@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+credentials.json
+service.json
+token.json
