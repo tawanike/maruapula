@@ -14,15 +14,19 @@ export default function (state: any, action: Action) {
             return Object.assign({}, state, { drawer: { visible: action.payload }});
 
         case ADD_TO_CART:
-            return Object.assign({}, state, { isLoggedIn: action.payload });
+            return {...state, products: [...state.products, action.payload]}
 
         case REMOVE_FROM_CART:
-            return Object.assign({}, state, { profile: action.payload.createdUser, isLoggedIn: action.payload.isLoggedIn });
+            return {...state, products: state.products.filter(product => product.id !== action.payload)}
 
         case CHANGE_QUANTITY:
-            return Object.assign({}, state, { profile: action.payload.createdUser, isLoggedIn: action.payload.isLoggedIn });
+            const index = state.products.findIndex(product => product.id !== action.payload.product);
 
-            
+            const newArray = [...state.products];
+            newArray[index].quantity = action.payload.quantity;
+
+            return { ...state, products: newArray}
+
         default:
             return state;
     }

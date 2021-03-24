@@ -8,6 +8,7 @@ export interface InitContextProps {
 }
 
 const initialState = {
+    products: [],
     drawer: {
         visible: false
     },

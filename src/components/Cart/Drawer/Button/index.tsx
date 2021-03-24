@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Button } from 'antd';
+import { Button, Badge } from 'antd';
 import { CartContext } from 'src/components/Cart/context';
 import { toggleCartDrawer } from 'src/components/Cart/actions';
 
@@ -9,9 +9,11 @@ export default function CartButton() {
 
   return (
     <div>
-      <Button onClick={() => {
-        cartContext.dispatch(toggleCartDrawer(!cartContext.state.drawer.visible));
-      }}>Cart</Button>
+      <Badge count={cartContext.state.products && cartContext.state.products.length} showZero>
+        <Button onClick={() => {
+          cartContext.dispatch(toggleCartDrawer(!cartContext.state.drawer.visible));
+        }}>Cart</Button>
+      </Badge>
     </div>
   )
 }

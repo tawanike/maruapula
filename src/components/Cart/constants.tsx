@@ -5,8 +5,9 @@ export const CHANGE_QUANTITY = 'app/Cart/CHANGE_QUANTITY';
 
 
 export interface ICart { 
+    products: any[];
     drawer: {
         visible: boolean
-    },
+    };
     children: React.ReactChildren;
 }

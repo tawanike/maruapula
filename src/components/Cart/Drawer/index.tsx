@@ -17,9 +17,9 @@ export default function CartDrawer(props) {
         onClose={onClose}
         visible={cartContext.state.drawer.visible}
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+        { cartContext.state.products && cartContext.state.products.map(product =>{
+          return <p>{product.title}</p>
+        })}
       </Drawer>
   )
 }
