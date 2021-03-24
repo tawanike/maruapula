@@ -20,7 +20,7 @@ export default function ListItem(props) {
           height={240}
         /></a>
         <h5>{props.product.title}</h5>
-        <h5>{props.product.size}</h5>
+        <h5 style={{whiteSpace: "pre-wrap"}}>{props.product.size}</h5>
         <h5>R{props.product.price} R{props.product.promo_price}</h5>
         <AddToCartButton />
 

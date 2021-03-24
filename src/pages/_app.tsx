@@ -3,6 +3,7 @@ import { ThemeProvider } from 'theme-ui';
 import theme from 'src/theme';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'antd/dist/antd.css';
+import 'src/styles/globals.scss'
 import { Layout } from 'antd';
 import Header from 'src/components/Header';
 import Footer from 'src/components/Footer';

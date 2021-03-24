@@ -14,9 +14,13 @@ export default function Home() {
       setLoading(true);
       const response = await fetch('/api/products');
       const products = await response.json();
-      console.log(products);
-      setLoading(false);
       setProducts(products);
+
+      const banners_response = await fetch('/api/banners');
+      const banners = await banners_response.json();
+      console.log(banners);
+
+      setLoading(false);
     })();
   }, []);
 
