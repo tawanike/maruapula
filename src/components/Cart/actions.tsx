@@ -8,6 +8,7 @@ export function toggleCartDrawer(data: boolean) {
   }
 
 export function addToCart(data: any) {
+  console.log(data)
   return {
     type: ADD_TO_CART,
     payload: {
@@ -18,7 +19,7 @@ export function addToCart(data: any) {
       promo_price: data.product.promo_price,
       size: data.product.size,
       category: data.product.category,
-      quanity: data.quanity,
+      quantity: data.quantity,
     },
   };
 }

@@ -1,19 +1,20 @@
-import { Layout } from 'antd';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 
-import CartDrawerButton from 'src/components/Cart/Drawer/Button';
-const { Header } = Layout;
+import CartDrawerButton from "src/components/Cart/Drawer/Button"
 
 export default function HeaderComponent() {
   return (
-    <Header>
+    <div className="container">
       <div className="row">
-        <div className="col-8">
+        <div className="col-8" sx={{}}>
           <h1>Maruapula</h1>
         </div>
-        <div className="col-4">
+        <div className="col-4" sx={{}}>
           <CartDrawerButton />
         </div>
       </div>
-    </Header>
+    </div>
   )
 }

@@ -1,19 +1,57 @@
+@import './variables.scss';
+@import './ant-override.scss';
 html,
 body {
-  padding: 0;
-  margin: 0;
-  background-color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+    color: $primaryText;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-@import './ant-override.scss'
+a {
+    color: $secondaryText;
+    text-decoration: none;
+}
+
+.bgWrap {
+    height: 100%;
+    width: 100%;
+}
+
+.price {
+    color: $secondary;
+}
+
+.promo-price {
+    color: $secondaryText;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.Product {
+    &__card {
+        max-height: 600px;
+        padding: 20px 0;
+        padding-top: 0;
+        padding-top: 20;
+        border: 1px solid #e2e2e2;
+        text-align: center;
+    }
+    &__Image {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    &__Price {}
+    &__PromoPrice {}
+}
+
+.CartItem {
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 10px;
+}

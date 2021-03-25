@@ -1,32 +1,15 @@
 import { Carousel } from 'antd';
+import Image from 'next/image';
 
-function onChange(a, b, c) {
-  console.log(a, b, c);
-}
+export default function Banners(props) {
 
-const contentStyle = {
-  height: '400px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
-};
-
-export default function Banners() {
-  return (
-    <Carousel afterChange={onChange}>
-    <div>
-      <h3 style={contentStyle}>1</h3>
-    </div>
-    <div>
-      <h3 style={contentStyle}>2</h3>
-    </div>
-    <div>
-      <h3 style={contentStyle}>3</h3>
-    </div>
-    <div>
-      <h3 style={contentStyle}>4</h3>
-    </div>
+  return <Carousel>
+      {props.banners.map((banner, index) => (<div key={index}>
+        <a><img
+          style={{width: '100%', height: '40%'}}
+          src={banner.image}
+          alt={banner.title}
+        /></a>
+      </div>))}
   </Carousel>
-  )
 }

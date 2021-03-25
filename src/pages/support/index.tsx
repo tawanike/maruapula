@@ -1,9 +1,9 @@
 import Head from 'next/head'
 
-export default function Home() {
+export default function Support() {
   return (
     <div>
-      <h1>Maruapula</h1>
+      <h1>Support</h1>
     </div>
   )
 }
