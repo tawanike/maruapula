@@ -9,22 +9,20 @@ export default function AddToCart(props) {
 
   const addProductToCart = () => {
     setQuantity(quantity+1);
-    cartContext.dispatch(addToCart({product: props.product, quantity}));
+    cartContext.dispatch(addToCart({product: props.product, quantity: quantity+1}));
   }
 
-  const removeProductFromCart = (product: any) => {}
-
-  const updateProduct = () => {
-    cartContext.dispatch(addToCart({product: props.product, quantity}));
+  const removeProductFromCart = () => {
+    cartContext.dispatch(addToCart({product: props.product, quantity: quantity-1}));
   }
 
   return (
     <div>
       {quantity === 0 && <Button onClick={ addProductToCart }>Add To Cart</Button> }
       {quantity > 0 && <div>
-        <Button onClick={() => setQuantity(quantity-1)}>-</Button>
+        <Button onClick={() => removeProductFromCart()}>-</Button>
         {quantity}
-        <Button onClick={() => setQuantity(quantity+1)}>+</Button>
+        <Button onClick={() => addProductToCart()}>+</Button>
       </div> }
     </div>
   )
