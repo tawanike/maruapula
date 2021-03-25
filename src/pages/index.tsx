@@ -7,9 +7,10 @@ import Products from 'src/components/Products/List';
 
 export default function Home() {
   const [products, setProducts] = useState<any[]>();
+  const [banners, setSlides] = useState<any[]>();
   const [loading, setLoading] = useState<boolean>(false);
 
-  useEffect(() =>{
+  useEffect(() => {
     (async () => {
       setLoading(true);
       const response = await fetch('/api/products');
@@ -17,8 +18,8 @@ export default function Home() {
       setProducts(products);
 
       const banners_response = await fetch('/api/banners');
-      const banners = await banners_response.json();
-      console.log(banners);
+      const banners_list = await banners_response.json();
+      setSlides(banners_list);
 
       setLoading(false);
     })();
@@ -26,7 +27,7 @@ export default function Home() {
 
   return (
     <div>
-      <Banners />
+      {banners && banners.length > 0 ? <Banners banners={banners} /> : 'PANO'}
       <h1>Maruapula</h1>
       {loading ? <Loading /> : <Products products={products} />}
     </div>
