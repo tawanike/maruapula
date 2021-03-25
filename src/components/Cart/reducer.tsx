@@ -14,7 +14,13 @@ export default function (state: any, action: Action) {
             return Object.assign({}, state, { drawer: { visible: action.payload }});
 
         case ADD_TO_CART:
-            return {...state, products: [...state.products, action.payload]}
+            const productIndex = state.products.findIndex(product => product.id !== action.payload.product);
+            if(productIndex < 0){
+                return {...state, products: [...state.products, action.payload]}
+            } else {
+                const productArray = [...state.products];
+                productArray[productIndex].quantity = action.payload.quantity;
+            }
 
         case REMOVE_FROM_CART:
             return {...state, products: state.products.filter(product => product.id !== action.payload)}

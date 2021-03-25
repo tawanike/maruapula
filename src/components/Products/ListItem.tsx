@@ -17,7 +17,7 @@ export default function ListItem(props) {
         <a href={`#/${props.product.id.toLowerCase()}`} onClick={productDetails}>
           <Image
             className="Product__Image"
-            src={props.product.image}
+            src={`https://res.cloudinary.com/mmogomedia/image/upload/v1616594498/maruapula/products/${props.product.id}.jpg`}
             alt={props.product.title}
             width={220}
             height={200}
@@ -39,7 +39,7 @@ export default function ListItem(props) {
           onCancel={() => setShowProduct(false)} 
           visible={showProduct} footer={null}>
         <Image
-          src={props.product.image}
+          src={`https://res.cloudinary.com/mmogomedia/image/upload/v1616594498/maruapula/products/${props.product.id}.jpg`}
           alt={props.product.title}
           width={240}
           height={240}
