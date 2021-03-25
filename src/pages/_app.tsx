@@ -16,7 +16,7 @@ const { Sider, Content } = Layout;
 function App({ Component, pageProps }) {
   return <CartContextProvider>
     <ThemeProvider theme={theme}>
-      <Layout>
+      <Layout className="container">
         <Header />
         <Layout>
           <Sider width={260}>

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function Home() {
+export default function About() {
   return (
     <div>
       <h1>About Maruapula</h1>

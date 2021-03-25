@@ -34,7 +34,7 @@ export default (req, res) => {
         })
         console.log(products);
 
-        res.status(200).json(products);
+        return res.status(200).json(products);
     })();
     
   }
