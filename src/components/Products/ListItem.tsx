@@ -12,16 +12,26 @@ export default function ListItem(props) {
   }
 
     return (
-      <div className="col-4">
-        <a href={`#/${props.product.id.toLowerCase()}`} onClick={productDetails}><Image
-          src={props.product.image}
-          alt={props.product.title}
-          width={240}
-          height={240}
-        /></a>
-        <h5>{props.product.title}</h5>
-        <h5 style={{whiteSpace: "pre-wrap"}}>{props.product.size}</h5>
-        <h5>R{props.product.price} R{props.product.promo_price}</h5>
+      <div className="col col-md-4 mb-3">
+        <div className="Product__card">
+        <a href={`#/${props.product.id.toLowerCase()}`} onClick={productDetails}>
+          <Image
+            className="Product__Image"
+            src={props.product.image}
+            alt={props.product.title}
+            width={220}
+            height={200}
+          />
+        </a>
+        <p>{props.product.title}</p>
+        <p style={{whiteSpace: "pre-wrap"}}>{props.product.size}</p>
+        <p>
+          { props.product.promo_price > 0 ? <>
+          <span className="price">R{props.product.promo_price}</span>&nbsp;
+          <span className="promo-price">R{props.product.price}</span>
+          </> : <span className="price">R{props.product.price}</span> }
+        </p>
+        
         <AddToCartButton product={props.product} />
 
         <Modal 
@@ -36,6 +46,7 @@ export default function ListItem(props) {
         />
           <h1>{props.product.title}</h1>
         </Modal>
+        </div>
       </div>
     )
   }
