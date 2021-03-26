@@ -46,10 +46,14 @@ function App({ Component, pageProps }) {
   return (
     <CartContextProvider>
       <ThemeProvider theme={theme}>
-        <div className="col-12 fixed-top" sx={{ bg: "muted", height: "70px" }}>
+        <div className="col-12" sx={{ bg: "muted", height: "40px" }}></div>
+        <div
+          className="col-12 sticky-top"
+          sx={{ maxHeight: "150px", zIndex: "10000", bg: "rgba(255, 255, 255, 0.95)" }}
+        >
           <Header />
         </div>
-        <Layout className="container" sx={{ paddingTop: "80px" }}>
+        <Layout className="container" sx={{ paddingTop: "40px" }}>
           <Layout>
             <Sider className="sticky-top" width={260}>
               <Sidebar />
