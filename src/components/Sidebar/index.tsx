@@ -1,9 +1,11 @@
 import { Menu } from "antd"
-import { useState, useContext } from "react"
+import { useRouter } from "next/router"
+import { useContext } from "react"
 import { ProductContext } from "src/components/Products/context"
 import { filterProducts, selectedCategory } from "src/components/Products/actions"
 
 export default function Sidebar() {
+  const router = useRouter();
   const productContext = useContext(ProductContext);
   const navigate = e => {
     if (e.key === 'Specials') {
@@ -15,7 +17,11 @@ export default function Sidebar() {
       });
       productContext.dispatch(selectedCategory(e.key));
       productContext.dispatch(filterProducts(defaultCategoryProducts));
-    } else {
+    } else if (e.key === 'Catering') {
+      router.push('/business')
+    } else if (e.key === 'Businesses') {
+      router.push('/business')
+    }else {
       const defaultCategoryProducts: any[] = productContext.state.products.filter(product => {
         if(product.category === e.key) {
           return product;
@@ -36,7 +42,7 @@ export default function Sidebar() {
         style={{ width: 200 }}
         onClick={navigate}
         // selectedKeys={[productContext.state.category]}
-        defaultSelectedKeys={[productContext.state.category]}
+        defaultSelectedKeys={[productContext.state ? productContext.state.category : ""]}
       >
       <Menu.Item key="Specials" className="text-warning">Specials</Menu.Item>
       <Menu.Item key="Fruits">Fruits</Menu.Item>
@@ -45,7 +51,7 @@ export default function Sidebar() {
       <Menu.Item key="Smoothies">Smoothies</Menu.Item>
       <Menu.Item key="Precooked">Pre-cooked meals</Menu.Item>
       <Menu.Item key="Catering">Catering</Menu.Item>
-      <Menu.Item key="Businesses">Businesses</Menu.Item>
+      <Menu.Item key="Businesses">For Businesses</Menu.Item>
     </Menu>
   )
 }
