@@ -1,0 +1,58 @@
+export default {
+    root: {
+        fontFamily: "body",
+        lineHeight: "body",
+        fontWeight: "body",
+    },
+    h1: {
+        color: "text",
+        fontFamily: "body",
+        lineHeight: "body",
+        fontWeight: "heading",
+        fontSize: [5, 7],
+    },
+    h2: {
+        color: "text",
+        fontFamily: "body",
+        lineHeight: "body",
+        fontWeight: "heading",
+        fontSize: [2, 4],
+        mb: 0,
+    },
+    h3: {
+        color: "text",
+        fontFamily: "body",
+        lineHeight: "body",
+        fontWeight: "heading",
+        fontSize: 3,
+        mb: 0,
+    },
+    h4: {
+        color: "text",
+        fontFamily: "body",
+        lineHeight: "body",
+        fontWeight: "article",
+        fontSize: 3,
+        mb: 0,
+    },
+    h5: {
+        color: "text",
+        fontFamily: "body",
+        lineHeight: "body",
+        fontWeight: "article",
+        fontSize: [1, 2],
+        mb: 0,
+    },
+    h6: {
+        color: "text",
+        fontFamily: "body",
+        lineHeight: "body",
+        fontWeight: "article",
+        fontSize: 1,
+        mb: 0,
+    },
+    p: {
+        mb: 0,
+        fontSize: [0, 2],
+    },
+};
