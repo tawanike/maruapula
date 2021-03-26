@@ -1,34 +1,35 @@
-import { useEffect, useState } from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import { useEffect, useState } from "react"
 
-import Loading from 'src/components/Loading';
-import Banners from 'src/components/Banners';
-import Products from 'src/components/Products/List';
-
+import Loading from "src/components/Loading"
+import Banners from "src/components/Banners"
+import Products from "src/components/Products/List"
 
 export default function Home() {
-  const [products, setProducts] = useState<any[]>();
-  const [banners, setSlides] = useState<any[]>();
-  const [loading, setLoading] = useState<boolean>(false);
+  const [products, setProducts] = useState<any[]>()
+  const [banners, setSlides] = useState<any[]>()
+  const [loading, setLoading] = useState<boolean>(false)
 
   useEffect(() => {
-    (async () => {
-      setLoading(true);
-      const response = await fetch('/api/products');
-      const products = await response.json();
-      setProducts(products);
+    ;(async () => {
+      setLoading(true)
+      const response = await fetch("/api/products")
+      const products = await response.json()
+      setProducts(products)
 
-      const banners_response = await fetch('/api/banners');
-      const banners_list = await banners_response.json();
-      setSlides(banners_list);
+      const banners_response = await fetch("/api/banners")
+      const banners_list = await banners_response.json()
+      setSlides(banners_list)
 
-      setLoading(false);
-    })();
-  }, []);
+      setLoading(false)
+    })()
+  }, [])
 
   return (
-    <div>
-      {banners && banners.length > 0 ? <Banners banners={banners} /> : 'PANO'}
-      <h1>Maruapula</h1>
+    <div className="col-12" sx={{ paddingLeft: "15px" }}>
+      {banners && banners.length ? <Banners banners={banners} /> : "PANO"}
       {loading ? <Loading /> : <Products products={products} />}
     </div>
   )
