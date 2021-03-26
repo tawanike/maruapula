@@ -3,7 +3,6 @@
 import { jsx } from "theme-ui"
 
 import CartDrawerButton from "src/components/Cart/Drawer/Button"
-import grid from "antd/lib/grid"
 
 export default function HeaderComponent() {
   return (
@@ -45,7 +44,7 @@ export default function HeaderComponent() {
                 "&:hover": { bg: "rgb(250, 250, 250)", cursor: "pointer", color: "muted" }
               }}
             >
-              Business Services
+              For Business
             </li>
             <li
               className="col-2 h-100"

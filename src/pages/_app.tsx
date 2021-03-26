@@ -51,18 +51,15 @@ function App({ Component, pageProps }) {
           className="col-12 sticky-top"
           sx={{
             maxHeight: "150px",
-            zIndex: "10000",
+            zIndex: "9997",
             bg: "rgba(255, 255, 255, 0.95)",
             boxShadow: "0 4px 6px -6px #c7c7c7"
           }}
         >
           <Header />
         </div>
-        <Layout className="container" sx={{ paddingTop: "40px" }}>
+        <Layout className="container" sx={{ paddingTop: "20px" }}>
           <Layout>
-            <Sider className="sticky-top">
-              <Sidebar />
-            </Sider>
             <Content>
               <Component {...pageProps} />
               <CartDrawer />

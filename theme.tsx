@@ -41,14 +41,15 @@ const theme = {
       display: "grid",
       placeItems: "center",
       "&:hover": { cursor: "pointer" },
+      borderRadius: "5px",
       p: {
-        m: 0,
         fontWeight: "heading",
         color: "white",
-        lineHeight: "0"
+        lineHeight: "0",
+        fontSize: "16px"
       }
     },
-    customAntBtnDanger: {
+    customAntBtnAccent: {
       display: "grid",
       width: "100%",
       bg: "accent",
@@ -56,6 +57,17 @@ const theme = {
       border: "none",
       "&:hover": {
         bg: darken("accent", 0.06),
+        color: "white"
+      }
+    },
+    customAntBtnMuted: {
+      display: "grid",
+      width: "100%",
+      bg: "muted",
+      color: "white",
+      border: "none",
+      "&:hover": {
+        bg: darken("muted", 0.06),
         color: "white"
       }
     }

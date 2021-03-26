@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import Loading from "src/components/Loading"
 import Banners from "src/components/Banners"
 import Products from "src/components/Products/List"
+import Sidebar from "src/components/Sidebar"
 
 export default function Home() {
   const [products, setProducts] = useState<any[]>()
@@ -29,8 +30,17 @@ export default function Home() {
 
   return (
     <div className="col-12" sx={{ paddingLeft: "15px" }}>
-      {banners && banners.length ? <Banners banners={banners} /> : "PANO"}
-      {loading ? <Loading /> : <Products products={products} />}
+      <div className="row">
+        <div className="col-12">{banners && banners.length ? <Banners banners={banners} /> : "PANO"}</div>
+        <div className="col-12" sx={{ paddingTop: "25px" }}>
+          <div className="row">
+            <div className="col-2">
+              <Sidebar />
+            </div>
+            <div className="col-10">{loading ? <Loading /> : <Products products={products} />}</div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

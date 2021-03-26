@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "@theme-ui/color": "^0.6.0",
     "@zeit/next-sass": "^1.0.1",
     "antd": "^4.14.1",
