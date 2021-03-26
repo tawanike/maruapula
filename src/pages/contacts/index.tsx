@@ -1,4 +1,5 @@
-import { Form, Input, InputNumber, Button } from 'antd';
+import { Form, Input, Button } from 'antd';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const layout = {
   labelCol: { span: 8 },
@@ -28,13 +29,15 @@ export default function Contacts() {
       </div>
       <div className="col-md-4 p-4">
         <p>Mobile/WhatsApp	: 083 668 5785</p>
-        <p>Office 			: TBC</p>
+        <p>Office 			: </p>
         <p>Email			: sales@maruapula.store</p>
         <p>Address			: 921 Moss Street, Weltevredenpark</p>
         <p>Contact days & times	: Monday to Saturday (08H00 to 18H00)</p>
         <p>
           <h3>Follow Us</h3>
-
+          <FontAwesomeIcon icon={['fab', 'facebook']} size="2x" style={{ marginRight: 10}}/>
+          <FontAwesomeIcon icon={['fab', 'twitter']} size="2x" style={{ marginRight: 10}}/>
+          <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" style={{ marginRight: 10}}/>
         </p>
       </div>
       <div className="col-md-8">
