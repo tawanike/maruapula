@@ -1,10 +1,13 @@
 import Image from 'next/image';
+import { useContext } from 'react';
 import { useRouter } from 'next/router';
 
-import { useContext } from 'react';
+
 import { CartContext } from 'src/components/Cart/context';
 import { Button, Drawer } from 'antd';
 import { toggleCartDrawer } from 'src/components/Cart/actions';
+import { removeFromCart } from 'src/components/Cart/actions';
+
 
 export default function CartDrawer(props) {
   const router = useRouter();
@@ -13,6 +16,11 @@ export default function CartDrawer(props) {
   const onClose = () => {
     cartContext.dispatch(toggleCartDrawer(!cartContext.state.drawer.visible));
   }
+
+  const removeProductFromCart = (product: any) => {
+    cartContext.dispatch(removeFromCart(product.id));
+  }
+
   return (
     <Drawer
         title="Cart"
@@ -33,23 +41,27 @@ export default function CartDrawer(props) {
             />
             </div>
             <div className="col-md-6">
-              <p>{product.title}</p>
-              <p>{product.price}</p>
-              <p>Quantity: {product.quantity}</p>
+              <p className="mb-0">{product.title}</p>
+              <p className="Product___Price mb-0">R{product.price}</p>
+              <p className="mb-0">Quantity: {product.quantity}</p>
             </div>
             <div className="col-md-1">
-              <Button>X</Button>
+              <Button onClick={() => removeProductFromCart(product)}>X</Button>
             </div>
             
             </div>
         })}
         <div>
-          <p>Subtotal: </p>
-          <p>Delivery Fee: </p>
-          <p>Total: </p>
+          <p>Subtotal: R{cartContext.state.subtotal}</p>
+          <p>Delivery Fee: R50.00</p>
+          <p>Total: R{cartContext.state.subtotal + cartContext.state.serviceFee}</p>
         </div>
         <div>
-          <Button type="primary" block onClick={() => router.push('/cart/checkout')}>Checkout</Button>
+          <Button type="primary" block onClick={() => {
+              router.push('/cart');
+              onClose();
+            }
+          }>Checkout</Button>
         </div>
       </Drawer>
   )
