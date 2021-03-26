@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <div className="col-12" sx={{ paddingLeft: "15px" }}>
-      {banners && banners.length ? <Banners banners={banners} /> : "PANO"}
+      {banners && banners.length ? <Banners banners={banners} /> : ""}
       {loading ? <Loading /> : <Products products={products} />}
     </div>
   )
