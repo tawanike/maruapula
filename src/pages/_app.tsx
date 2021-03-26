@@ -49,13 +49,18 @@ function App({ Component, pageProps }) {
         <div className="col-12" sx={{ bg: "muted", height: "40px" }}></div>
         <div
           className="col-12 sticky-top"
-          sx={{ maxHeight: "150px", zIndex: "10000", bg: "rgba(255, 255, 255, 0.95)" }}
+          sx={{
+            maxHeight: "150px",
+            zIndex: "10000",
+            bg: "rgba(255, 255, 255, 0.95)",
+            boxShadow: "0 4px 6px -6px #c7c7c7"
+          }}
         >
           <Header />
         </div>
         <Layout className="container" sx={{ paddingTop: "40px" }}>
           <Layout>
-            <Sider className="sticky-top" width={260}>
+            <Sider className="sticky-top">
               <Sidebar />
             </Sider>
             <Content>
