@@ -17,7 +17,7 @@ import CartContextProvider from "src/components/Cart/context"
 import BannerContextProvider from "src/components/Banners/context"
 import ProductContextProvider from "src/components/Products/context"
 import { useEffect } from "react"
-import { Router } from "next/router"
+import { Router, useRouter } from "next/router"
 
 NProgress.configure({
   showSpinner: false,
@@ -30,6 +30,8 @@ NProgress.configure({
 const { Sider, Content } = Layout
 
 function App({ Component, pageProps }) {
+  const router = useRouter();
+
   useEffect(() => {
     const handleRouteChange = url => NProgress.start()
     const handleCompleteChange = url => NProgress.done()
@@ -64,9 +66,9 @@ function App({ Component, pageProps }) {
             </div>
             <Layout className="container" sx={{ paddingTop: "40px" }}>
               <Layout>
-                <Sider className="sticky-top">
+                { ['/about', '/business', '/contacts', '/support'].includes(router.pathname) || <Sider className="sticky-top">
                   <Sidebar />
-                </Sider>
+                </Sider>}
                 <Content>
                   <Component {...pageProps} />
                   <CartDrawer />
