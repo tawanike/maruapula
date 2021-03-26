@@ -15,6 +15,8 @@ export default async (req, res) => {
           client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
           private_key: process.env.GOOGLE_PRIVATE_KEY,
         });
+
+        console.log(process.env.GOOGLE_PRIVATE_KEY);
         
         await doc.loadInfo(); // loads document properties and worksheets
         const sheet = doc.sheetsByIndex[1];
