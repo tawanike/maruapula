@@ -1,4 +1,5 @@
-import { TOGGLE_CART_DRAWER, ADD_TO_CART, REMOVE_FROM_CART, CHANGE_QUANTITY } from './constants';
+import {find} from 'lodash';
+import { TOGGLE_CART_DRAWER, ADD_TO_CART, REMOVE_FROM_CART, CHANGE_QUANTITY, UPDATE_CART_PRICE } from './constants';
 
 export interface Action {
     type: string,
@@ -7,31 +8,57 @@ export interface Action {
 
 
 // import logger from 'utils/logger';
-export default function (state: any, action: Action) {
-    // logger(action);
+export default function reducer(state: any, action: Action) {
+    console.log(action);
     switch (action.type) {
         case TOGGLE_CART_DRAWER:
             return Object.assign({}, state, { drawer: { visible: action.payload }});
 
+        case UPDATE_CART_PRICE:
+            return Object.assign({}, state, { subtotal: action.payload });
+
         case ADD_TO_CART:
-            const productIndex = state.products.findIndex(product => product.id !== action.payload.product);
-            if(productIndex < 0){
-                return {...state, products: [...state.products, action.payload]}
+            const product = find(state.products, {id: action.payload.id});
+            if(product) {
+                return {...state, 
+                
+                    products: state.products.map(product =>{
+                        // If this isn's the product we are looking for return the product
+    
+                        if(product.id !== action.payload.id){
+                            return product;
+                        }
+    
+                        return {
+                            ...product, 
+                            quantity: action.payload.quantity
+                        }
+                    })
+                }    
             } else {
-                const productArray = [...state.products];
-                productArray[productIndex].quantity = action.payload.quantity;
+                return {...state, products: [...state.products, action.payload]};
             }
+              
 
         case REMOVE_FROM_CART:
             return {...state, products: state.products.filter(product => product.id !== action.payload)}
 
         case CHANGE_QUANTITY:
-            const index = state.products.findIndex(product => product.id !== action.payload.product);
+            return {...state, 
+                
+                products: state.products.map(product =>{
+                    // If this isn's the product we are looking for return the product
 
-            const newArray = [...state.products];
-            newArray[index].quantity = action.payload.quantity;
+                    if(product.id !== action.payload.product){
+                        return product;
+                    }
 
-            return { ...state, products: newArray}
+                    return {
+                        ...product, 
+                        quantity: action.payload.quantity
+                    }
+                })
+            }    
 
         default:
             return state;

@@ -1,14 +1,21 @@
-import { TOGGLE_CART_DRAWER, ADD_TO_CART, REMOVE_FROM_CART, CHANGE_QUANTITY } from './constants';
+import { TOGGLE_CART_DRAWER, ADD_TO_CART, REMOVE_FROM_CART, CHANGE_QUANTITY, UPDATE_CART_PRICE } from './constants';
 
 export function toggleCartDrawer(data: boolean) {
-    return {
-      type: TOGGLE_CART_DRAWER,
-      payload: data,
-    };
-  }
+  return {
+    type: TOGGLE_CART_DRAWER,
+    payload: data,
+  };
+}
+
+export function updateCartPrice(data: any) {
+  return {
+    type: UPDATE_CART_PRICE,
+    payload: data,
+  };
+}
 
 export function addToCart(data: any) {
-  console.log(data)
+
   return {
     type: ADD_TO_CART,
     payload: {
@@ -24,16 +31,16 @@ export function addToCart(data: any) {
   };
 }
 
-export function removeFromCart(data: any) {
+export function removeFromCart(product: string) {
   return {
     type: REMOVE_FROM_CART,
-    payload: data,
+    payload: product,
   };
 }
 
-export function changeQuantity(data: any) {
+export function changeQuantity(product: string, quantity: number) {
   return {
     type: CHANGE_QUANTITY,
-    payload: data,
+    payload: {product, quantity},
   };
 }
