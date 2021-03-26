@@ -1,0 +1,7 @@
+{
+    "esversion": 9,
+    "strict": "implied",
+    "devel": true,
+    "node": true,
+    "globals": {}
+}
