@@ -10,6 +10,8 @@ export interface InitContextProps {
 
 const initialState = {
     products: [],
+    selectedProducts: [],
+    category: 'Fruits'
 } 
 
 export const ProductContext = createContext({} as InitContextProps);

@@ -35,7 +35,9 @@ export default async (req, res) => {
             category: row.category,
             specials: row.specials
           })
-        })
+        });
+
+        
         res.status(200).json(products);    
   }
     

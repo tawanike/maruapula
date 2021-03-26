@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS, FILTER_PRODUCTS } from './constants';
+import { FETCH_PRODUCTS, FILTER_PRODUCTS, SELECTED_CATEGORY } from './constants';
 
 export function getProducts(data: any[]) {
   return {
@@ -7,10 +7,16 @@ export function getProducts(data: any[]) {
   };
 }
 
-export function filterProducts(data: string) {
+export function filterProducts(data: any[]) {
   return {
     type: FILTER_PRODUCTS,
     payload: data,
   };
 }
 
+export function selectedCategory(data: string[]) {
+  return {
+    type: SELECTED_CATEGORY,
+    payload: data,
+  };
+}

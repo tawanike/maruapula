@@ -9,7 +9,8 @@ import Products from "src/components/Products/List"
 import { BannersContext } from "src/components/Banners/context"
 import { ProductContext } from "src/components/Products/context"
 import { getBanners } from "src/components/Banners/actions"
-import { getProducts } from "src/components/Products/actions"
+import { filterProducts, getProducts } from "src/components/Products/actions"
+import specials from "./api/products/specials"
 
 export default function Home() {
   const bannersContext = useContext(BannersContext);
@@ -21,22 +22,27 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      console.log('OUTSIDE', bannersContext.state.banners);
 
       if (productContext.state.products.length === 0) {
         const response = await fetch("/api/products")
         const products = await response.json()
         setProducts(products);
         productContext.dispatch(getProducts(products));
+        
+        const defaultCategoryProducts = products.filter(product => {
+          if(product.category === productContext.state.category) {
+            return product;
+          }
+        });
+        
+        productContext.dispatch(filterProducts(defaultCategoryProducts));
       }
-      
 
       if (bannersContext.state.banners.length === 0) {
         const banners_response = await fetch("/api/banners")
         const banners_list = await banners_response.json()
         setSlides(banners_list);
         bannersContext.dispatch(getBanners(banners_list));
-        console.log('INSIDE', bannersContext.state.banners);
       }
 
       setLoading(false)
@@ -46,7 +52,7 @@ export default function Home() {
   return (
     <div className="col-12" sx={{ paddingLeft: "15px" }}>
       {banners && banners.length ? <Banners banners={bannersContext.state.banners} /> : ""}
-      {loading ? <Loading /> : <Products products={productContext.state.products} />}
+      {loading ? <Loading /> : <Products category={productContext.state.category} products={productContext.state.selectedProducts} />}
     </div>
   )
 }

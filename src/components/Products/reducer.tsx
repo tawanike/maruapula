@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS, FILTER_PRODUCTS  } from './constants';
+import { FETCH_PRODUCTS, FILTER_PRODUCTS, SELECTED_CATEGORY  } from './constants';
 
 export interface Action {
     type: string,
@@ -14,9 +14,10 @@ export default function reducer(state: any, action: Action) {
             return Object.assign({}, state, { products: action.payload });
 
         case FILTER_PRODUCTS:
-            return Object.assign({}, state, { subtotal: action.payload });
+            return Object.assign({}, state, { selectedProducts: action.payload });
 
- 
+        case SELECTED_CATEGORY:
+            return Object.assign({}, state, { category: action.payload });
 
         default:
             return state;
