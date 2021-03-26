@@ -3,6 +3,7 @@ import { Form, Input, Button } from 'antd';
 
 import { CartContext } from 'src/components/Cart/context';
 import CartProduct from 'src/components/Cart/Product';
+import cart from '..';
 
 const layout = {
   labelCol: { span: 6 },
@@ -32,9 +33,21 @@ export default function Checkout() {
     seCartTotal(total);
   }, []);
 
-  const onFinish = (values: any) => {
+  const onFinish = async (values: any) => {
     console.log(cartTotal)
 
+    const response = await fetch('/api/cart/checkout',  {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({total: cartTotal, user: values.user, products: cartContext.state.products})
+    });
+    const content = await response.json();
+
+    console.log(content)
+  
   };
 
   return (
