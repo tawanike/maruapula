@@ -24,8 +24,16 @@ export default function ListItem(props) {
   }
 
   return (
-    <div className="col col-md-4" sx={{}}>
-      <div className="row" sx={{ variant: "containers.card", height: "100%", "&:hover": { cursor: "pointer" } }}>
+    <div className="col-12 col-md-4" sx={{ marginBottom: "25px" }}>
+      <div
+        className=""
+        sx={{
+          variant: "containers.card",
+          height: "100%",
+          "&:hover": { cursor: "pointer" },
+          display: "grid"
+        }}
+      >
         <div className="col-12" sx={{ variant: "center" }}>
           <a sx={{ variant: "center" }} href={`#/${props.product.id.toLowerCase()}`} onClick={productDetails}>
             <img
