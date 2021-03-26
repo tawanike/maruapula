@@ -1,8 +1,7 @@
 export default {
     fonts: {
-        body:
-            'Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif',
-        heading: "Georgia, serif",
+        body: 'Rubik sans-serif',
+        heading: 'Rubik sans-serif',
         monospace: "Menlo, monospace",
     },
     fontSizes: [12, 14, 16, 20, 24, 32, 48, 52, 68],

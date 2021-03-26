@@ -58,7 +58,7 @@ export default function HeaderComponent() {
               }}
             >
               <Link href="/business">
-                <a>Businesses</a>
+                <a>For Businesses</a>
               </Link>
             </li>
             <li
