@@ -1,0 +1,63 @@
+@import './src/styles/variables';
+@import './src/styles/ant-override.scss';
+a,
+h1 {
+    margin-bottom: 0;
+}
+
+#__next {
+    background-color: rgb(255, 255, 255);
+}
+
+#components-layout-demo-fixed .logo {
+    width: 120px;
+    height: 31px;
+    background: white;
+    margin: 16px 24px 16px 0;
+    float: left;
+}
+
+#nprogress {
+    .bar {
+        background: $secondary-white !important;
+        height: 5px !important;
+    }
+}
+
+.site-layout {
+    margin-top: 64px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: calc(100vh - 64px);
+    .site-layout-background {
+        min-height: 340px;
+    }
+}
+
+.ant-layout-header {
+    background-color: $main-green;
+    border: 0;
+    .ant-menu-dark {
+        background-color: $main-green;
+        height: 80px;
+        li {
+            height: inherit;
+            &.ant-menu-item-selected {
+                background-color: lighten($main-green, 8) !important;
+            }
+            &:hover {
+                background-color: lighten($main-green, 8) !important;
+            }
+        }
+    }
+}
+
+.hoverCursor {
+     :hover {
+        cursor: pointer;
+        text-decoration: underline;
+        p {
+            text-decoration: underline;
+        }
+    }
+}
