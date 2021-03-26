@@ -14,8 +14,11 @@ import Footer from "src/components/Footer"
 import Sidebar from "src/components/Sidebar"
 import CartDrawer from "src/components/Cart/Drawer"
 import CartContextProvider from "src/components/Cart/context"
+import BannerContextProvider from "src/components/Banners/context"
+import ProductContextProvider from "src/components/Products/context"
 import { useEffect } from "react"
 import { Router } from "next/router"
+import '../libs/fontawesome'
 
 NProgress.configure({
   showSpinner: false,
@@ -44,9 +47,15 @@ function App({ Component, pageProps }) {
     }
   }, [])
   return (
+    <BannerContextProvider>
+      <ProductContextProvider>
     <CartContextProvider>
       <ThemeProvider theme={theme}>
-        <div className="col-12" sx={{ bg: "muted", height: "40px" }}></div>
+        <div className="col-12 pt-2" sx={{ bg: "muted", height: "40px", textAlign: "center"}}>
+              <div className="container">
+                All orders received before 14:00, will be delivered in 2 days. Deliveries from 10H00 to 18H00, daily. NO DELIEVERIES ON SUNDAYS AND PUBLIC HOLIDAYS
+              </div>
+            </div>
         <div
           className="col-12 sticky-top"
           sx={{
@@ -69,6 +78,8 @@ function App({ Component, pageProps }) {
         </Layout>
       </ThemeProvider>
     </CartContextProvider>
+    </ProductContextProvider>
+    </BannerContextProvider>
   )
 }
 

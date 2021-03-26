@@ -8,6 +8,7 @@ import { useContext } from "react"
 import { CartContext } from "src/components/Cart/context"
 import { Button, Drawer } from "antd"
 import { toggleCartDrawer } from "src/components/Cart/actions"
+import { removeFromCart } from 'src/components/Cart/actions';
 
 export default function CartDrawer(props) {
   const router = useRouter()
@@ -16,6 +17,11 @@ export default function CartDrawer(props) {
   const onClose = () => {
     cartContext.dispatch(toggleCartDrawer(!cartContext.state.drawer.visible))
   }
+
+  const removeProductFromCart = (product: any) => {
+    cartContext.dispatch(removeFromCart(product.id));
+  }
+
   return (
     <Drawer
       sx={{ zIndex: "9999" }}
@@ -50,18 +56,18 @@ export default function CartDrawer(props) {
                 </p>
               </div>
               <div className="col-md-1">
-                <Button>X</Button>
+                <Button onClick={() => removeProductFromCart(product)}>X</Button>
               </div>
             </div>
           )
         })}
-      <div>
-        <p>Subtotal: </p>
-        <p>Delivery Fee: </p>
-        <p>Total: </p>
-      </div>
-      <div className="row">
-        <div
+        <div>
+          <p>Subtotal: R{cartContext.state.subtotal}</p>
+          <p>Delivery Fee: R50.00</p>
+          <p>Total: R{cartContext.state.subtotal + cartContext.state.serviceFee}</p>
+        </div>
+        <div className="row">
+          <div
           sx={{ variant: "containers.button", bg: "orange" }}
           className="col-12 py-2"
           onClick={() => {

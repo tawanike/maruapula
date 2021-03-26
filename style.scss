@@ -1,8 +1,11 @@
 @import './src/styles/variables';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
 @import './src/styles/ant-override.scss';
 a,
 h1 {
     margin-bottom: 0;
+    color: $main-black;
+    text-transform: uppercase;
 }
 
 #__next {
@@ -60,4 +63,8 @@ h1 {
             text-decoration: underline;
         }
     }
+}
+
+.ant-layout-footer { 
+    background-color: rgb(255, 255, 255);
 }
