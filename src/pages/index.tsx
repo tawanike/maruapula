@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <div className="col-12" sx={{ paddingLeft: "15px" }}>
-      {banners && banners.length ? <Banners banners={bannersContext.state.banners} /> : ""}
+      {bannersContext.state.banners && bannersContext.state.banners.length ? <Banners banners={bannersContext.state.banners} /> : ""}
       {loading ? <Loading /> : <Products category={productContext.state.category} products={productContext.state.selectedProducts} />}
     </div>
   )
