@@ -32,6 +32,13 @@ export default function ListItem(props) {
               className="Product__Image"
               src={getProductImg(props.product.id)}
               alt={props.product.title}
+              onError={e => {
+                e.target.src = "./placeholder.png"
+                e.target.style.width = "40%"
+                e.target.style.height = "auto"
+                e.target.style.marginTop = "15px"
+                e.target.style.marginBottom = "15px"
+              }}
               sx={{ width: "80%", height: "auto" }}
             />
           </a>
