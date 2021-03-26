@@ -10,7 +10,7 @@ const theme = {
       border: "1px solid",
       borderColor: "primary",
       backgroundColor: "primary",
-      p: 2
+      p: 5
     },
     page: {
       m: 0,

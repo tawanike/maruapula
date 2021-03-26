@@ -14,6 +14,8 @@ import Footer from "src/components/Footer"
 import Sidebar from "src/components/Sidebar"
 import CartDrawer from "src/components/Cart/Drawer"
 import CartContextProvider from "src/components/Cart/context"
+import BannerContextProvider from "src/components/Banners/context"
+import ProductContextProvider from "src/components/Products/context"
 import { useEffect } from "react"
 import { Router } from "next/router"
 
@@ -44,34 +46,38 @@ function App({ Component, pageProps }) {
     }
   }, [])
   return (
-    <CartContextProvider>
-      <ThemeProvider theme={theme}>
-        <div className="col-12" sx={{ bg: "muted", height: "40px" }}></div>
-        <div
-          className="col-12 sticky-top"
-          sx={{
-            maxHeight: "150px",
-            zIndex: "10000",
-            bg: "rgba(255, 255, 255, 0.95)",
-            boxShadow: "0 4px 6px -6px #c7c7c7"
-          }}
-        >
-          <Header />
-        </div>
-        <Layout className="container" sx={{ paddingTop: "40px" }}>
-          <Layout>
-            <Sider className="sticky-top">
-              <Sidebar />
-            </Sider>
-            <Content>
-              <Component {...pageProps} />
-              <CartDrawer />
-            </Content>
-          </Layout>
-          <Footer />
-        </Layout>
-      </ThemeProvider>
-    </CartContextProvider>
+    <BannerContextProvider>
+      <ProductContextProvider>
+        <CartContextProvider>
+          <ThemeProvider theme={theme}>
+            <div className="col-12" sx={{ bg: "muted", height: "40px" }}></div>
+            <div
+              className="col-12 sticky-top"
+              sx={{
+                maxHeight: "150px",
+                zIndex: "10000",
+                bg: "rgba(255, 255, 255, 0.95)",
+                boxShadow: "0 4px 6px -6px #c7c7c7"
+              }}
+            >
+              <Header />
+            </div>
+            <Layout className="container" sx={{ paddingTop: "40px" }}>
+              <Layout>
+                <Sider className="sticky-top">
+                  <Sidebar />
+                </Sider>
+                <Content>
+                  <Component {...pageProps} />
+                  <CartDrawer />
+                </Content>
+              </Layout>
+              <Footer />
+            </Layout>
+          </ThemeProvider>
+        </CartContextProvider>
+      </ProductContextProvider>
+    </BannerContextProvider>
   )
 }
 
