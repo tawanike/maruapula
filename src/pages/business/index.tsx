@@ -58,7 +58,7 @@ Furthermore, we have strong relationships with the area's best vendors for any a
         <div className="mission-section col-12">
 
           <h3 className="mt-5" style={{ fontWeight: 'bold', textAlign: "center", width:"50%", margin: "auto" }}>We offer</h3>
-        <hr className="mt-3" style={{width: "35%", height:"2px", margin: "auto", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
+        <hr className="mt-3" style={{width: "8%", height:"2px", margin: "auto", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
       </div>
       <div className="mission-section col-12 mt-5">
         <div className="row">
@@ -93,7 +93,7 @@ Furthermore, we have strong relationships with the area's best vendors for any a
             <Link href="/contacts">
                                 <a>Work with us <DoubleRightOutlined style={{fontSize: 32, color: "var(--theme-ui-colors-muted)" }}/>
                                   
-                                  <hr className="mt-3" style={{width: "35%", height:"2px", margin: "auto", backgroundColor: "var(--theme-ui-colors-muted)"}}/></a>
+                                  <hr className="mt-3" style={{width: "15%", height:"2px", margin: "auto", backgroundColor: "var(--theme-ui-colors-muted)"}}/></a>
                             </Link>
             </h5>
       </div>
