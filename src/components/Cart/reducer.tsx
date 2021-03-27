@@ -1,7 +1,7 @@
 import { find } from 'lodash';
 import { 
     TOGGLE_CART_DRAWER, ADD_TO_CART, REMOVE_FROM_CART, CHANGE_QUANTITY, 
-    UPDATE_CART_PRICE, REMOVE_ALL_FROM_CART 
+    UPDATE_CART_PRICE, REMOVE_ALL_FROM_CART, UPDATE_CART_COUNT
 } from './constants';
 
 export interface Action {
@@ -45,6 +45,9 @@ export default function reducer(state: any, action: Action) {
         case REMOVE_ALL_FROM_CART:
             return {...state, products: []};
 
+        case UPDATE_CART_COUNT:
+            return { ...state, count: action.payload };
+            
         case CHANGE_QUANTITY:
             return {...state,
                 products: state.products.map(product => {

@@ -1,6 +1,6 @@
 import { createContext, useReducer, Dispatch,useEffect } from 'react';
 import reducer, { Action} from './reducer';
-import { updateCartPrice, emptyCart, removeFromCart } from './actions';
+import { updateCartPrice, emptyCart, removeFromCart, updateCartCount } from './actions';
 import { ICart } from './constants';
 
 export interface InitContextProps {
@@ -12,6 +12,7 @@ const initialState = {
     subtotal: 0,
     serviceFee: 50.00,
     products: [],
+    count: 0,
     drawer: {
         visible: false
     },
@@ -25,11 +26,13 @@ const CartContextProvider: React.FC = ( props: any ) => {
 
     useEffect(() => {
         let subtotal = 0;
+        
         state.products.map((product) => {
             subtotal += (product.quantity * product.price);
         });
 
         dispatch(updateCartPrice(subtotal));
+
 
         const localCart = window.localStorage.getItem('_maruaCart');
         // if(localCart) {
@@ -42,6 +45,8 @@ const CartContextProvider: React.FC = ( props: any ) => {
     }, [state.products]);
 
     useEffect(() => {
+        
+
         if (state.subtotal === 0) {
             console.log('SUBTOTAL IS ZERO')
             dispatch(emptyCart());
@@ -52,6 +57,8 @@ const CartContextProvider: React.FC = ( props: any ) => {
                 dispatch(removeFromCart(product.id))
             }
         });
+
+        
     }, [state.subtotal]);
 
 return (
