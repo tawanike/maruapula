@@ -43,7 +43,7 @@ export default function HeaderComponent() {
                             }}
                         >
                             <Link href="/">
-                                <a>Home</a>
+                                <a>Shop</a>
                             </Link>
                         </li>
                         <li
@@ -77,7 +77,7 @@ export default function HeaderComponent() {
                             }}
                         >
                             <Link href="/business">
-                                <a>For Businesses</a>
+                                <a>For Business</a>
                             </Link>
                         </li>
                         <li
