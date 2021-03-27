@@ -56,9 +56,9 @@ export default function reducer(state: any, action: Action) {
                         return product;
                     }
 
-                    if (action.payload.quantity > 0) {
-                        return product;
-                    }
+                    // if (action.payload.quantity > 0) {
+                    //     return product;
+                    // }
 
                     return {
                         ...product,
