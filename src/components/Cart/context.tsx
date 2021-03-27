@@ -1,6 +1,6 @@
 import { createContext, useReducer, Dispatch,useEffect } from 'react';
 import reducer, { Action} from './reducer';
-import { updateCartPrice } from './actions';
+import { updateCartPrice, emptyCart } from './actions';
 import { ICart } from './constants';
 
 export interface InitContextProps {
@@ -26,18 +26,24 @@ const CartContextProvider: React.FC = ( props: any ) => {
     useEffect(() => {
         let subtotal = 0;
         state.products.map((product) => {
-            subtotal += (product.quantity * product.price)
-        })
+            subtotal += (product.quantity * product.price);
+        });
+
+        if (subtotal > 0) {
+            console.log('SUBTOTAL IS ZERO')
+            // dispatch(emptyCart());
+        }
+
         dispatch(updateCartPrice(subtotal));
 
         const localCart = window.localStorage.getItem('_maruaCart');
-        if(localCart) {
-            console.log('GET_LOCAL_CART');
-            console.log('SAVE CART TO LOCAL STORAGE');
-        } else {
-            console.log('CREATE LOCAL CART');
-            console.log('SAVE CART TO LOCAL STORAGE');
-        }
+        // if(localCart) {
+        //     console.log('GET_LOCAL_CART');
+        //     console.log('SAVE CART TO LOCAL STORAGE');
+        // } else {
+        //     console.log('CREATE LOCAL CART');
+        //     console.log('SAVE CART TO LOCAL STORAGE');
+        // }
         
     }, [state.products])
 
