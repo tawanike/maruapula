@@ -8,7 +8,7 @@ export default function List(props) {
   return (
     <div className="col-12">
       <h1 className="pb-4" sx={{ fontSize: "38px" }}>
-        Products
+        {props.category}
       </h1>
       <div className="row" sx={{}}>
         {props.products && props.products.map(product => <ListItem key={product.id} product={product} />)}
