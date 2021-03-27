@@ -50,7 +50,8 @@ export function changeQuantity(product: string, quantity: number) {
 
 export function emptyCart() {
   return {
-    type: REMOVE_ALL_FROM_CART
+    type: REMOVE_ALL_FROM_CART,
+    payload: ''
   };
 }
 
