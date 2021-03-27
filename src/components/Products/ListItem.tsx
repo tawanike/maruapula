@@ -71,14 +71,49 @@ export default function ListItem(props) {
         </div>
 
         <AddToCartButton product={props.product} />
-        <Modal title={props.product.title} onCancel={() => setShowProduct(false)} visible={showProduct} footer={null}>
-          <Image
-            src={`https://res.cloudinary.com/mmogomedia/image/upload/v1616594498/maruapula/products/${props.product.id}.jpg`}
-            alt={props.product.title}
-            width={240}
-            height={240}
-          />
-          <h1>{props.product.title}</h1>
+        <Modal title={``} 
+          onCancel={() => setShowProduct(false)} 
+          visible={showProduct} 
+          footer={null}
+          style={{ top: 160 }}
+          width={`60%`}
+          >
+          <div className="row">
+            <div className="col-5">
+            <img
+              className="Product__Image"
+              src={getProductImg(props.product.id)}
+              alt={props.product.title}
+              onError={e => {
+                ;(e.target as any).src = "./placeholder.png"
+                ;(e.target as any).style.width = "40%"
+                ;(e.target as any).style.height = "auto"
+                ;(e.target as any).style.marginTop = "15px"
+                ;(e.target as any).style.marginBottom = "15px"
+              }}
+              sx={{ width: "80%", height: "auto" }}
+            />
+            </div>
+            <div className="col-7">
+              <h1>{props.product.title}</h1>
+              <p sx={{ fontSize: "20px", fontWeight: "700", color: "muted" }}>
+                {props.product.promo_price > 0 ? (
+                  <>
+                    <span className="price">R{props.product.promo_price}</span>&nbsp;
+                    <span className="promo-price">R{props.product.price}</span>
+                  </>
+                ) : (
+                  <span className="price">R{props.product.price}</span>
+                )}
+              </p>
+              <p sx={{ whiteSpace: "pre-wrap", py: "5px", fontSize: "18px" }}>{props.product.size}</p>
+            
+              <AddToCartButton product={props.product} />
+
+            </div>
+          </div>
+          
+          
         </Modal>
       </div>
     </div>
