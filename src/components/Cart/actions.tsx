@@ -1,4 +1,7 @@
-import { TOGGLE_CART_DRAWER, ADD_TO_CART, REMOVE_FROM_CART, CHANGE_QUANTITY, UPDATE_CART_PRICE } from './constants';
+import { 
+  TOGGLE_CART_DRAWER, ADD_TO_CART, REMOVE_FROM_CART, 
+  CHANGE_QUANTITY, UPDATE_CART_PRICE, REMOVE_ALL_FROM_CART, UPDATE_CART_COUNT
+} from './constants';
 
 export function toggleCartDrawer(data: boolean) {
   return {
@@ -42,5 +45,19 @@ export function changeQuantity(product: string, quantity: number) {
   return {
     type: CHANGE_QUANTITY,
     payload: {product, quantity},
+  };
+}
+
+export function emptyCart() {
+  return {
+    type: REMOVE_ALL_FROM_CART,
+    payload: ''
+  };
+}
+
+export function updateCartCount(count: number) {
+  return {
+    type: UPDATE_CART_COUNT,
+    payload: count
   };
 }

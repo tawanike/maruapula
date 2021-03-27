@@ -1,22 +1,23 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+import { find } from 'lodash'
 import { jsx } from "theme-ui"
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect } from "react"
 import { Button } from "antd"
 import { addToCart, removeFromCart, changeQuantity } from 'src/components/Cart/actions';
 import { CartContext } from "src/components/Cart/context"
 
 export default function AddToCart(props) {
-  const [quantity, setQuantity] = useState<number>(0)
-  const cartContext = useContext(CartContext)
+  const [quantity, setQuantity] = useState<number>(0);
+  const cartContext = useContext(CartContext);
 
   const addProductToCart = () => {
-    setQuantity(quantity + 1)
-    cartContext.dispatch(addToCart({ product: props.product, quantity: quantity + 1 }))
+    setQuantity(quantity + 1);
+    cartContext.dispatch(addToCart({ product: props.product, quantity: quantity + 1 }));
   }
 
   const removeProductFromCart = () => {
-    setQuantity(quantity - 1)
+    setQuantity(quantity - 1);
     cartContext.dispatch(removeFromCart(props.product.id));
   }
 
@@ -31,6 +32,18 @@ export default function AddToCart(props) {
       cartContext.dispatch(changeQuantity(props.product.id, quantity-1));
     }
   }
+
+  // useEffect(() => {
+  //   if (cartContext.state.products.length > 0) {
+  //     // Check if product in cart
+  //     const product = find(cartContext.state.products, {id: props.product.id});
+  //     console.log('PRODUCT', product)
+  //     if (product) {
+  //       removeProductFromCart();
+  //     }
+  //   }
+
+  // }, [quantity]);
 
   return (
     <div className="w-100" sx={{ display: "grid", placeItems: "center", marginBottom: "15px" }}>
