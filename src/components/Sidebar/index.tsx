@@ -47,6 +47,7 @@ export default function Sidebar() {
         <Menu
             mode="inline"
             style={{ width: "100%" }}
+            className=" make-me-sticky"
             onClick={navigate}
             defaultSelectedKeys={[
                 productContext.state ? productContext.state.category : "",
