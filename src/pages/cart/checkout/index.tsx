@@ -155,7 +155,7 @@ export default function Checkout() {
                 <li className="CheckOut__infor">
                   <div className="row">
                     <div className="col-md-8">Total</div>
-                    <div className="col-md-4 CheckOut__totals">R{toFixed(cartTotal + parseInt(50), 2)}</div>
+                    <div className="col-md-4 CheckOut__totals">R{toFixed(cartTotal + parseInt('50'), 2)}</div>
                   </div>
                 </li>
               </ul>
