@@ -16,6 +16,10 @@ a:hover {
     color: $main-green;
 }
 
+label {
+    font-weight: 900;
+}
+
 #__next {
     background-color: rgb(255, 255, 255);
 }
@@ -75,4 +79,30 @@ a:hover {
 
 .ant-layout-footer { 
     background-color: rgb(255, 255, 255);
+}
+
+.CheckOut {
+    font-size: 24px;
+    background-color: rgb(230, 230, 230);
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__infor {
+        border-bottom: 1px solid $main-black;
+        margin-bottom: 20px;
+    }
+
+    &__totals {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    &__product:last-child {
+        margin-bottom: 20px;
+        border-bottom: 1px solid $main-black;
+    }
 }
