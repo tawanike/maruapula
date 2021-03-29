@@ -36,7 +36,7 @@ export default function HeaderComponent() {
                                 fontWeight: 600,
                                 fontSize: "16px",
                                 "&:hover": {
-                                    bg: "rgb(250, 250, 250)",
+                                    bg: "rgb(255, 255, 255)",
                                     cursor: "pointer",
                                     color: "muted",
                                 },
@@ -53,7 +53,7 @@ export default function HeaderComponent() {
                                 fontWeight: 600,
                                 fontSize: "16px",
                                 "&:hover": {
-                                    bg: "rgb(250, 250, 250)",
+                                    bg: "rgb(255, 255, 255)",
                                     cursor: "pointer",
                                     color: "muted",
                                 },
@@ -70,7 +70,7 @@ export default function HeaderComponent() {
                                 fontWeight: 600,
                                 fontSize: "16px",
                                 "&:hover": {
-                                    bg: "rgb(250, 250, 250)",
+                                    bg: "rgb(255, 255, 255)",
                                     cursor: "pointer",
                                     color: "muted",
                                 },
@@ -87,7 +87,7 @@ export default function HeaderComponent() {
                                 fontWeight: 600,
                                 fontSize: "16px",
                                 "&:hover": {
-                                    bg: "rgb(250, 250, 250)",
+                                    bg: "rgb(255, 255, 255)",
                                     cursor: "pointer",
                                     color: "muted",
                                 },
@@ -104,14 +104,14 @@ export default function HeaderComponent() {
                                 fontWeight: 600,
                                 fontSize: "16px",
                                 "&:hover": {
-                                    bg: "rgb(250, 250, 250)",
+                                    bg: "rgb(255, 255, 255)",
                                     cursor: "pointer",
                                     color: "muted",
                                 },
                             }}
                         >
                             <Link href="/support">
-                                <a>Support</a>
+                                <a>FAQs</a>
                             </Link>
                         </li>
                     </ul>
