@@ -63,12 +63,12 @@ export default function Home() {
                         ""
                     )}
                 </div>
-                <div className="col-12" sx={{ paddingTop: "25px" }}>
+                <div className="col-12" sx={{ paddingTop: "50px" }}>
                     <div className="row">
-                        <div className="col-2">
+                        <div className="col-3">
                             <Sidebar />
                         </div>
-                        <div className="col-10">
+                        <div className="col-9">
                             {loading ? (
                                 <Loading />
                             ) : (

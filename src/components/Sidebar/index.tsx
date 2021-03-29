@@ -58,7 +58,6 @@ export default function Sidebar() {
                 className="text-warning"
                 sx={{
                     fontSize: "16px",
-                    fontWeight: "bold",
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
             >
@@ -68,7 +67,6 @@ export default function Sidebar() {
                 key="Fruits"
                 sx={{
                     fontSize: "16px",
-                    fontWeight: "bold",
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
             >
@@ -78,7 +76,6 @@ export default function Sidebar() {
                 key="Vegetables"
                 sx={{
                     fontSize: "16px",
-                    fontWeight: "bold",
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
             >
@@ -88,7 +85,6 @@ export default function Sidebar() {
                 key="Poultry"
                 sx={{
                     fontSize: "16px",
-                    fontWeight: "bold",
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
             >
@@ -98,7 +94,6 @@ export default function Sidebar() {
                 key="Smoothies"
                 sx={{
                     fontSize: "16px",
-                    fontWeight: "bold",
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
             >
@@ -107,7 +102,6 @@ export default function Sidebar() {
             <Menu.Item
                 sx={{
                     fontSize: "16px",
-                    fontWeight: "bold",
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
                 key="Precooked"
@@ -118,7 +112,6 @@ export default function Sidebar() {
             <Menu.Item
                 sx={{
                     fontSize: "16px",
-                    fontWeight: "bold",
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
                 key="Catering"
@@ -128,7 +121,6 @@ export default function Sidebar() {
             <Menu.Item
                 sx={{
                     fontSize: "16px",
-                    fontWeight: "bold",
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
                 key="Businesses"
