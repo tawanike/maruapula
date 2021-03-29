@@ -1,4 +1,19 @@
-import { Collapse } from 'antd';
+import { Collapse, Steps, Popover } from 'antd';
+
+const { Step } = Steps;
+
+const customDot = (dot, { status, index }) => (
+  <Popover
+    content={
+      <span>
+        step {index} status: {status}
+      </span>
+    }
+  >
+    {dot}
+  </Popover>
+);
+
 
 export default function Support() {
   return (
@@ -42,6 +57,17 @@ export default function Support() {
 
       <div className="pt-3">
         <h3>How to buy</h3>
+        <div className="mission-section col-12">
+          <div className="how-it-works col-md-12 mx-5">
+    <Steps direction="vertical" current={5} progressDot={customDot}>
+    <Step title="Shop" description="Browse our fresh food product listing." />
+    <Step title="Cart" description="Review, amend and/or confirm your order in the cart." />
+    <Step title="Invoice" description="Receive & review the Maruapula order confirmation invoice." />
+    <Step title="Payment" description="Make an EFT payment of the invoiced amount" />
+    <Step title="Delivery" description="Expect your delivery within 2 days." />
+  </Steps>
+  </div>
+  </div>
       </div>
     </div>
   )
