@@ -1,8 +1,8 @@
 export default {
     fonts: {
-        body: 'Rubik sans-serif',
-        heading: 'Rubik sans-serif',
-        monospace: "Menlo, monospace",
+        body: 'Rubik, sans-serif',
+        heading: 'Rubik, sans-serif',
+        monospace: "Rubik, sans-serif'",
     },
     fontSizes: [12, 14, 16, 20, 24, 32, 48, 52, 68],
     fontWeights: {

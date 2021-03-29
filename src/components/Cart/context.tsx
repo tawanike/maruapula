@@ -35,13 +35,7 @@ const CartContextProvider: React.FC = ( props: any ) => {
 
 
         const localCart = window.localStorage.getItem('_maruaCart');
-        // if(localCart) {
-        //     console.log('GET_LOCAL_CART');
-        //     console.log('SAVE CART TO LOCAL STORAGE');
-        // } else {
-        //     console.log('CREATE LOCAL CART');
-        //     console.log('SAVE CART TO LOCAL STORAGE');
-        // }
+
     }, [state.products]);
 
     useEffect(() => {
