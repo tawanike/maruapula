@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Form, Input, Button, Modal } from 'antd';
-
+import { useRouter } from 'next/router';
 import { CartContext } from 'src/components/Cart/context';
 import { toFixed } from 'accounting-js'
 
@@ -17,6 +17,7 @@ const validateMessages = {
 };
 
 export default function Checkout() {
+  const router = useRouter();
   const cartContext = useContext(CartContext);
   const [loading, setLoading] = useState<boolean>(false);
   const [cartTotal, seCartTotal] = useState<number>(0);
@@ -29,6 +30,8 @@ export default function Checkout() {
       return total + (product.price * product.quantity);
     }, 0);
     seCartTotal(total);
+    setPlaceOrder(false); 
+    setLoading(false); 
   }, []);
 
   const onFinish = async (values: any) => {
@@ -46,7 +49,9 @@ export default function Checkout() {
   
       console.log(content)
       setLoading(false);
+      setPlaceOrder(false);
       setShowPlaceOrder(false);
+      return router.push('/');
     } else {
       setUserDetails(values);
       setShowPlaceOrder(true);
@@ -173,12 +178,14 @@ export default function Checkout() {
           if(!loading) {
             setPlaceOrder(true); 
             onFinish(userDetails);
+            
           } else {
             setShowPlaceOrder(false);
           }
 
           }
         } 
+        className="mt-5"
         onCancel={() => { setShowPlaceOrder(false) }}>
           { loading || <div>
             <p>“You are about to confirm your order. Kindly note the following: </p>
