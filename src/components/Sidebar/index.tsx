@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 
-import { Menu } from "antd";
+import { Menu, Divider } from "antd";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import { ProductContext } from "src/components/Products/context";
@@ -113,6 +113,7 @@ export default function Sidebar() {
             >
                 Pre-cooked meals
             </Menu.Item>
+            <Divider />
             <Menu.Item
                 sx={{
                     fontSize: "16px",
