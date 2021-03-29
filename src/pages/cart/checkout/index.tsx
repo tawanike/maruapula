@@ -54,7 +54,7 @@ export default function Checkout() {
     <div>
       <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
       <div className="row">
-        <div className="col-7">
+        <div className="col-5">
           <h3>Billing Details</h3>
           
             <Form.Item name={['user', 'name']} label="Name" rules={[{ required: true }]}>
@@ -87,7 +87,7 @@ export default function Checkout() {
             
           
         </div>
-        <div className="col-5">
+        <div className="col-7">
         <div className="row">
             <div className="col">
               <h3>Your Order</h3>
@@ -95,25 +95,17 @@ export default function Checkout() {
           </div>
         
           <div className="row">
-            <div className="row">
-              <div className="col"></div>
-              <div className="col"></div>
-              <div className="col">Price</div>
-              <div className="col">Qty</div>
-              <div className="col">Subtotal</div>
-            </div>
-            {
-              cartContext.state.products.map(product => {
-                  return <CartProduct key={product.id} product={product} />
-              })
-            }
-            <div className="row">
-              <div className="col">
-
-                <p>Subtotal: R{cartTotal}</p>
-                <p>Service fee: R50.00</p>
-                <p>Grand total: R{cartTotal + 50}</p>
-              </div>
+            <div className="col">
+              <ul>
+                <li>Product <span className="">Total</span></li>
+                {
+                  cartContext.state.products.map(product => {
+                    return<li>{ product.title} x{product.quantity}</li>
+                  })
+                }
+                <li>Shipping <span className="">Total</span></li>
+                <li>Total <span className="">Total</span></li>
+              </ul>
             </div>
 
             <Form.Item className="mt-5" wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
