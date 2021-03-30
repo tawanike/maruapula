@@ -15,8 +15,8 @@ export default function FooterComponent() {
         <div className="col-md-4 p-4">
           <p>
           <img
-              sx={{ width: "25%", height: "auto" }}
-              src="./logo_transparent.png"
+              sx={{ width: "60%", height: "auto" }}
+              src="https://res.cloudinary.com/mmogomedia/image/upload/v1617125589/maruapula/assets/maruapula_logo-02_qkjodp.png"
               alt=""
           />
           </p>

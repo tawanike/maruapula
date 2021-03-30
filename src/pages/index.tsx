@@ -3,7 +3,7 @@
 import { Card, Carousel } from 'antd'; 
 import { jsx } from "theme-ui";
 import { useEffect, useState, useContext } from "react";
-import Link from 'next/link'
+import Link from 'next/link';
 import Loading from "src/components/Loading";
 import Banners from "src/components/Banners";
 import { useRouter } from "next/router";
