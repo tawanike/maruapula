@@ -35,7 +35,7 @@ export default function ListItem(props) {
         }}
       >
         <div className="col-12" sx={{ variant: "center" }}>
-          <a sx={{ variant: "center" }} href={`#/${props.product.id.toLowerCase()}`} onClick={productDetails}>
+          <a sx={{ variant: "center" }} href={`#`} onClick={productDetails}>
             <img
               className="Product__Image"
               src={getProductImg(props.product.id)}
