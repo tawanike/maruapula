@@ -13,11 +13,6 @@ import { getBanners } from "src/components/Banners/actions";
 import { filterProducts, getProducts, selectedCategory } from "src/components/Products/actions";
 import Products from "src/components/Products/List";
 
-const gridStyle = {
-    width: '33.33%',
-    textAlign: 'center',
-  };
-  
 
 export default function Home() {
     const router = useRouter();
@@ -97,7 +92,7 @@ export default function Home() {
                 <div className="col-12" sx={{ paddingTop: "50px" }}>
                     <h3 className="mb-5">Categories</h3>
                     <Card title={null}>
-                        <Card.Grid style={gridStyle}>
+                        <Card.Grid className="GridStyle">
                             <div className="row" onClick={() => navigate('Fruits') }>
                                 <div className="col-3">
                                     <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594495/maruapula/products/FR0009.jpg" 
@@ -106,7 +101,7 @@ export default function Home() {
                                 <div className="col-9">Fresh Fruits</div>
                             </div>
                         </Card.Grid>
-                        <Card.Grid style={gridStyle}>
+                        <Card.Grid className="GridStyle">
                             <div className="row" onClick={() => navigate('Vegetables') }>
                                 <div className="col-3">
                                     <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594501/maruapula/products/VG0022.jpg" 
@@ -115,7 +110,7 @@ export default function Home() {
                                 <div className="col-9">Fresh Veges</div>
                             </div>
                         </Card.Grid>
-                        <Card.Grid style={gridStyle}>
+                        <Card.Grid className="GridStyle">
                             <div className="row" onClick={() => navigate('Poultry') }>
                                 <div className="col-3">
                                     <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg" 
@@ -124,7 +119,7 @@ export default function Home() {
                                 <div className="col-9">Fresh Poultry</div>
                             </div>
                         </Card.Grid>
-                        <Card.Grid style={gridStyle}>
+                        <Card.Grid className="GridStyle">
                             <div className="row" onClick={() => navigate('Precooked') }>
                                 <div className="col-3">
                                     <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594500/maruapula/products/platter.jpg" 
@@ -133,7 +128,7 @@ export default function Home() {
                                 <div className="col-9">Pre-cooked Meals</div>
                             </div>
                         </Card.Grid>
-                        <Card.Grid style={gridStyle}>
+                        <Card.Grid className="GridStyle">
                             <Link href="/about#catering">
                                 <div className="row">
                                     <div className="col-3">
@@ -144,7 +139,7 @@ export default function Home() {
                                 </div>
                             </Link>
                         </Card.Grid>
-                        <Card.Grid style={gridStyle}>
+                        <Card.Grid className="GridStyle">
                             <Link href="/about#businesses">
                                 <div className="row">
                                     <div className="col-3">
