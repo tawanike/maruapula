@@ -1,12 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import Image from "next/image";
 import { useRouter } from "next/router";
-
+import { toFixed } from 'accounting-js'
 import { useContext } from "react";
 import { CartContext } from "src/components/Cart/context";
-import { Button, Drawer } from "antd";
+import { Drawer } from "antd";
 import { toggleCartDrawer } from "src/components/Cart/actions";
 import { removeFromCart } from "src/components/Cart/actions";
 import { CloseCircleFilled } from "@ant-design/icons";
@@ -47,21 +46,21 @@ export default function CartDrawer(props) {
                                 className="col-md-4"
                                 sx={{ display: "grid", placeItems: "center" }}
                             >
-                                <img
-                                    src={`https://res.cloudinary.com/mmogomedia/image/upload/v1616594498/maruapula/products/${product.id}.jpg`}
-                                    alt={product.title}
-                                    onError={(e) => {
-                                        (e.target as any).src =
-                                            "./placeholder.png";
-                                        (e.target as any).style.width = "40%";
-                                        (e.target as any).style.height = "auto";
-                                        (e.target as any).style.marginTop =
-                                            "15px";
-                                        (e.target as any).style.marginBottom =
-                                            "15px";
-                                    }}
-                                    sx={{ width: "100%", height: "auto" }}
-                                />
+                                    <img
+                                        src={`https://res.cloudinary.com/mmogomedia/image/upload/v1616594498/maruapula/products/${product.id}.jpg`}
+                                        alt={product.title}
+                                        onError={(e) => {
+                                            (e.target as any).src =
+                                                "./placeholder.png";
+                                            (e.target as any).style.width = "40%";
+                                            (e.target as any).style.height = "auto";
+                                            (e.target as any).style.marginTop =
+                                                "15px";
+                                            (e.target as any).style.marginBottom =
+                                                "15px";
+                                        }}
+                                        sx={{ width: "100%", height: "auto" }}
+                                    />
                             </div>
                             <div className="col-md-6">
                                 <p
@@ -101,15 +100,23 @@ export default function CartDrawer(props) {
                         </div>
                     );
                 })}
-            <div>
-                <p>Subtotal: R{cartContext.state.subtotal}</p>
-                <p>Delivery Fee: R50.00</p>
-                <p>
-                    Total: R
-                    {cartContext.state.subtotal + cartContext.state.serviceFee}
-                </p>
+            <div className="row mb-3">
+                <div className="col-8 fw-bolder">Subtotal</div>
+                <div className="col-4 text-end fw-bolder">R{toFixed(cartContext.state.subtotal, 2)}</div>
             </div>
-            <div className="row">
+            <div className="row mb-3 text-right">
+                <div className="col-8 fw-bolder">Delivery Fee</div>
+                <div className="col-4 text-end fw-bolder">R{toFixed(cartContext.state.serviceFee)}</div>
+            </div>
+            <div className="row mb-3 text-right">
+                <div className="col-8 fw-bolder">VAT </div>
+                <div className="col-4 text-end fw-bolder">R{toFixed(0, 2)}</div>
+            </div>
+            <div className="row mb-3 text-right">
+                <div className="col-8 fw-bolder">Total</div>
+                <div className="col-4 text-end fw-bolder">R{toFixed(cartContext.state.subtotal + cartContext.state.serviceFee, 2)}</div>
+            </div>
+            <div className="row p-3">
                 <div
                     sx={{ variant: "containers.button", bg: "orange" }}
                     className="col-12 py-2"
