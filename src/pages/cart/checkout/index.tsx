@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Form, Input, Button, Modal } from 'antd';
 import { useRouter } from 'next/router';
 import { CartContext } from 'src/components/Cart/context';
-import { toFixed } from 'accounting-js'
+import { toFixed } from 'accounting-js';
 
 /* eslint-disable no-template-curly-in-string */
 const validateMessages = {

@@ -1,19 +1,26 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+import { Card, Carousel } from 'antd'; 
 import { jsx } from "theme-ui";
 import { useEffect, useState, useContext } from "react";
-
+import Link from 'next/link'
 import Loading from "src/components/Loading";
 import Banners from "src/components/Banners";
-import Products from "src/components/Products/List";
-import Sidebar from "src/components/Sidebar";
+import { useRouter } from "next/router";
 import { BannersContext } from "src/components/Banners/context";
 import { ProductContext } from "src/components/Products/context";
 import { getBanners } from "src/components/Banners/actions";
-import { filterProducts, getProducts } from "src/components/Products/actions";
-import specials from "./api/products/specials";
+import { filterProducts, getProducts, selectedCategory } from "src/components/Products/actions";
+import Products from "src/components/Products/List";
+
+const gridStyle = {
+    width: '33.33%',
+    textAlign: 'center',
+  };
+  
 
 export default function Home() {
+    const router = useRouter();
     const bannersContext = useContext(BannersContext);
     const productContext = useContext(ProductContext);
     const [products, setProducts] = useState<any[]>();
@@ -52,6 +59,30 @@ export default function Home() {
         })();
     }, []);
 
+    const navigate = (location) => {
+        const defaultCategoryProducts = productContext.state.products.filter((product) => {
+            if (product.category === location) {
+                return product;
+            }
+        });
+
+        productContext.dispatch(
+            filterProducts(defaultCategoryProducts)
+        );
+
+        productContext.dispatch(
+            selectedCategory(location)
+        );
+        if (location === 'Catering') {
+            router.push(`/about#catering`);
+        } else if (location === 'Business') {
+            router.push(`/about#businesses`);
+        } else {
+            router.push(`/shop`);
+        }
+        
+    }
+
     return (
         <div className="col-12" sx={{ paddingLeft: "15px" }}>
             <div className="row">
@@ -64,25 +95,137 @@ export default function Home() {
                     )}
                 </div>
                 <div className="col-12" sx={{ paddingTop: "50px" }}>
-                    <div className="row">
-                        <div className="col-3">
-                            <Sidebar />
-                        </div>
-                        <div className="col-9">
+                    <h3 className="mb-5">Categories</h3>
+                    <Card title={null}>
+                        <Card.Grid style={gridStyle}>
+                            <div className="row" onClick={() => navigate('Fruits') }>
+                                <div className="col-3">
+                                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594495/maruapula/products/FR0009.jpg" 
+                                        style={{width: '134%', height: "auto"}} />
+                                </div>
+                                <div className="col-9">Fresh Fruits</div>
+                            </div>
+                        </Card.Grid>
+                        <Card.Grid style={gridStyle}>
+                            <div className="row" onClick={() => navigate('Vegetables') }>
+                                <div className="col-3">
+                                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594501/maruapula/products/VG0022.jpg" 
+                                        style={{width: '125.3%', height: "auto"}} />
+                                </div>
+                                <div className="col-9">Fresh Veges</div>
+                            </div>
+                        </Card.Grid>
+                        <Card.Grid style={gridStyle}>
+                            <div className="row" onClick={() => navigate('Poultry') }>
+                                <div className="col-3">
+                                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg" 
+                                        style={{width: '100%', height: "auto"}} />
+                                </div>
+                                <div className="col-9">Fresh Poultry</div>
+                            </div>
+                        </Card.Grid>
+                        <Card.Grid style={gridStyle}>
+                            <div className="row" onClick={() => navigate('Precooked') }>
+                                <div className="col-3">
+                                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594500/maruapula/products/platter.jpg" 
+                                        style={{width: '163%', height: "auto"}} />
+                                </div>
+                                <div className="col-9">Pre-cooked Meals</div>
+                            </div>
+                        </Card.Grid>
+                        <Card.Grid style={gridStyle}>
+                            <Link href="/about#catering">
+                                <div className="row">
+                                    <div className="col-3">
+                                        <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg" 
+                                            style={{width: '100%', height: "auto"}} />
+                                    </div>
+                                    <div className="col-9">Catering Services</div>
+                                </div>
+                            </Link>
+                        </Card.Grid>
+                        <Card.Grid style={gridStyle}>
+                            <Link href="/about#businesses">
+                                <div className="row">
+                                    <div className="col-3">
+                                        <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg" 
+                                            style={{width: '100%', height: "auto"}} />
+                                    </div>
+                                    <div className="col-9">For Institutions</div>
+                                </div>
+                            </Link>
+                        </Card.Grid>
+                    </Card>
+                </div>
+                <div className="col-12" sx={{ paddingTop: "50px" }}>
+                    <h3>Today's Specials</h3>
+                    <div className="col-9">
                             {loading ? (
                                 <Loading />
                             ) : (
                                 <Products
-                                    category={productContext.state.category}
+                                    category={""}
                                     products={
-                                        productContext.state.selectedProducts
+                                        productContext.state.selectedProducts.slice(0, 3)
                                     }
                                 />
                             )}
                         </div>
-                    </div>
+                </div>
+                <div className="col-12" sx={{ paddingTop: "50px" }}>
+                    <h3 className="mb-5">What our clients say</h3>
+                    <Carousel autoplay speed={8000} autoplaySpeed={5000}>
+                        <div className="Testimonials">
+                            <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1617081397/maruapula/banners/background.jpg" 
+                                style={{width: '100%', height: "auto"}}
+                            />
+                            <div className="Testimonials__text pb-5">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
+                                    printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg" 
+                                className="Testimonials__image"
+                            />
+                                <h5>First Last</h5>
+                                <p>Location</p>
+                            </div>
+                        </div>
+
+                        <div className="Testimonials">
+                            <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1617081397/maruapula/banners/background.jpg" 
+                                style={{width: '100%', height: "auto"}}
+                            />
+                            <div className="Testimonials__text pb-5">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
+                                    printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg" 
+                                className="Testimonials__image"
+                            />
+                                <h5>First Last</h5>
+                                <p>Location</p>
+                            </div>
+                        </div>
+
+                        <div className="Testimonials">
+                            <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1617081397/maruapula/banners/background.jpg" 
+                                style={{width: '100%', height: "auto"}}
+                            />
+                            <div className="Testimonials__text pb-5">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
+                                    printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg" 
+                                className="Testimonials__image"
+                            />
+                                <h5>First Last</h5>
+                                <p>Location</p>
+                            </div>
+                        </div>
+                    </Carousel>
+                </div>
+                <div className="col-12" sx={{ paddingTop: "50px" }}>
+                    
                 </div>
             </div>
         </div>
     );
 }
+

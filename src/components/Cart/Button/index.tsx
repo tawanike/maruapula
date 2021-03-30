@@ -1,10 +1,10 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { find } from 'lodash'
+
 import { jsx } from "theme-ui"
-import { useContext, useState, useEffect } from "react"
-import { Button } from "antd"
-import { addToCart, removeFromCart, changeQuantity } from 'src/components/Cart/actions';
+import { useContext, useState } from "react"
+import { Button, notification, Space } from "antd"
+import { addToCart, changeQuantity } from 'src/components/Cart/actions';
 import { CartContext } from "src/components/Cart/context"
 
 export default function AddToCart(props) {
@@ -14,11 +14,8 @@ export default function AddToCart(props) {
   const addProductToCart = () => {
     setQuantity(quantity + 1);
     cartContext.dispatch(addToCart({ product: props.product, quantity: quantity + 1 }));
-  }
 
-  const removeProductFromCart = () => {
-    setQuantity(quantity - 1);
-    cartContext.dispatch(removeFromCart(props.product.id));
+    addTocartNotification('success');
   }
 
   const updateCart = (action) => {
@@ -31,19 +28,28 @@ export default function AddToCart(props) {
       setQuantity(quantity-1);
       cartContext.dispatch(changeQuantity(props.product.id, quantity-1));
     }
+
+    cartUpdateNotification('success');
   }
 
-  // useEffect(() => {
-  //   if (cartContext.state.products.length > 0) {
-  //     // Check if product in cart
-  //     const product = find(cartContext.state.products, {id: props.product.id});
-  //     console.log('PRODUCT', product)
-  //     if (product) {
-  //       removeProductFromCart();
-  //     }
-  //   }
+  const addTocartNotification = type => {
+    notification[type]({
+      top: 150,
+      message: 'Add to cart',
+      description:
+        'Product added to cart successfully.',
+    });
+  };
 
-  // }, [quantity]);
+  const cartUpdateNotification = type => {
+    notification[type]({
+      top: 150,
+      message: 'Update cart',
+      description:
+        'Cart updated successfully.',
+    });
+  };
+
 
   return (
     <div className="w-100" sx={{ display: "grid", placeItems: "center", marginBottom: "15px" }}>

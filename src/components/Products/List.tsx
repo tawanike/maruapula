@@ -26,9 +26,11 @@ export default function List(props) {
     <div className="col-12">
       <h1 className="pb-4" sx={{ fontSize: "38px" }}>
         { 
+          props.category.length !== 0 ?
           props.category === 'Precooked' ? 'Pre-cooked Meals' : 
           props.category === 'Specials' ? 'Today\'s Specials' : 
           'Fresh '+ props.category 
+          : ''
         }
       </h1>
       <div className="row" sx={{}}>
@@ -38,7 +40,8 @@ export default function List(props) {
         <Pagination 
           current={currentPage} 
           total={props.products && props.products.length} 
-          pageSize={12} 
+          pageSize={12}
+          hideOnSinglePage={true}
           onChange={handleChangePage} 
         />
       </div>
