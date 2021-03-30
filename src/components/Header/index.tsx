@@ -43,6 +43,23 @@ export default function HeaderComponent() {
                             }}
                         >
                             <Link href="/">
+                                <a>Home</a>
+                            </Link>
+                        </li>
+                        <li
+                            className="col-2 h-100"
+                            sx={{
+                                variant: "center",
+                                fontWeight: 600,
+                                fontSize: "16px",
+                                "&:hover": {
+                                    bg: "rgb(255, 255, 255)",
+                                    cursor: "pointer",
+                                    color: "muted",
+                                },
+                            }}
+                        >
+                            <Link href="/shop">
                                 <a>Shop</a>
                             </Link>
                         </li>
