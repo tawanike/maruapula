@@ -17,8 +17,8 @@ export default function HeaderComponent() {
                     <Link href="/">
                         <a>
                             <img
-                                sx={{ width: "50%", height: "auto" }}
-                                src="./logo_transparent.png"
+                                sx={{ width: "60%", height: "auto" }}
+                                src="https://res.cloudinary.com/mmogomedia/image/upload/v1617125589/maruapula/assets/maruapula_logo-02_qkjodp.png"
                                 alt=""
                             />
                         </a>
