@@ -61,7 +61,7 @@ export default function Sidebar() {
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
             >
-                Specials
+                Today's Specials
             </Menu.Item>
             <Menu.Item
                 key="Fruits"
@@ -70,7 +70,7 @@ export default function Sidebar() {
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
             >
-                Fruits
+                Fresh Fruits
             </Menu.Item>
             <Menu.Item
                 key="Vegetables"
@@ -79,7 +79,7 @@ export default function Sidebar() {
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
             >
-                Vegetables
+                Fresh Veges
             </Menu.Item>
             <Menu.Item
                 key="Poultry"
@@ -88,16 +88,7 @@ export default function Sidebar() {
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
             >
-                Poultry
-            </Menu.Item>
-            <Menu.Item
-                key="Smoothies"
-                sx={{
-                    fontSize: "16px",
-                    "&:hover": { color: "muted", bg: "#eaffeb" },
-                }}
-            >
-                Smoothies
+                Fresh poultry
             </Menu.Item>
             <Menu.Item
                 sx={{
@@ -116,7 +107,7 @@ export default function Sidebar() {
                 }}
                 key="Catering"
             >
-                Catering
+                Catering services
             </Menu.Item>
             <Menu.Item
                 sx={{
@@ -125,7 +116,7 @@ export default function Sidebar() {
                 }}
                 key="Businesses"
             >
-                For Businesses
+                For institutions
             </Menu.Item>
         </Menu>
     );
