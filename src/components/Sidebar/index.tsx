@@ -61,7 +61,7 @@ export default function Sidebar() {
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
             >
-                Today's Specials
+                Today's specials
             </Menu.Item>
             <Menu.Item
                 key="Fruits"
@@ -70,7 +70,7 @@ export default function Sidebar() {
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
             >
-                Fresh Fruits
+                Fresh fruits
             </Menu.Item>
             <Menu.Item
                 key="Vegetables"
@@ -79,7 +79,7 @@ export default function Sidebar() {
                     "&:hover": { color: "muted", bg: "#eaffeb" },
                 }}
             >
-                Fresh Veges
+                Fresh veges
             </Menu.Item>
             <Menu.Item
                 key="Poultry"
