@@ -1,4 +1,13 @@
 @import './variables.scss';
+
+::selection {
+    background: $main-green;
+}
+
+html {
+    --antd-wave-shadow-color: $main-green;
+}
+
 .ant-layout {
     background-color: #fff;
 }
@@ -33,11 +42,15 @@
 }
 
 .ant-btn-primary {
-    background: $main-green;
-    border-color: $main-green;
+    background: $main-green !important;
+    border-color: $main-green !important;
 }
 
 .ant-btn-primary:hover {
     background: $main-green;
     border-color: $main-green;
+}
+
+.ant-pagination-item-active a {
+    border-color: $main-green ;
 }

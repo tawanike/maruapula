@@ -60,7 +60,7 @@ export default function HeaderComponent() {
                             }}
                         >
                             <Link href="/about">
-                                <a>About</a>
+                                <a>About Us</a>
                             </Link>
                         </li>
                         <li
@@ -76,8 +76,8 @@ export default function HeaderComponent() {
                                 },
                             }}
                         >
-                            <Link href="/business">
-                                <a>For Business</a>
+                            <Link href="/support">
+                                <a>Support</a>
                             </Link>
                         </li>
                         <li
@@ -95,23 +95,6 @@ export default function HeaderComponent() {
                         >
                             <Link href="/contacts">
                                 <a>Contact Us</a>
-                            </Link>
-                        </li>
-                        <li
-                            className="col-2 h-100"
-                            sx={{
-                                variant: "center",
-                                fontWeight: 600,
-                                fontSize: "16px",
-                                "&:hover": {
-                                    bg: "rgb(255, 255, 255)",
-                                    cursor: "pointer",
-                                    color: "muted",
-                                },
-                            }}
-                        >
-                            <Link href="/support">
-                                <a>FAQs</a>
                             </Link>
                         </li>
                     </ul>

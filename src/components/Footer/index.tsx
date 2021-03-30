@@ -36,13 +36,14 @@ export default function FooterComponent() {
           <p><Link href="/support"><a>Help and FAQs</a></Link></p>
           
           <p><Link href="/legal/terms-conditions"><a>Terms and Conditions</a></Link></p>
-          <p><Link href="/legal/terms-use"><a>Terms of Use</a></Link></p>
+          <p><Link href="/legal/product/terms"><a>Terms of Use</a></Link></p>
           <p><Link href="/legal/refunds-returns"><a>Refunds and Returns</a></Link></p>
         </div>
         <div className="col-md-4 p-5">
-          <p><FontAwesomeIcon icon={['fas', 'business-time']} style={{ marginRight: 10}}/>Monday to Saturday (08H00 to 18H00)</p>
-          <p><FontAwesomeIcon icon={['fas', 'business-time']} style={{ marginRight: 10}}/>Deliveries from 10H00 to 18H00, daily.</p>
-          <p><FontAwesomeIcon icon={['fas', 'business-time']} style={{ marginRight: 10}}/>No deliveries on Sundays and Public Holidays</p>
+          <h3>Operating Hours</h3>
+          <p>Monday to Saturday (08H00 to 18H00)</p>
+          <p>Deliveries from 10H00 to 18H00, daily.</p>
+          <p>No deliveries on Sundays and Public Holidays</p>
         </div>
       </div>
     </Footer>
