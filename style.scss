@@ -132,10 +132,10 @@ label {
     font-size: 24px;
     background-color: rgb(230, 230, 230);
 }
+
 .Banner {
-    height: 400px;
+    // height: 400px;
     position: relative;
-    
     &__text {
         width: 500px;
         position: absolute;
@@ -143,14 +143,9 @@ label {
         left: 12;
         padding: 100px;
         margin-bottom: 16px;
-
         h3 {
             font-size: 56px;
         }
-    }
-
-    &__image {
-        width: 100%;
     }
 }
 
@@ -158,21 +153,18 @@ label {
     height: 500px;
     position: relative;
     overflow: hidden;
-
     &__text {
         width: 100%;
         position: absolute;
         top: 0;
         padding: 50px;
         text-align: center;
-
         p {
             width: 75%;
             margin: 0 auto;
             font-size: 18px;
         }
     }
-
     &__image {
         display: block;
         margin-left: auto;
