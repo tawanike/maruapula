@@ -6,19 +6,20 @@ import { Pagination } from "antd"
 import ListItem from "src/components/Products/ListItem"
 
 export default function List(props) {
-  const [pageStart, setPageStart] = useState<number>(0);
+  const [pageStartEnd, setPageStartEnd] = useState<any>({start: 0, end:12});
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [products, setProducts] = useState<any[]>([]);
 
   const handleChangePage = (page, pageSize) => {
     let start = 0;
+    let end = pageSize;
     if (page > 1) {
-      start = pageSize * page;
+      start = pageStartEnd.end;
+      end = (pageSize) * page;
     }
-
-    console.log(pageStart, (page*pageSize));
     setCurrentPage(page);
-    setPageStart(start);
+    setPageStartEnd({start, end});
+    console.log(pageStartEnd);
   }
 
   return (
@@ -31,10 +32,15 @@ export default function List(props) {
         }
       </h1>
       <div className="row" sx={{}}>
-        {props.products && props.products.slice(pageStart, (currentPage*12)).map(product => <ListItem key={product.id} product={product} />)}
+        {props.products && props.products.slice(pageStartEnd.start, pageStartEnd.end).map(product => <ListItem key={product.id} product={product} />)}
       </div>
       <div className="row">
-      <Pagination current={currentPage} total={props.products && props.products.length} pageSize={12} onChange={handleChangePage} />
+        <Pagination 
+          current={currentPage} 
+          total={props.products && props.products.length} 
+          pageSize={12} 
+          onChange={handleChangePage} 
+        />
       </div>
     </div>
   )
