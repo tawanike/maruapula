@@ -21,13 +21,16 @@ export default async (req, res) => {
         const rows = await sheet.getRows();
         
         rows.map(row => {
-          banners.push({
-            id: row.id,
-            title: row.title,
-            link: row.link,
-            image: row.image,
-            publish: row.publish,
-          })
+          if (row.publish === 'Yes') {
+            banners.push({
+              id: row.id,
+              title: row.title,
+              link: row.link,
+              image: row.image,
+              publish: row.publish,
+              category: row.category,
+            });
+          }
         })
         return res.status(200).json(banners);
   }
