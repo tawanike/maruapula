@@ -1,14 +1,15 @@
-import { Carousel } from 'antd';
+import { Button, Carousel } from 'antd';
 
 export default function Banners(props) {
 
-  return <Carousel>
-      {props.banners.map((banner, index) => (<div style={{ height: 500 }} key={index}>
-        <a><img
-          style={{width: '100%', height: 'auto'}}
-          src={banner.image}
-          alt={banner.title}
-        /></a>
+  return <Carousel autoplay>
+      {props.banners.map((banner, index) => (<div className="Banner" key={index}>
+        <img src={banner.image}  className="Banner__image" />
+        <div className="Banner__text">
+          <span>{banner.category}</span>
+          <h3>{banner.title}</h3>
+          <Button type="primary">Buy Now</Button>
+        </div>
       </div>))}
   </Carousel>
 }
