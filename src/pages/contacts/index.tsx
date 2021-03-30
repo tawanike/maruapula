@@ -1,5 +1,12 @@
 import { Form, Input, Button } from 'antd';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  StaticGoogleMap,
+  Marker,
+  Path,
+} from 'react-static-google-map';
+
+const API_KEY = 'AIzaSyAQAW6W2ZNVKu_I9XIQXuSIj4q_YrjEIt4'
 
 const layout = {
   labelCol: { span: 8 },
@@ -24,8 +31,10 @@ export default function Contacts() {
   };
   return (
     <div className="row">
-      <div className="col-md-12">
-        <h2>Get intouch with us</h2>
+      <div className="col-12">
+        <StaticGoogleMap size="600x1200" className="img-fluid" apiKey={API_KEY}>
+          <Marker location="-26.1150374,27.9822172" color="green" label="P" />
+        </StaticGoogleMap>
       </div>
       <div className="col-md-5 p-4">
         <p><FontAwesomeIcon icon={['fas', 'phone-alt']} size="2x" style={{ marginRight: 10}}/> 083 668 5785</p>
@@ -40,6 +49,9 @@ export default function Contacts() {
         </p>
       </div>
       <div className="col-md-7 Contacts p-5">
+        <div className="col-md-12">
+          <h2>Get intouch with us</h2>
+        </div>
         <Form layout="vertical" name="contacts" onFinish={onFinish} validateMessages={validateMessages}>
           <div className="row">
             <div className="col-md-6">

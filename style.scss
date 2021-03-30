@@ -1,10 +1,29 @@
 @import './src/styles/variables';
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700&display=swap');
 @import './src/styles/ant-override.scss';
-
+$rubik: Rubik,
+"sans-serif";
+html,
 body {
-    font-family: 'Rubik, sans-serif';
+    color: $primaryText;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
 }
+
+body,
+*,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $rubik;
+    font-weight: normal;
+}
+
 a,
 h1 {
     margin-bottom: 0;
@@ -12,12 +31,18 @@ h1 {
     text-transform: uppercase;
 }
 
+.make-me-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 130px;
+}
+
 a:hover {
     color: $main-green;
 }
 
 label {
-    font-weight: 900;
+    font-weight: 700;
 }
 
 #__next {
@@ -77,30 +102,26 @@ label {
     }
 }
 
-.ant-layout-footer { 
+.ant-layout-footer {
     background-color: rgb(255, 255, 255);
 }
 
 .CheckOut {
     font-size: 24px;
     background-color: rgb(230, 230, 230);
-
     &__list {
         list-style: none;
         margin: 0;
         padding: 0;
     }
-
     &__infor {
         border-bottom: 1px solid $main-black;
         margin-bottom: 20px;
     }
-
     &__totals {
         text-align: right;
         padding-right: 20px;
     }
-
     &__product:last-child {
         margin-bottom: 20px;
         border-bottom: 1px solid $main-black;

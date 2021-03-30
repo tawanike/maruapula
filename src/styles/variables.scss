@@ -14,7 +14,9 @@ $secondary: orange;
 $accent: yellowgreen;
 $primaryText: #0A0A0A;
 $secondaryText: $primary;
+
 :root {
-    --bs-font-sans-serif: 'Rubik, sans-serif'; 
+    --bs-font-sans-serif: Rubik, 'sans-serif';
     --bs-primary: $main-green;
+    --bs-blue: $main-green;
 }
