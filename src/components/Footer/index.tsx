@@ -12,7 +12,7 @@ export default function FooterComponent() {
     <Footer>
       <div className="row">
         <Divider />
-        <div className="col-md-4 p-4">
+        <div className="col-md-4 p-2">
           <p>
           <img
               sx={{ width: "60%", height: "auto" }}
@@ -25,7 +25,7 @@ export default function FooterComponent() {
           <p><FontAwesomeIcon icon={['fas', 'map-marker-alt']} style={{ marginRight: 10}}/>921 Moss Street, Weltevredenpark</p>
 
         </div>
-        <div className="col-md-4 p-5">
+        <div className="col-md-4 p-2">
           <p><Link href="/about"><a>About Us</a></Link></p>
           <p><Link href="/contacts"><a>Contact Us</a></Link></p>
           <p><Link href="/support"><a>Help and FAQs</a></Link></p>
@@ -33,7 +33,7 @@ export default function FooterComponent() {
           <p><Link href="/legal/terms-conditions"><a>Terms and Conditions</a></Link></p>
           <p><Link href="/legal/product/terms"><a>Terms of Use</a></Link></p>
         </div>
-        <div className="col-md-4 p-5">
+        <div className="col-md-4 p-2">
           <h3>Operating Hours</h3>
           <p>Monday to Saturday (08H00 to 18H00)</p>
           <p>Deliveries from 10H00 to 18H00, daily.</p>

@@ -38,7 +38,7 @@ export default function Checkout() {
   const onFinish = async (values: any) => {
     if (placeOrder) {
       setLoading(true);
-      const response = await fetch('/api/cart/checkout',  {
+      await fetch('/api/cart/checkout',  {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -46,9 +46,6 @@ export default function Checkout() {
         },
         body: JSON.stringify({total: cartTotal, user: userDetails.user, products: cartContext.state.products})
       });
-      const content = await response.json();
-  
-      console.log(content)
       setLoading(false);
       setPlaceOrder(false);
       setShowPlaceOrder(false);
