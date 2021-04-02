@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Form, Input, Button, Modal } from 'antd';
 import { useRouter } from 'next/router';
 import { CartContext } from 'src/components/Cart/context';
+import { emptyCart } from 'src/components/Cart/actions';
 import { toFixed } from 'accounting-js';
 
 /* eslint-disable no-template-curly-in-string */
@@ -37,7 +38,7 @@ export default function Checkout() {
   const onFinish = async (values: any) => {
     if (placeOrder) {
       setLoading(true);
-      const response = await fetch('/api/cart/checkout',  {
+      await fetch('/api/cart/checkout',  {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -45,9 +46,6 @@ export default function Checkout() {
         },
         body: JSON.stringify({total: cartTotal, user: userDetails.user, products: cartContext.state.products})
       });
-      const content = await response.json();
-  
-      console.log(content)
       setLoading(false);
       setPlaceOrder(false);
       setShowPlaceOrder(false);
@@ -181,6 +179,9 @@ export default function Checkout() {
             
           } else {
             setShowPlaceOrder(false);
+            cartContext.dispatch(emptyCart());
+            router.push('/');
+            
           }
 
           }
@@ -188,16 +189,13 @@ export default function Checkout() {
         className="mt-5"
         onCancel={() => { setShowPlaceOrder(false) }}>
           { loading || <div>
-            <p>“You are about to confirm your order. Kindly note the following: </p>
+            <p>You are about to confirm your order. Kindly note the following: </p>
             <ul>
               <li>All orders received before 14:00, will be delivered in 2 days.</li>
-              <li>Deliveries from 10H00 to 18H00, daily</li>
-              <li>No deliveries on Sundays and public holidays</li>
+              <li>Deliveries from 10H00 to 18H00, daily.</li>
+              <li>No deliveries on Sundays and public holidays.</li>
               <li>Delivery fee: R50.</li>
-              <li>Maruapula will be in touch to re-confirm your order where necessary, or send an invoice for EFT payment</li>
-              <li>Contact us on: Monday to Saturday (08H00 to 18H00) on 083 668 5785; sales@maruapula.store or www.maruapula.store</li>
             </ul>
-            <p>Share your Maruapula experience!! WhatsApp this message to your trusted family, friends, neighbours, and colleagues.</p>
           </div>}
 
           { loading && <div>

@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { useContext } from "react";
 import { ProductContext } from "src/components/Products/context";
 import {
+    changePage,
     filterProducts,
     selectedCategory,
 } from "src/components/Products/actions";
@@ -15,6 +16,7 @@ export default function Sidebar() {
     const router = useRouter();
     const productContext = useContext(ProductContext);
     const navigate = (e) => {
+        
         if (e.key === "Specials") {
             const defaultCategoryProducts: any[] = productContext.state.products.filter(
                 (product) => {
@@ -41,6 +43,7 @@ export default function Sidebar() {
             productContext.dispatch(selectedCategory(e.key));
             productContext.dispatch(filterProducts(defaultCategoryProducts));
         }
+        productContext.dispatch(changePage(1));
     };
 
     return (
