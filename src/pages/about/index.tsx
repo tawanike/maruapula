@@ -84,7 +84,7 @@ export default function About() {
                 </h3>
                 <div className="row">
                   <div className="col-7">
-                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1616862223/maruapula/assets/Business_Tab_Image_2_vd0vsd.jpg" 
+                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862223/maruapula/assets/Business_Tab_Image_5_uiyxo6.jpg" 
                       style={{ width: '100%', height: "auto"}} />
                   </div>
                   <div className="col-5">
@@ -151,7 +151,10 @@ export default function About() {
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
-                  <div className="col-5"></div>
+                  <div className="col-5">
+                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862222/maruapula/assets/Business_Tab_Image_1_cwq1ay.jpg" 
+                        style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
+                  </div>
                   <div className="col-7">
                     <p>We receive orders and deliver to corporates, businesses and institutions. Our clients include banks, schools, movie production companies, churches and small, 
                       medium and large manufacturing business – typically we deliver regularly to locations with as few as 10 or up to 2,000 people!!</p>
@@ -171,7 +174,6 @@ export default function About() {
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
-                  <div className="col-5"></div>
                   <div className="col-7">
                     <p>
                       Healthy brain food at the office can boost productivity, and improve staff wellness and morale. Fruits are healthy So, instead of staff reaching for a chocolate bar when the munchies take hold, give your staff a healthier alternative. 
@@ -179,6 +181,10 @@ export default function About() {
                       Our fruit is hand-picked and sourced from local farmers, so it’s always fresh. 
                       One fruit tray can be consumed by 10-12 adults or 15-20 kids
                     </p>
+                  </div>
+                  <div className="col-5">
+                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862221/maruapula/assets/Business_Tab_Image_3_v4skgy.jpg" 
+                        style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
                   </div>
                 </div>
               </div>
@@ -189,8 +195,47 @@ export default function About() {
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
-                  <div className="col-5"></div>
-                  <div className="col-7"></div>
+                  <div className="col-5">
+                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1617204435/maruapula/assets/Catering_image_2_hepozl.jpg" 
+                        style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
+                  </div>
+                  <div className="col-7">
+                    <p>Maruapula employs qualified catering staff. We own the equipment to manage all types of events. 
+                      Maruapula catering service includes an assortment of the finest foods, beverages, and knowledgeable and experienced staff.
+                    </p>
+  
+                    <p>Our dedicated event planners work with customers to design the best menus that reflects the customers personal 
+                    tastes and preferences for an event. We have confidently delivered catering services at many corporate and family 
+                    events, all within customer’s catering budgets.</p>
+                    <p>Our catering service is typically requested for corporate functions, training, conferences, private functions, 
+                      events. We offer:</p>
+                    <p>
+                      <ul>
+                        <li>Catering for Production companies</li>
+                        <li>Office Functions Catering</li>
+                        <li>Corporate Lunch Buffets</li>
+                        <li>Warm and cold Corporate Lunch Box Options</li>
+                        <li>Boardroom Catering</li>
+                        <li>Team Building Menus</li>
+                        <li>Year-end events</li>
+                        <li>Corporate Parties</li>
+                        <li>Drinks options</li>
+                      </ul>
+                    </p>
+                    <p>When required, through our partners, our catering service includes:</p>
+                    <p>
+                      <ul>
+                        <li>Floral designs</li>
+                        <li>Deco</li>
+                        <li>Music</li>
+                        <li>Entertainment</li>
+                        <li>Furniture rental</li>
+                        <li>Cake</li>
+                      </ul>
+                    </p>
+                    <p>Contact our sales team to discuss your specific needs.</p>
+                  </div>
+                  
                 </div>
               </div>
           </div>
