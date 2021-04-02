@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS, FILTER_PRODUCTS, SELECTED_CATEGORY  } from './constants';
+import { FETCH_PRODUCTS, FILTER_PRODUCTS, SELECTED_CATEGORY, CHANGE_PAGE  } from './constants';
 
 export interface Action {
     type: string,
@@ -19,6 +19,8 @@ export default function reducer(state: any, action: Action) {
         case SELECTED_CATEGORY:
             return Object.assign({}, state, { category: action.payload });
 
+        case CHANGE_PAGE:
+            return Object.assign({}, state, { page: action.payload });
         default:
             return state;
     }

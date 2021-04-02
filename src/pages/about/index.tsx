@@ -174,10 +174,10 @@ export default function About() {
                   <div className="col-5"></div>
                   <div className="col-7">
                     <p>
-                    Healthy brain food at the office can boost productivity, and improve staff wellness and morale. Fruits are healthy So, instead of staff reaching for a chocolate bar when the munchies take hold, give your staff a healthier alternative. 
-If you want your business to be more fruitful too, treat your staff to premium quality fruit as a healthy office snack. 
-Our fruit is hand-picked and sourced from local farmers, so it’s always fresh. 
-One fruit tray can be consumed by 10-12 adults or 15-20 kids
+                      Healthy brain food at the office can boost productivity, and improve staff wellness and morale. Fruits are healthy So, instead of staff reaching for a chocolate bar when the munchies take hold, give your staff a healthier alternative. 
+                      If you want your business to be more fruitful too, treat your staff to premium quality fruit as a healthy office snack. 
+                      Our fruit is hand-picked and sourced from local farmers, so it’s always fresh. 
+                      One fruit tray can be consumed by 10-12 adults or 15-20 kids
                     </p>
                   </div>
                 </div>

@@ -23,12 +23,7 @@ export default function FooterComponent() {
           <p><FontAwesomeIcon icon={['fas', 'phone-alt']} style={{ marginRight: 10}}/> 083 668 5785</p>
           <p><FontAwesomeIcon icon={['fas', 'envelope']} style={{ marginRight: 10}}/>sales@maruapula.store</p>
           <p><FontAwesomeIcon icon={['fas', 'map-marker-alt']} style={{ marginRight: 10}}/>921 Moss Street, Weltevredenpark</p>
-          
-          <p>
-            <a><FontAwesomeIcon icon={['fab', 'facebook']} style={{ marginRight: 10}}/></a>
-            <a><FontAwesomeIcon icon={['fab', 'twitter']} style={{ marginRight: 10}}/></a>
-            <a><FontAwesomeIcon icon={['fab', 'instagram']} style={{ marginRight: 10}}/></a>
-          </p>
+
         </div>
         <div className="col-md-4 p-5">
           <p><Link href="/about"><a>About Us</a></Link></p>
@@ -37,7 +32,6 @@ export default function FooterComponent() {
           
           <p><Link href="/legal/terms-conditions"><a>Terms and Conditions</a></Link></p>
           <p><Link href="/legal/product/terms"><a>Terms of Use</a></Link></p>
-          <p><Link href="/legal/refunds-returns"><a>Refunds and Returns</a></Link></p>
         </div>
         <div className="col-md-4 p-5">
           <h3>Operating Hours</h3>

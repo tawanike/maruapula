@@ -41,12 +41,12 @@ export default function Contacts() {
         <p><FontAwesomeIcon icon={['fas', 'envelope']} size="2x" style={{ marginRight: 10}}/>sales@maruapula.store</p>
         <p><FontAwesomeIcon icon={['fas', 'map-marker-alt']} size="2x" style={{ marginRight: 10}}/>921 Moss Street, Weltevredenpark</p>
         <p><FontAwesomeIcon icon={['fas', 'business-time']} size="2x" style={{ marginRight: 10}}/>Monday to Saturday (08H00 to 18H00)</p>
-        <p>
+        {/* <p>
           <h3>Follow Us</h3>
           <FontAwesomeIcon icon={['fab', 'facebook']} size="2x" style={{ marginRight: 10}}/>
           <FontAwesomeIcon icon={['fab', 'twitter']} size="2x" style={{ marginRight: 10}}/>
           <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" style={{ marginRight: 10}}/>
-        </p>
+        </p> */}
       </div>
       <div className="col-md-7 Contacts p-5">
         <div className="col-md-12">
