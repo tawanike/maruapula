@@ -12,7 +12,7 @@ import {
     selectedCategory,
 } from "src/components/Products/actions";
 
-export default function Sidebar() {
+export default function Sidebar(props) {
     const router = useRouter();
     const productContext = useContext(ProductContext);
     const navigate = (e) => {
@@ -50,7 +50,7 @@ export default function Sidebar() {
         <Menu
             mode="inline"
             style={{ width: "100%" }}
-            className=" make-me-sticky"
+            className={`make-me-sticky ${props.className}`}
             onClick={navigate}
             defaultSelectedKeys={[
                 productContext.state ? productContext.state.category : "",

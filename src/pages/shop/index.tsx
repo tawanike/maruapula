@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { useEffect, useState, useContext } from "react";
-
+import { Menu, Dropdown, Button } from 'antd';
 import Loading from "src/components/Loading";
 import Banners from "src/components/Banners";
 import Products from "src/components/Products/List";
@@ -67,10 +67,13 @@ export default function Home() {
                 </div>
                 <div className="col-12" sx={{ paddingTop: "50px" }}>
                     <div className="row">
-                        <div className="col-3">
-                            <Sidebar />
+                        <div className="col-12 col-md-3">
+                            <Sidebar className="mb-5 d-none d-md-block"/>
+                            <Dropdown overlay={<Sidebar />} placement="bottomCenter" arrow className="d-md-none">
+                                <Button block className="mb-5">Categories</Button>
+                            </Dropdown>
                         </div>
-                        <div className="col-9">
+                        <div className="col-12 col-md-9">
                             {loading ? (
                                 <Loading />
                             ) : (
