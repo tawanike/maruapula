@@ -140,12 +140,8 @@ export default function About() {
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
-<<<<<<< HEAD
-                  <div className="col-7">
-=======
                   
                   <div className="col-12 col-md-7">
->>>>>>> 555816a48b2cf6d04976c3630b6dc9d36f8421e2
                     <p>We receive orders and deliver to corporates, businesses and institutions. Our clients include banks, schools, movie production companies, churches and small, 
                       medium and large manufacturing business – typically we deliver regularly to locations with as few as 10 or up to 2,000 people!!</p>
                     <p>Our corporate, business and institutional customers mostly order fruit trays, chicken pieces and prepared foods. 
@@ -155,15 +151,9 @@ export default function About() {
                       Deliveries are made from 10H00 to 18H00, daily excluding Sundays and public holidays. </p>
                     <p>Explore our offering for fruit trays and catering service or contact our sales team to discuss your specific needs.</p>
                   </div>
-<<<<<<< HEAD
-                  <div className="col-5">
-                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862222/maruapula/assets/Business_Tab_Image_1_cwq1ay.jpg" 
-                        style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
-=======
                   <div className="col-12 col-md-5">
                     <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862222/maruapula/assets/Business_Tab_Image_1_cwq1ay.jpg" 
                         style={{ width: '100%', height: "auto"}} />
->>>>>>> 555816a48b2cf6d04976c3630b6dc9d36f8421e2
                   </div>
                 </div>
               </div>
@@ -217,22 +207,13 @@ export default function About() {
                   
                 </div>
               </div>
-<<<<<<< HEAD
-          
-=======
-
->>>>>>> 555816a48b2cf6d04976c3630b6dc9d36f8421e2
               <div className="col-12">
                 <h3 id="fruit-trays" className="mt-5">
                   Fruits Trays
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
-<<<<<<< HEAD
-                  <div className="col-7">
-=======
                   <div className="col-12 col-md-7">
->>>>>>> 555816a48b2cf6d04976c3630b6dc9d36f8421e2
                     <p>
                       Healthy brain food at the office can boost productivity, and improve staff wellness and morale. Fruits are healthy So, instead of staff reaching for a chocolate bar when the munchies take hold, give your staff a healthier alternative. 
                       If you want your business to be more fruitful too, treat your staff to premium quality fruit as a healthy office snack. 
@@ -240,15 +221,9 @@ export default function About() {
                       One fruit tray can be consumed by 10-12 adults or 15-20 kids
                     </p>
                   </div>
-<<<<<<< HEAD
-                  <div className="col-5">
-                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862221/maruapula/assets/Business_Tab_Image_3_v4skgy.jpg" 
-                        style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
-=======
                   <div className="col-12 col-md-5">
                     <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862221/maruapula/assets/Business_Tab_Image_3_v4skgy.jpg" 
                         style={{ width: '100%', height: "auto"}} />
->>>>>>> 555816a48b2cf6d04976c3630b6dc9d36f8421e2
                   </div>
                 </div>
               </div>
