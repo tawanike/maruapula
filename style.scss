@@ -135,14 +135,18 @@ label {
     // height: 400px;
     position: relative;
     &__text {
-        width: 500px;
+        width: 600px;
         position: absolute;
         top: 0;
         left: 12;
-        padding: 100px;
+        padding: 60px 80px;
         margin-bottom: 16px;
+        h1 {
+            font-size: 64px;
+            margin-bottom: 8px;
+        }
         h3 {
-            font-size: 60px;
+            font-size: 28px;
         }
     }
 }
