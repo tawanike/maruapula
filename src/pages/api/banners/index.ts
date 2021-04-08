@@ -27,6 +27,7 @@ export default async (req, res) => {
               title: row.title,
               link: row.link,
               image: row.image,
+              mobile_image: row.mobile_image,
               publish: row.publish,
               category: row.category,
             });

@@ -1,8 +1,7 @@
 @import './src/styles/variables';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700&display=swap');
 @import './src/styles/ant-override.scss';
-$rubik: Rubik,
-"sans-serif";
+$rubik: Rubik, "sans-serif";
 html,
 body {
     color: $primaryText;
@@ -136,14 +135,18 @@ label {
     // height: 400px;
     position: relative;
     &__text {
-        width: 500px;
+        width: 600px;
         position: absolute;
         top: 0;
         left: 12;
-        padding: 100px;
+        padding: 60px 80px;
         margin-bottom: 16px;
+        h1 {
+            font-size: 64px;
+            margin-bottom: 8px;
+        }
         h3 {
-            font-size: 56px;
+            font-size: 28px;
         }
     }
 }

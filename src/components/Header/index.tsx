@@ -32,8 +32,8 @@ export default function HeaderComponent() {
                     <Link href="/">
                         <a>
                             <img
-                                sx={{ width: "60%", height: "auto" }}
-                                src="https://res.cloudinary.com/mmogomedia/image/upload/v1617125589/maruapula/assets/maruapula_logo-02_qkjodp.png"
+                                sx={{ width: "100%", height: "auto" }}
+                                src="https://res.cloudinary.com/mmogomedia/image/upload/v1617880681/maruapula/assets/maruapula_landscape_uh0orm.svg"
                                 alt=""
                             />
                         </a>
@@ -57,8 +57,8 @@ export default function HeaderComponent() {
                                 },
                             }}
                         >
-                            <Link href="/">
-                                <a>Home</a>
+                            <Link href="/" sx={{textDecoration: "none"}}>
+                                <a sx={{textDecoration: "none"}}>Home</a>
                             </Link>
                         </li>
                         <li
@@ -74,8 +74,8 @@ export default function HeaderComponent() {
                                 },
                             }}
                         >
-                            <Link href="/shop">
-                                <a>Shop</a>
+                            <Link href="/shop" sx={{textDecoration: "none"}}>
+                                <a sx={{textDecoration: "none"}}>Shop</a>
                             </Link>
                         </li>
                         <li
@@ -91,8 +91,8 @@ export default function HeaderComponent() {
                                 },
                             }}
                         >
-                            <Link href="/about">
-                                <a>About</a>
+                            <Link href="/about" sx={{textDecoration: "none"}}>
+                                <a sx={{textDecoration: "none"}}>About Us</a>
                             </Link>
                         </li>
                         <li
@@ -108,8 +108,8 @@ export default function HeaderComponent() {
                                 },
                             }}
                         >
-                            <Link href="/support">
-                                <a>Support</a>
+                            <Link href="/support" sx={{textDecoration: "none"}}>
+                                <a sx={{textDecoration: "none"}}>Support</a>
                             </Link>
                         </li>
                         <li
@@ -125,8 +125,8 @@ export default function HeaderComponent() {
                                 },
                             }}
                         >
-                            <Link href="/contacts">
-                                <a>Contacts</a>
+                            <Link href="/contacts" sx={{textDecoration: "none"}}>
+                                <a sx={{textDecoration: "none"}}>Contacts</a>
                             </Link>
                         </li>
                     </ul>
@@ -149,8 +149,8 @@ export default function HeaderComponent() {
                                 },
                             }}
                         >
-                            <Link href="/">
-                                <a>Home</a>
+                            <Link href="/" sx={{textDecoration: "none"}}>
+                                <a sx={{textDecoration: "none"}}>Home</a>
                             </Link>
                         </li>
                         <li
@@ -166,8 +166,8 @@ export default function HeaderComponent() {
                                 },
                             }}
                         >
-                            <Link href="/shop">
-                                <a>Shop</a>
+                            <Link href="/shop" sx={{textDecoration: "none"}}>
+                                <a sx={{textDecoration: "none"}}>Shop</a>
                             </Link>
                         </li>
                     </ul>
