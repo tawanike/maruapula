@@ -1,14 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import { useState } from "react";
-import { Pagination } from "antd"
-import ListItem from "src/components/Products/ListItem"
+import { jsx } from "theme-ui";
+import { useState, useEffect } from "react";
+import { Pagination } from "antd";
+import ListItem from "src/components/Products/ListItem";
+
 
 export default function List(props) {
   const [pageStartEnd, setPageStartEnd] = useState<any>({start: 0, end:12});
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [products, setProducts] = useState<any[]>([]);
 
   const handleChangePage = (page, pageSize) => {
     let start = 0;
@@ -17,10 +16,20 @@ export default function List(props) {
       start = pageStartEnd.end;
       end = (pageSize) * page;
     }
-    setCurrentPage(page);
+    props.changePage(page);
     setPageStartEnd({start, end});
-    console.log(pageStartEnd);
+    window.scrollTo({
+      top: 550,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
+
+  useEffect(() => {
+    if (props.currentPage === 1) {
+      setPageStartEnd({start: 0, end: 12});
+    }
+  }, [props.currentPage]);
 
   return (
     <div className="col-12">
@@ -38,7 +47,7 @@ export default function List(props) {
       </div>
       <div className="row">
         <Pagination 
-          current={currentPage} 
+          current={props.currentPage} 
           total={props.products && props.products.length} 
           pageSize={12}
           hideOnSinglePage={true}

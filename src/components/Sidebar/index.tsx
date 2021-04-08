@@ -7,14 +7,16 @@ import { useRouter } from "next/router";
 import { useContext } from "react";
 import { ProductContext } from "src/components/Products/context";
 import {
+    changePage,
     filterProducts,
     selectedCategory,
 } from "src/components/Products/actions";
 
-export default function Sidebar() {
+export default function Sidebar(props) {
     const router = useRouter();
     const productContext = useContext(ProductContext);
     const navigate = (e) => {
+        
         if (e.key === "Specials") {
             const defaultCategoryProducts: any[] = productContext.state.products.filter(
                 (product) => {
@@ -41,13 +43,14 @@ export default function Sidebar() {
             productContext.dispatch(selectedCategory(e.key));
             productContext.dispatch(filterProducts(defaultCategoryProducts));
         }
+        productContext.dispatch(changePage(1));
     };
 
     return (
         <Menu
             mode="inline"
             style={{ width: "100%" }}
-            className=" make-me-sticky"
+            className={`make-me-sticky ${props.className}`}
             onClick={navigate}
             defaultSelectedKeys={[
                 productContext.state ? productContext.state.category : "",

@@ -1,8 +1,7 @@
 @import './src/styles/variables';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700&display=swap');
 @import './src/styles/ant-override.scss';
-$rubik: Rubik,
-"sans-serif";
+$rubik: Rubik, "sans-serif";
 html,
 body {
     color: $primaryText;
@@ -28,7 +27,6 @@ a,
 h1 {
     margin-bottom: 0;
     color: $main-black;
-    text-transform: uppercase;
 }
 
 .make-me-sticky {

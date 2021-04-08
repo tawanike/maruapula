@@ -10,15 +10,15 @@ import { Dropdown, Menu } from "antd";
 
 export default function HeaderComponent() {
     const menu = (
-        <Menu sx={{ marginTop: "24px" }}>
+        <Menu sx={{ marginTop: "24px", textTransform: 'uppercase' }}>
             <Menu.Item>
-                <a href="/about">About Us</a>
+                <a href="/about">About</a>
             </Menu.Item>
             <Menu.Item>
                 <a href="/support">Support</a>
             </Menu.Item>
             <Menu.Item>
-                <a href="/contacts">Contact Us</a>
+                <a href="/contacts">Contacts</a>
             </Menu.Item>
         </Menu>
     );
@@ -39,7 +39,7 @@ export default function HeaderComponent() {
                         </a>
                     </Link>
                 </div>
-                <div className="d-none d-md-block col-md-9" sx={{}}>
+                <div className="d-none d-md-block col-md-9" sx={{textTransform: 'uppercase'}}>
                     <ul
                         className="row h-100"
                         sx={{ listStyle: "none", paddingLeft: "0" }}
@@ -126,7 +126,7 @@ export default function HeaderComponent() {
                             }}
                         >
                             <Link href="/contacts">
-                                <a>Contact Us</a>
+                                <a>Contacts</a>
                             </Link>
                         </li>
                     </ul>

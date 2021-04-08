@@ -43,7 +43,7 @@ export default function CartDrawer(props) {
                             sx={{ borderBottom: "1px solid #e2e2e2" }}
                         >
                             <div
-                                className="col-md-4"
+                                className="col-5 col-md-4"
                                 sx={{ display: "grid", placeItems: "center" }}
                             >
                                     <img
@@ -62,7 +62,7 @@ export default function CartDrawer(props) {
                                         sx={{ width: "100%", height: "auto" }}
                                     />
                             </div>
-                            <div className="col-md-6">
+                            <div className="col-5 col-md-6">
                                 <p
                                     className="mb-2"
                                     sx={{ fontSize: "16px", fontWeight: "600" }}
@@ -83,7 +83,7 @@ export default function CartDrawer(props) {
                                     Quantity: {product.quantity}
                                 </p>
                             </div>
-                            <div className="col-md-1">
+                            <div className="col-1 col-md-1">
                                 <CloseCircleFilled
                                     onClick={() =>
                                         removeProductFromCart(product)

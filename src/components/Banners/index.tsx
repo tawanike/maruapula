@@ -12,6 +12,10 @@ export default function Banners(props) {
     const productContext = useContext(ProductContext);
 
     const goTo = (location) => {
+        if (router.asPath === "/") {
+            router.push('/shop')
+        }
+        
         const defaultCategoryProducts: any[] = productContext.state.products.filter(
             (product) => {
                 if (product.category === location) {

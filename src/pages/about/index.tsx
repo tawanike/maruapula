@@ -1,25 +1,11 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { Anchor } from 'antd';
+import { Anchor, Button } from 'antd';
 
 export default function About() {
-  const router = useRouter();
-
-  useEffect(() => {
-    
-  })
-
-  const getCurrentAnchor = () => {
-    console.log('ROUTER_QUERY', router)
-    return ''
-  }
-
-
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className="col-2 make-me-sticky">
+        <div className="col-md-2 make-me-sticky d-none d-sm-none d-md-block">
         <Anchor offsetTop={100}>
           <p><Anchor.Link href="#who-we-are" title="Who we are"/></p>
           <p><Anchor.Link href="#pholosophy" title="Our philosopy" /></p>
@@ -33,7 +19,7 @@ export default function About() {
           </p>
           </Anchor>
         </div>
-        <div className="col-10">
+        <div className="col-12 col-md-10">
           
             <h3 id="who-we-are" className="p-3">Who we are
               <hr style={{width:'15%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
@@ -60,7 +46,7 @@ export default function About() {
             
               <div className="pb-5 col-md-8">
                 <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616779237/maruapula/assets/Karabo_Journey_Image_1.jpg" 
-                    style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
+                    style={{ width: '100%', height: "auto"}} />
               </div>
 
             {/* <div className="col-12 pt-5">
@@ -86,11 +72,11 @@ export default function About() {
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
-                  <div className="col-7">
+                  <div className="col-12 col-md-7 mb-3">
                     <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862223/maruapula/assets/Business_Tab_Image_5_uiyxo6.jpg" 
                       style={{ width: '100%', height: "auto"}} />
                   </div>
-                  <div className="col-5">
+                  <div className="col-12 col-md-5">
                   <p>
                     Maruapula’s fresh food products are prepared daily to ensure that customers get the best quality and fresh food products.
                   </p>
@@ -111,18 +97,18 @@ export default function About() {
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
-                <div className="col-5">
-                  <p>
-                    A dream for founder Karabo Dlamini for some time, the busines began operating in 2013 as a true black-woman-owned, empowered, 
-                    and managed business. Karabo is proud that Maruapula’s family roots, ethos and values remain to this day. Karabo is the Managing 
-                    Director of Maruapula responsible for strategy, operations, planning and quality management. Her corporate banking background 
-                    in strategic planning, sales, marketing, and the management of a division prepared her well for Maruapula.
-                  </p>
-                </div>
-                <div className="col-7">
-                  <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616779237/maruapula/assets/Karabo_Journey_Image_2.jpg" 
-                    style={{ width: '100%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
-                </div>
+                  <div className="col-12 col-md-5">
+                    <p>
+                      A dream for founder Karabo Dlamini for some time, the busines began operating in 2013 as a true black-woman-owned, empowered, 
+                      and managed business. Karabo is proud that Maruapula’s family roots, ethos and values remain to this day. Karabo is the Managing 
+                      Director of Maruapula responsible for strategy, operations, planning and quality management. Her corporate banking background 
+                      in strategic planning, sales, marketing, and the management of a division prepared her well for Maruapula.
+                    </p>
+                  </div>
+                  <div className="col-12 col-md-7">
+                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616779237/maruapula/assets/Karabo_Journey_Image_2.jpg" 
+                      style={{ width: '100%', height: "auto"}} />
+                  </div>
                 </div>
                 
               </div>
@@ -154,7 +140,12 @@ export default function About() {
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
+<<<<<<< HEAD
                   <div className="col-7">
+=======
+                  
+                  <div className="col-12 col-md-7">
+>>>>>>> 555816a48b2cf6d04976c3630b6dc9d36f8421e2
                     <p>We receive orders and deliver to corporates, businesses and institutions. Our clients include banks, schools, movie production companies, churches and small, 
                       medium and large manufacturing business – typically we deliver regularly to locations with as few as 10 or up to 2,000 people!!</p>
                     <p>Our corporate, business and institutional customers mostly order fruit trays, chicken pieces and prepared foods. 
@@ -164,9 +155,15 @@ export default function About() {
                       Deliveries are made from 10H00 to 18H00, daily excluding Sundays and public holidays. </p>
                     <p>Explore our offering for fruit trays and catering service or contact our sales team to discuss your specific needs.</p>
                   </div>
+<<<<<<< HEAD
                   <div className="col-5">
                     <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862222/maruapula/assets/Business_Tab_Image_1_cwq1ay.jpg" 
                         style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
+=======
+                  <div className="col-12 col-md-5">
+                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862222/maruapula/assets/Business_Tab_Image_1_cwq1ay.jpg" 
+                        style={{ width: '100%', height: "auto"}} />
+>>>>>>> 555816a48b2cf6d04976c3630b6dc9d36f8421e2
                   </div>
                 </div>
               </div>
@@ -177,11 +174,11 @@ export default function About() {
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
-                  <div className="col-5">
+                  <div className="col-12 col-md-5 mb-3">
                     <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1617204435/maruapula/assets/Catering_image_2_hepozl.jpg" 
-                        style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
+                        style={{ width: '100%', height: "auto"}} />
                   </div>
-                  <div className="col-7">
+                  <div className="col-12 col-md-7">
                     <p>Maruapula employs qualified catering staff. We own the equipment to manage all types of events. 
                       Maruapula catering service includes an assortment of the finest foods, beverages, and knowledgeable and experienced staff.
                     </p>
@@ -215,19 +212,27 @@ export default function About() {
                         <li>Cake</li>
                       </ul>
                     </p>
-                    <p>Contact our sales team to discuss your specific needs.</p>
+                    <Link href="/contacts"><Button type="primary">Contact Sales</Button></Link>
                   </div>
                   
                 </div>
               </div>
+<<<<<<< HEAD
           
+=======
+
+>>>>>>> 555816a48b2cf6d04976c3630b6dc9d36f8421e2
               <div className="col-12">
                 <h3 id="fruit-trays" className="mt-5">
                   Fruits Trays
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
+<<<<<<< HEAD
                   <div className="col-7">
+=======
+                  <div className="col-12 col-md-7">
+>>>>>>> 555816a48b2cf6d04976c3630b6dc9d36f8421e2
                     <p>
                       Healthy brain food at the office can boost productivity, and improve staff wellness and morale. Fruits are healthy So, instead of staff reaching for a chocolate bar when the munchies take hold, give your staff a healthier alternative. 
                       If you want your business to be more fruitful too, treat your staff to premium quality fruit as a healthy office snack. 
@@ -235,9 +240,15 @@ export default function About() {
                       One fruit tray can be consumed by 10-12 adults or 15-20 kids
                     </p>
                   </div>
+<<<<<<< HEAD
                   <div className="col-5">
                     <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862221/maruapula/assets/Business_Tab_Image_3_v4skgy.jpg" 
                         style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
+=======
+                  <div className="col-12 col-md-5">
+                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862221/maruapula/assets/Business_Tab_Image_3_v4skgy.jpg" 
+                        style={{ width: '100%', height: "auto"}} />
+>>>>>>> 555816a48b2cf6d04976c3630b6dc9d36f8421e2
                   </div>
                 </div>
               </div>
