@@ -31,10 +31,14 @@ export default function Banners(props) {
         <Carousel autoplay dots={false}>
             {props.banners.map((banner, index) => (
                 <div className="Banner" sx={{ height: "auto" }} key={index}>
+                    <picture className="w-100">
+                        <source media="(min-width: 650px)" srcSet={banner.image} />
+                        <source media="(max-width: 465px)" srcSet={banner.mobile_image} />
+                    </picture>
                     <img src={banner.image} className="w-100" />
                     <div className="d-none d-md-block Banner__text">
-                        <span>{banner.category}</span>
-                        <h3>{banner.title}</h3>
+                        <h3>{banner.category}</h3>
+                        <h1>{banner.title}</h1>
                         <Button
                             type="primary"
                             onClick={() => goTo(banner.link)}
@@ -48,6 +52,7 @@ export default function Banners(props) {
                                 <Button
                                     type="primary"
                                     onClick={() => goTo(banner.link)}
+                                    size="large"
                                 >
                                     Buy Now
                                 </Button>
