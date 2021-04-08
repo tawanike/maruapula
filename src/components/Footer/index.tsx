@@ -16,7 +16,7 @@ export default function FooterComponent() {
           <p>
           <img
               sx={{ width: "60%", height: "auto" }}
-              src="https://res.cloudinary.com/mmogomedia/image/upload/v1617125589/maruapula/assets/maruapula_logo-02_qkjodp.png"
+              src="https://res.cloudinary.com/mmogomedia/image/upload/v1617880681/maruapula/assets/maruapula_export2_jsmt1d.svg"
               alt=""
           />
           </p>
@@ -24,20 +24,18 @@ export default function FooterComponent() {
           <p><FontAwesomeIcon icon={['fas', 'envelope']} style={{ marginRight: 10}}/>sales@maruapula.store</p>
           <p><FontAwesomeIcon icon={['fas', 'map-marker-alt']} style={{ marginRight: 10}}/>921 Moss Street, Weltevredenpark</p>
           
-          <p>
+          {/* <p>
             <a><FontAwesomeIcon icon={['fab', 'facebook']} style={{ marginRight: 10}}/></a>
             <a><FontAwesomeIcon icon={['fab', 'twitter']} style={{ marginRight: 10}}/></a>
             <a><FontAwesomeIcon icon={['fab', 'instagram']} style={{ marginRight: 10}}/></a>
-          </p>
+          </p> */}
         </div>
         <div className="col-md-4 p-5">
-          <p><Link href="/about"><a>About Us</a></Link></p>
-          <p><Link href="/contacts"><a>Contact Us</a></Link></p>
+          <p><Link href="/about"><a>About</a></Link></p>
+          <p><Link href="/contacts"><a>Contact</a></Link></p>
           <p><Link href="/support"><a>Help and FAQs</a></Link></p>
           
-          <p><Link href="/legal/terms-conditions"><a>Terms and Conditions</a></Link></p>
-          <p><Link href="/legal/product/terms"><a>Terms of Use</a></Link></p>
-          <p><Link href="/legal/refunds-returns"><a>Refunds and Returns</a></Link></p>
+          <p><Link href="/legal/terms-conditions"><a>Terms and conditions</a></Link></p>
         </div>
         <div className="col-md-4 p-5">
           <h3>Operating Hours</h3>

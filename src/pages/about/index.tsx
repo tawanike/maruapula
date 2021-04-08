@@ -25,9 +25,12 @@ export default function About() {
           <p><Anchor.Link href="#pholosophy" title="Our philosopy" /></p>
           <p><Anchor.Link href="#journey" title="The journey" /></p>
           <p><Anchor.Link href="#customers" title="Individual & family customers" /></p>
-          <p><Anchor.Link href="#businesses" title="Corporate, business and institutional customers" /></p>
-          <p><Anchor.Link href="#fruit-trays" title="Fruits Trays" /></p>
-          <p><Anchor.Link href="#catering" title="Catering service" /></p>
+          <p>
+            <Anchor.Link href="#businesses" title="Corporate, business and institutional customers">
+              <p><Anchor.Link href="#catering" title="Catering service" /></p>
+              <p><Anchor.Link href="#fruit-trays" title="Fruits Trays" /></p>
+            </Anchor.Link>
+          </p>
           </Anchor>
         </div>
         <div className="col-10">
@@ -126,7 +129,7 @@ export default function About() {
 
               <div className="col-12">
                 <h3 id="customers" className="mt-5">
-                  Individual & family customers
+                  Consumers - Individuals & family
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
@@ -147,14 +150,10 @@ export default function About() {
 
               <div className="col-12">
                 <h3 id="businesses" className="mt-5">
-                  Corporate, business and institutional customers
+                  Corporate, business and institutions
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
-                  <div className="col-5">
-                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862222/maruapula/assets/Business_Tab_Image_1_cwq1ay.jpg" 
-                        style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
-                  </div>
                   <div className="col-7">
                     <p>We receive orders and deliver to corporates, businesses and institutions. Our clients include banks, schools, movie production companies, churches and small, 
                       medium and large manufacturing business – typically we deliver regularly to locations with as few as 10 or up to 2,000 people!!</p>
@@ -165,25 +164,8 @@ export default function About() {
                       Deliveries are made from 10H00 to 18H00, daily excluding Sundays and public holidays. </p>
                     <p>Explore our offering for fruit trays and catering service or contact our sales team to discuss your specific needs.</p>
                   </div>
-                </div>
-              </div>
-
-              <div className="col-12">
-                <h3 id="fruit-trays" className="mt-5">
-                  Fruits Trays
-                  <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
-                </h3>
-                <div className="row">
-                  <div className="col-7">
-                    <p>
-                    Healthy brain food at the office can boost productivity, and improve staff wellness and morale. Fruits are healthy So, instead of staff reaching for a chocolate bar when the munchies take hold, give your staff a healthier alternative. 
-If you want your business to be more fruitful too, treat your staff to premium quality fruit as a healthy office snack. 
-Our fruit is hand-picked and sourced from local farmers, so it’s always fresh. 
-One fruit tray can be consumed by 10-12 adults or 15-20 kids
-                    </p>
-                  </div>
                   <div className="col-5">
-                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862221/maruapula/assets/Business_Tab_Image_3_v4skgy.jpg" 
+                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862222/maruapula/assets/Business_Tab_Image_1_cwq1ay.jpg" 
                         style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
                   </div>
                 </div>
@@ -236,6 +218,27 @@ One fruit tray can be consumed by 10-12 adults or 15-20 kids
                     <p>Contact our sales team to discuss your specific needs.</p>
                   </div>
                   
+                </div>
+              </div>
+          
+              <div className="col-12">
+                <h3 id="fruit-trays" className="mt-5">
+                  Fruits Trays
+                  <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
+                </h3>
+                <div className="row">
+                  <div className="col-7">
+                    <p>
+                      Healthy brain food at the office can boost productivity, and improve staff wellness and morale. Fruits are healthy So, instead of staff reaching for a chocolate bar when the munchies take hold, give your staff a healthier alternative. 
+                      If you want your business to be more fruitful too, treat your staff to premium quality fruit as a healthy office snack. 
+                      Our fruit is hand-picked and sourced from local farmers, so it’s always fresh. 
+                      One fruit tray can be consumed by 10-12 adults or 15-20 kids
+                    </p>
+                  </div>
+                  <div className="col-5">
+                    <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862221/maruapula/assets/Business_Tab_Image_3_v4skgy.jpg" 
+                        style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
+                  </div>
                 </div>
               </div>
           </div>

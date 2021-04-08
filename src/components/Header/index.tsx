@@ -32,8 +32,8 @@ export default function HeaderComponent() {
                     <Link href="/">
                         <a>
                             <img
-                                sx={{ width: "60%", height: "auto" }}
-                                src="https://res.cloudinary.com/mmogomedia/image/upload/v1617125589/maruapula/assets/maruapula_logo-02_qkjodp.png"
+                                sx={{ width: "100%", height: "auto" }}
+                                src="https://res.cloudinary.com/mmogomedia/image/upload/v1617880681/maruapula/assets/maruapula_landscape_uh0orm.svg"
                                 alt=""
                             />
                         </a>
@@ -91,8 +91,8 @@ export default function HeaderComponent() {
                                 },
                             }}
                         >
-                            <Link href="/about">
-                                <a>About Us</a>
+                            <Link href="/about" sx={{textDecoration: "none"}}>
+                                <a sx={{textDecoration: "none"}}>About Us</a>
                             </Link>
                         </li>
                         <li
