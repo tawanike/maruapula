@@ -84,7 +84,7 @@ export default function Home() {
                 <div className="col-12">
                     {bannersContext.state.banners &&
                     bannersContext.state.banners.length ? (
-                        <Banners banners={bannersContext.state.banners} />
+                        <Banners banners={bannersContext.state.banners} is_home={true} />
                     ) : (
                         ""
                     )}
@@ -208,86 +208,15 @@ export default function Home() {
                         ) : (
                             <Products
                                 category={""}
-                                products={productContext.state.selectedProducts.slice(
+                                products={productContext.state.products.filter(product => {
+                                    if (product.category === "Specials") return product;
+                                }).slice(
                                     0,
                                     3
                                 )}
                             />
                         )}
                     </div>
-                </div>
-                <div className="col-12" sx={{ paddingTop: "50px" }}>
-                    <h3 className="mb-5">What our clients say</h3>
-                    <Carousel autoplay speed={8000} autoplaySpeed={5000}>
-                        <div className="Testimonials">
-                            <img
-                                src="https://res.cloudinary.com/mmogomedia/image/upload/v1617081397/maruapula/banners/background.jpg"
-                                style={{ width: "100%", height: "auto" }}
-                            />
-                            <div className="Testimonials__text pb-5">
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy
-                                    text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled
-                                    it to make a type specimen book.
-                                </p>
-                                <img
-                                    src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg"
-                                    className="Testimonials__image"
-                                />
-                                <h5>First Last</h5>
-                                <p>Location</p>
-                            </div>
-                        </div>
-
-                        <div className="Testimonials">
-                            <img
-                                src="https://res.cloudinary.com/mmogomedia/image/upload/v1617081397/maruapula/banners/background.jpg"
-                                style={{ width: "100%", height: "auto" }}
-                            />
-                            <div className="Testimonials__text pb-5">
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy
-                                    text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled
-                                    it to make a type specimen book.
-                                </p>
-                                <img
-                                    src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg"
-                                    className="Testimonials__image"
-                                />
-                                <h5>First Last</h5>
-                                <p>Location</p>
-                            </div>
-                        </div>
-
-                        <div className="Testimonials">
-                            <img
-                                src="https://res.cloudinary.com/mmogomedia/image/upload/v1617081397/maruapula/banners/background.jpg"
-                                style={{ width: "100%", height: "auto" }}
-                            />
-                            <div className="Testimonials__text pb-5">
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy
-                                    text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled
-                                    it to make a type specimen book.
-                                </p>
-                                <img
-                                    src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg"
-                                    className="Testimonials__image"
-                                />
-                                <h5>First Last</h5>
-                                <p>Location</p>
-                            </div>
-                        </div>
-                    </Carousel>
                 </div>
                 <div className="col-12" sx={{ paddingTop: "50px" }}></div>
             </div>
