@@ -193,7 +193,7 @@ export default function Home() {
                                         />
                                     </div>
                                     <div className="col co-md-9">
-                                        For Institutions
+                                        For Business
                                     </div>
                                 </div>
                             </Link>
@@ -216,7 +216,7 @@ export default function Home() {
                         )}
                     </div>
                 </div>
-                <div className="col-12" sx={{ paddingTop: "50px" }}>
+                {/* <div className="col-12" sx={{ paddingTop: "50px" }}>
                     <h3 className="mb-5">What our clients say</h3>
                     <Carousel autoplay speed={8000} autoplaySpeed={5000}>
                         <div className="Testimonials">
@@ -288,7 +288,7 @@ export default function Home() {
                             </div>
                         </div>
                     </Carousel>
-                </div>
+                </div> */}
                 <div className="col-12" sx={{ paddingTop: "50px" }}></div>
             </div>
         </div>
