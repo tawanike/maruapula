@@ -358,7 +358,7 @@ export default function Checkout() {
             >
                 {loading || (
                     <div>
-                        <p>Order confirmation reference #</p>
+                        <p>Order confirmation reference # {order_reference}</p>
                         <ul>
                             <li>Monday to Saturday 08H00 to 17H00</li>
                             <li>Deliveries daily, from 09H00 to 17H00</li>
