@@ -1,7 +1,8 @@
 @import './src/styles/variables';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700&display=swap');
 @import './src/styles/ant-override.scss';
-$rubik: Rubik, "sans-serif";
+$rubik: Rubik,
+"sans-serif";
 html,
 body {
     color: $primaryText;
@@ -105,7 +106,7 @@ label {
 }
 
 .CheckOut {
-    font-size: 24px;
+    font-size: 20px;
     background-color: rgb(230, 230, 230);
     &__list {
         list-style: none;
@@ -113,7 +114,7 @@ label {
         padding: 0;
     }
     &__infor {
-        border-bottom: 1px solid $main-black;
+        // border-bottom: 1px solid $main-black;
         margin-bottom: 20px;
     }
     &__totals {
@@ -121,7 +122,6 @@ label {
         padding-right: 20px;
     }
     &__product:last-child {
-        margin-bottom: 20px;
         border-bottom: 1px solid $main-black;
     }
 }
@@ -190,5 +190,4 @@ label {
             height: 30px;
         }
     }
-
 }

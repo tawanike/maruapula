@@ -1,6 +1,6 @@
 import { Button, Carousel } from "antd";
 import { useRouter } from "next/router";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ProductContext } from "src/components/Products/context";
 import {
     filterProducts,
@@ -13,7 +13,7 @@ export default function Banners(props) {
 
     const goTo = (location) => {
         if (router.asPath === "/") {
-            router.push('/shop')
+            router.push('/shop#top')
         }
         
         const defaultCategoryProducts: any[] = productContext.state.products.filter(
@@ -26,6 +26,12 @@ export default function Banners(props) {
         productContext.dispatch(selectedCategory(location));
         productContext.dispatch(filterProducts(defaultCategoryProducts));
     };
+
+    useEffect(() => {
+        if(props.is_home) {
+
+        }
+    })
 
     return (
         <Carousel autoplay dots={false}>

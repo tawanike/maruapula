@@ -16,12 +16,10 @@ export default function Sidebar(props) {
     const router = useRouter();
     const productContext = useContext(ProductContext);
     const navigate = (e) => {
-        
         if (e.key === "Specials") {
             const defaultCategoryProducts: any[] = productContext.state.products.filter(
                 (product) => {
                     if (product.specials === "Yes") {
-                        console.log("CATEGORY", product);
                         return product;
                     }
                 }
@@ -29,9 +27,9 @@ export default function Sidebar(props) {
             productContext.dispatch(selectedCategory(e.key));
             productContext.dispatch(filterProducts(defaultCategoryProducts));
         } else if (e.key === "Catering") {
-            router.push("/business");
+            router.push("/about#catering");
         } else if (e.key === "Businesses") {
-            router.push("/business");
+            router.push("/about#businesses");
         } else {
             const defaultCategoryProducts: any[] = productContext.state.products.filter(
                 (product) => {
@@ -119,7 +117,7 @@ export default function Sidebar(props) {
                 }}
                 key="Businesses"
             >
-                For institutions
+                For business
             </Menu.Item>
         </Menu>
     );

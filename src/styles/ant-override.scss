@@ -1,5 +1,4 @@
 @import './variables.scss';
-
 ::selection {
     background: $main-green;
 }
@@ -52,5 +51,16 @@ html {
 }
 
 .ant-pagination-item-active a {
-    border-color: $main-green ;
+    border-color: $main-green;
+}
+
+.ant-btn {
+    background: #d1d1d3;
+    // color: #fff;
+}
+
+.ant-btn:hover {
+    background: #adadad;
+    border-color: #adadad;
+    color: #000;
 }
