@@ -52,7 +52,7 @@ export default function About() {
                         <p>
                             <Anchor.Link
                                 href="#customers"
-                                title="Individual & household customers"
+                                title="Individuals & households"
                             />
                         </p>
                         <p>
@@ -91,20 +91,16 @@ export default function About() {
                     <div className="row">
                         <div className="col-md-4">
                             <p className="pb-3">
-                                Maruapula conveniently delivers fruit, veges,
-                                poultry and prepared foods that are of
-                                high-quality, natural, fresh and healthy. We
-                                also provide catering services. Our customers
-                                are individuals, families, corporates,
-                                businesses, and institutions.
+                                Maruapula conveniently delivers fruit, vegies, poultry and prepared 
+                                foods that are of high-quality, natural, fresh and healthy. We also provide 
+                                catering services. Our customers are individuals, families, corporates, businesses, and institutions.
                             </p>
                             <p className="pb-3">
-                                Our motto <br />
+                                Our belief to  <br />
                                 <span className="usp">
                                     “Serve them fresh, daily”
                                 </span>{" "}
-                                underlies Maruapula’s passion and promise to our
-                                customers for food that is:
+                                underlies Maruapula’s passion and promise to our customers for food that is:
                                 <p className="ValueProposition">
                                     <ul>
                                         <li>Natural</li>
@@ -127,23 +123,6 @@ export default function About() {
                                 style={{ width: "100%", height: "auto" }}
                             />
                         </div>
-
-                        {/* <div className="col-12 pt-5">
-              <div className="row">
-                <div className="col">
-                  <img src="https://res.cloudinary.com/mmogomedia/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1616862223/maruapula/assets/Business_Tab_Image_2_vd0vsd.jpg"
-                    style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
-                </div>
-                <div className="col">
-                  <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616779237/maruapula/assets/Karabo_Journey_Image_1.jpg"
-                    style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
-                </div>
-                <div className="col">
-                  <img src="https://res.cloudinary.com/mmogomedia/image/upload/v1616779237/maruapula/assets/Karabo_Journey_Image_1.jpg"
-                    style={{ width: '90%', height: "auto", display:'inline-block', float: 'none', marginLeft:30}} />
-                </div>
-              </div>
-            </div> */}
 
                         <div className="col-12">
                             <h3 id="pholosophy" className="mt-5">
@@ -170,29 +149,24 @@ export default function About() {
                                 </div>
                                 <div className="col-12 col-md-5">
                                     <p>
-                                        Maruapula’s fresh food products are
-                                        prepared daily to ensure that customers
-                                        get the best quality and fresh food
-                                        products.
+                                        Maruapula’s fresh food products are prepared 
+                                        daily to ensure that customers get the best quality 
+                                        and fresh food products.
                                     </p>
                                     <p>
-                                        We supply and deliver hand-picked fruit,
-                                        vegetables, poultry, and food products
-                                        sourced from our local farmers, making
-                                        them always fresh for delivery to your
-                                        door-step.
+                                        We supply and deliver hand-picked fruit and vegetables. 
+                                        All our fresh produced products are sourced from our local 
+                                        farmers,that ensures fresh delivery to your door-step.
                                     </p>
                                     <p>
-                                        We deliver fruits and vegetables that
-                                        are in season, hence you can be sure you
-                                        are getting the best available products,
-                                        delivered on time.
+                                        We deliver fruits and vegetables that are in season, 
+                                        hence you can be sure you are getting the best available 
+                                        products, delivered on time.
                                         <br />
-                                        Being a modest, healthy, fresh produce
-                                        business that cares about our client’s
-                                        health, we believe that healthy and
-                                        sustainability fresh produced products
-                                        need to be made more accessible.
+                                        Being a modest, healthy, fresh produce business that cares 
+                                        about our client’s health, we believe that healthy and 
+                                        sustainability fresh produced products need to be made more 
+                                        accessible.
                                     </p>
                                     <div >
                                         <Button className="btn-cta"
@@ -217,20 +191,17 @@ export default function About() {
                             <div className="row">
                                 <div className="col-12 col-md-5">
                                     <p>
-                                        A dream for founder Karabo Dlamini for
-                                        some time, the busines began operating
-                                        in 2013 as a true black-woman-owned,
-                                        empowered, and managed business. Karabo
-                                        is proud that Maruapula’s family roots,
-                                        ethos and values remain to this day.
-                                        Karabo is the Managing Director of
-                                        Maruapula responsible for strategy,
-                                        operations, planning and quality
-                                        management. Her corporate banking
-                                        background in strategic planning, sales,
-                                        marketing, and the management of a
-                                        division prepared her well for
-                                        Maruapula.
+                                        It's been a dream for some time for the founder Karabo Dlamini, 
+                                        to start a successful black women owned company that distributes 
+                                        fresh products. The business began operating in 2013 fully black 
+                                        managed by herself with the assistant of two other managers.
+                                    </p>
+                                    <p>
+                                        She is proud that Maruapula’s family roots, ethos and values 
+                                        remain to this day. Karabo is the Managing Director of Maruapula 
+                                        who is responsible for strategy, planning management and marketing. 
+                                        Her corporate banking experience and her Cost Management studies 
+                                        have prepared her for establishing and running this group.
                                     </p>
                                     <div >
                                         <Button className="btn-cta"
@@ -251,7 +222,7 @@ export default function About() {
 
                         <div className="col-12">
                             <h3 id="customers" className="mt-5">
-                                Consumers - Individuals & households
+                                Individuals & households
                                 <hr
                                     style={{
                                         width: "30%",
@@ -273,24 +244,23 @@ export default function About() {
                                 </div>
                                 <div className="col-7">
                                     <p>
-                                        We receive orders daily and deliver to
-                                        individual and family homes, saving you
-                                        the trouble of shopping for quality
-                                        fresh products. We also deliver to
-                                        family members in different locations:{" "}
-                                        <br />
-                                        All orders received before 14:00, will
-                                        be delivered in 2 days. <br />
-                                        Deliveries from 10H00 to 18H00, daily.{" "}
-                                        <br />
-                                        No deliveries on Sundays and public
-                                        holidays. <br />
+                                        Orders are received daily and delivered to 
+                                        individuals and families to their homes. 
+                                        Saving them the troubles of shopping for 
+                                        quality fresh products and time. We also 
+                                        deliver to family members in different locations: {" "}
+                                    </p>
+                                    <p className="ValueProposition">
+                                    <ul>
+                                        <li>All orders received before 14:00, will be delivered in 2 days.</li>
+                                        <li>Deliveries daily, from 09H00 to 17H00</li>
+                                        <li>No deliveries on Sundays and public holidays</li>
+                                    </ul>
                                     </p>
                                     <p>
-                                    <div>
+
                                         <Button className="btn-cta"
                                         onClick={()=> goTo('Fruits')} type="link" size="large">Click here to order online from our fresh food menu</Button>
-                                    </div>
                                     </p>
                                 </div>
                             </div>
@@ -298,7 +268,7 @@ export default function About() {
 
                         <div className="col-12">
                             <h3 id="businesses" className="mt-5">
-                                Corporate, business and institutions
+                                Corporate, business and government clients
                                 <hr
                                     style={{
                                         width: "30%",
@@ -310,12 +280,15 @@ export default function About() {
                             </h3>
                             <div className="row">
                                 <div className="col-12 col-md-7">
-                                    <p>We deliver to corporates, businesses and Government. Our clients include banks, 
-                                        schools, production companies, small, medium and large businesses.</p>
+                                    <p>We deliver to corporates, businesses and Government. 
+                                        Our clients include banks, schools, production companies, 
+                                        small, medium and large businesses.
+                                    </p>
                                     <p>
-                                        These clients of ours mostly order fruit trays, bulk fresh chicken and prepared foods. 
-                                        Orders are delivered either daily,weekly or twice a week. Due to unique client needs, Maruapula is flexible to deliver when, 
-                                        where and how the customer prefers. 
+                                    These clients of ours mostly order fruit trays, bulk fresh 
+                                    chicken and prepared foods. Orders are delivered either daily,
+                                    weekly or twice a week. Due to unique client needs, Maruapula is 
+                                    flexible to deliver when, where and how the customer prefers. 
                                     </p>
 
                                     <p>Explore our offering for:</p>
@@ -360,28 +333,23 @@ export default function About() {
                                 </div>
                                 <div className="col-12 col-md-7">
                                     <p>
-                                        Maruapula employs qualified catering
-                                        staff. We own the equipment to manage
-                                        all types of events. Maruapula catering
-                                        service includes an assortment of the
-                                        finest foods, beverages, and
-                                        knowledgeable and experienced staff.
+                                        Maruapula employs qualified catering staff. 
+                                        We own the equipment to manage all types of events. 
+                                        Maruapula catering service includes an assortment of 
+                                        the finest foods, beverages, and knowledgeable and experienced staff.
                                     </p>
 
                                     <p>
-                                        Our dedicated event planners work with
-                                        customers to design the best menus that
-                                        reflects the customers personal tastes
-                                        and preferences for an event. We have
-                                        confidently delivered catering services
-                                        at many corporate and family events, all
-                                        within customer’s catering budgets.
+                                        Our dedicated event planners work with customers 
+                                        to design the best menus that reflect the customer's 
+                                        personal tastes and preferences for an event. We have 
+                                        confidently delivered catering services at many corporate 
+                                        and family events, all within customer’s catering budgets.
                                     </p>
                                     <p>
-                                        Our catering service is typically
-                                        requested for corporate functions,
-                                        training, conferences, private
-                                        functions, events. We offer:
+                                        Our catering service is typically requested 
+                                        for corporate functions, training, conferences, 
+                                        private functions, events. We offer: 
                                     </p>
                                     <p>
                                         <ul>
@@ -435,22 +403,16 @@ export default function About() {
                             <div className="row">
                                 <div className="col-12 col-md-7">
                                     <p>
-                                        Healthy brain food at the office can
-                                        boost productivity, and improve staff
-                                        wellness and morale. Fruits are healthy
-                                        So, instead of staff reaching for a
-                                        chocolate bar when the munchies take
-                                        hold, give your staff a healthier
-                                        alternative.
+                                    Healthy brain food at the office can boost productivity, 
+                                    and improve staff wellness and morale. Fruits are healthy so, 
+                                    instead of staff reaching for a chocolate bar when the 
+                                    munchies take hold, give your staff a healthier alternative. 
                                     </p> 
-                                    <p>If you want your business
-                                        to be more fruitful too, treat your
-                                        staff to premium quality fruit as a
-                                        healthy office snack.</p> 
-                                    <p>Our fruit is hand-picked and sourced from local
-                                        farmers, so it’s always fresh.</p>
-                                    <p>One fruit tray can be consumed by 10-12 adults or
-                                        15-20 kids
+                                    <p>
+                                    If you want your business to be more fruitful too, treat your staff to premium quality fruit as a healthy office snack.
+                                    </p> 
+                                    <p>Our fruit is hand-picked and sourced from local farmers, so it’s always fresh.</p>
+                                    <p>One fruit tray can be consumed by 10-12 adults or 15-20 kids.
                                     </p>
                                     <p>Contact our <Link href="/contacts"><span style={{color: '#7dd181'}}>sales team</span></Link> to discuss your specific needs.</p>
                                 </div>
@@ -465,6 +427,7 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
+                    <div style={{padding: 140}}></div>
                     </div>
                 </div>
             </div>

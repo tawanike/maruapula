@@ -74,7 +74,7 @@ export default function Home() {
         } else if (location === "Business") {
             router.push(`/about#businesses`);
         } else {
-            router.push(`/shop`);
+            router.push(`/shop#top`);
         }
     };
 
