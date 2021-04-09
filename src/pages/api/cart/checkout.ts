@@ -43,19 +43,12 @@ export default async (req, res) => {
             'Accept': 'application/json'
         }
 
-        console.log(Math.floor(Math.random() * (max - min + 1)) + min )
+        const order_number = Math.floor(Math.random() * (max - min + 1)) + min;
 
         await axios
             .post( 'https://api.clickatell.com/rest/message', {
                 to: [req.body.user.mobile],
-                text: `We have received your order. See your email for details. Note:
-                All orders received before 14H00, will be delivered in 2 days.
-                Deliveries from 09H00 to 17H00, daily
-                No deliveries on Sundays and public holidays
-                Delivery fee: R50.
-                Contact us: Monday to Saturday (08H00 to 17H00) on 083 668 5785; sales@maruapula.store or www.maruapula.store
-                Share your Maruapula experience!! Send this message to your trusted family, friends, neighbours, and colleagues.`
-            }, { headers: headers} );
+                text: `We have received your order, ${order_number}. See your email for details.`}, { headers: headers} );
         
 
         // Send Email and SMS to user
