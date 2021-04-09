@@ -21,6 +21,7 @@
         "@zeit/next-sass": "^1.0.1",
         "accounting-js": "^1.1.1",
         "antd": "^4.14.1",
+        "axios": "^0.21.1",
         "bootstrap": "^5.0.0-beta3",
         "dotenv-load": "^2.0.0",
         "google-spreadsheet": "^3.1.15",
