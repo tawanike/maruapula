@@ -23,6 +23,26 @@ export default async (req, res) => {
             console.log(error)
         }
         
+        const msg1 = {
+            to: 'sales@maruapula.store', 
+            from: 'sales@maruapula.store',
+            templateId: 'd-f62774d6c8ef480bb8a70661c6e5a464',
+            dynamic_template_data: {
+                subject: req.body.subject,
+                customer_name: req.body.name,
+                customer_email: req.body.email,
+                message: req.body.message
+            },
+        };
+
+        try {
+            const sent = await sgMail.send(msg1);
+            console.log(sent); 
+        } catch (error) {
+            console.log(error)
+        }
+        
+
 
         // Send Email and SMS to user
     }else{

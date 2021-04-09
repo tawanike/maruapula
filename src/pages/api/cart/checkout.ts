@@ -19,6 +19,16 @@ export default async (req, res) => {
             },
         };
 
+        try {
+            await sgMail.send(msg);
+          } catch (error) {
+            console.error(error);
+        
+            if (error.response) {
+              console.error(error.response.body)
+            }
+          }
+
         const msg1 = {
             to: 'sales@maruapula.store',
             from: 'sales@maruapula.store',
@@ -33,22 +43,28 @@ export default async (req, res) => {
             },
         };
 
-        const max = 999999;
-        const min = 111111;
+        try {
+            await sgMail.send(msg1);
+          } catch (error) {
+            console.error(error);
+        
+            if (error.response) {
+              console.error(error.response.body)
+            }
+          }
 
+        sgMail.send()
         const headers = {
             'X-Version': 1,
             'Authorization': `bearer ${process.env.CLICKATEL_AUTH_TOKEN}`,
             'Content-Type': 'application/json',
             'Accept': 'application/json'
         }
-
-        const order_number = Math.floor(Math.random() * (max - min + 1)) + min;
-
         await axios
             .post( 'https://api.clickatell.com/rest/message', {
                 to: [req.body.user.mobile],
-                text: `We have received your order, ${order_number}. See your email for details.`}, { headers: headers} );
+                text: `Thank you for your Maruapula order!! We will contact you soon to finalise your order + payment arrangements. Call 0836685785 for queries. Ref #${req.body.order_reference}`
+                }, { headers: headers} );
         
 
         // Send Email and SMS to user
