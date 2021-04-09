@@ -115,7 +115,7 @@ export default function About() {
 
               <div className="col-12">
                 <h3 id="customers" className="mt-5">
-                  Individual & family customers
+                  Consumers - Individuals & family
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
@@ -136,7 +136,7 @@ export default function About() {
 
               <div className="col-12">
                 <h3 id="businesses" className="mt-5">
-                  Corporate, business and institutional customers
+                  Corporate, business and institutions
                   <hr style={{width:'30%', height:"5px", backgroundColor: "var(--theme-ui-colors-muted)"}}/>
                 </h3>
                 <div className="row">
@@ -207,7 +207,6 @@ export default function About() {
                   
                 </div>
               </div>
-
               <div className="col-12">
                 <h3 id="fruit-trays" className="mt-5">
                   Fruits Trays
