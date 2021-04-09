@@ -16,7 +16,7 @@ export default function FooterComponent() {
                     <p>
                         <img
                             sx={{ width: "60%", height: "auto" }}
-                            src="https://res.cloudinary.com/mmogomedia/image/upload/v1617880681/maruapula/assets/maruapula_export2_jsmt1d.svg"
+                            src="https://res.cloudinary.com/mmogomedia/image/upload/v1617880681/maruapula/assets/maruapula_landscape_uh0orm.svg"
                             alt=""
                         />
                     </p>
@@ -50,24 +50,24 @@ export default function FooterComponent() {
                 </div>
                 <div className="col-md-4 p-5">
                     <p>
-                        <Link href="/about">
-                            <a>About</a>
+                        <Link href="/about" sx={{textDecoration: "none"}}>
+                            <a sx={{textDecoration: "none"}}>About</a>
                         </Link>
                     </p>
                     <p>
-                        <Link href="/contacts">
-                            <a>Contact</a>
+                        <Link href="/contacts" sx={{textDecoration: "none"}}>
+                            <a sx={{textDecoration: "none"}}>Contact</a>
                         </Link>
                     </p>
                     <p>
-                        <Link href="/support">
-                            <a>Help and FAQs</a>
+                        <Link href="/support" sx={{textDecoration: "none"}}>
+                            <a sx={{textDecoration: "none"}}>Help and FAQs</a>
                         </Link>
                     </p>
 
                     <p>
-                        <Link href="/legal/terms-conditions">
-                            <a>Terms and conditions</a>
+                        <Link href="/legal/terms-conditions" sx={{textDecoration: "none"}}>
+                            <a sx={{textDecoration: "none"}}>Terms and conditions</a>
                         </Link>
                     </p>
                 </div>

@@ -65,7 +65,7 @@ export default function Home() {
                         ""
                     )}
                 </div>
-                <div className="col-12" sx={{ paddingTop: "50px" }}>
+                <div className="col-12" sx={{ paddingTop: "100px" }} id="top">
                     <div className="row">
                         <div className="col-12 col-md-3">
                             <Sidebar className="mb-5 d-none d-md-block"/>
