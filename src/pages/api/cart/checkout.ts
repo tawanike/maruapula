@@ -13,6 +13,7 @@ export default async (req, res) => {
                 subject: 'Online Order Confirmation',
                 service_fee: 'R50.00',
                 total: req.body.total,
+                tracking_code: req.body.order_reference,
                 customer_name: req.body.user.first_name,
                 customer_email: req.body.user.email,
                 products: req.body.products
@@ -37,6 +38,7 @@ export default async (req, res) => {
                 subject: 'New Online Order',
                 service_fee: 'R50.00',
                 total: req.body.total,
+                tracking_code: req.body.order_reference,
                 customer_name: 'sales@maruapula.store',
                 customer_email: 'sales@maruapula.store',
                 products: req.body.products
