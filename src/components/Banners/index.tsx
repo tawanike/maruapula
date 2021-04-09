@@ -27,12 +27,6 @@ export default function Banners(props) {
         productContext.dispatch(filterProducts(defaultCategoryProducts));
     };
 
-    useEffect(() => {
-        if(props.is_home) {
-
-        }
-    })
-
     return (
         <Carousel autoplay dots={false}>
             {props.banners.map((banner, index) => (

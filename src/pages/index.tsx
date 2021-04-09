@@ -106,7 +106,7 @@ export default function Home() {
                                         }}
                                     />
                                 </div>
-                                <div className="col co-md-9">Fresh Fruits</div>
+                                <div className="col co-md-9 p-4">Fresh Fruits</div>
                             </div>
                         </Card.Grid>
                         <Card.Grid className="GridStyle">
@@ -123,7 +123,7 @@ export default function Home() {
                                         }}
                                     />
                                 </div>
-                                <div className="col co-md-9">Fresh Veges</div>
+                                <div className="col co-md-9 p-4">Fresh Veges</div>
                             </div>
                         </Card.Grid>
                         <Card.Grid className="GridStyle">
@@ -140,7 +140,7 @@ export default function Home() {
                                         }}
                                     />
                                 </div>
-                                <div className="col co-md-9">Fresh Poultry</div>
+                                <div className="col co-md-9 p-4">Fresh Poultry</div>
                             </div>
                         </Card.Grid>
                         <Card.Grid className="GridStyle">
@@ -152,12 +152,12 @@ export default function Home() {
                                     <img
                                         src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594500/maruapula/products/platter.jpg"
                                         style={{
-                                            width: "163%",
+                                            width: "165%",
                                             height: "auto",
                                         }}
                                     />
                                 </div>
-                                <div className="col co-md-9">
+                                <div className="col co-md-9 p-4">
                                     Pre-cooked Meals
                                 </div>
                             </div>
@@ -167,14 +167,14 @@ export default function Home() {
                                 <div className="row">
                                     <div className="d-none d-md-block col-md-3 h-100">
                                         <img
-                                            src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg"
+                                            src="https://res.cloudinary.com/mmogomedia/image/upload/v1617958751/maruapula/assets/catering_services.jpg"
                                             style={{
-                                                width: "100%",
+                                                width: "135%",
                                                 height: "auto",
                                             }}
                                         />
                                     </div>
-                                    <div className="col co-md-9">
+                                    <div className="col co-md-9 p-4">
                                         Catering Services
                                     </div>
                                 </div>
@@ -185,14 +185,14 @@ export default function Home() {
                                 <div className="row">
                                     <div className="d-none d-md-block col-md-3 h-100">
                                         <img
-                                            src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg"
+                                            src="https://res.cloudinary.com/mmogomedia/image/upload/v1617959305/maruapula/assets/About_Us-_Corporate_Business_and_Government_Clients_irii6m.jpg"
                                             style={{
-                                                width: "100%",
+                                                width: "135%",
                                                 height: "auto",
                                             }}
                                         />
                                     </div>
-                                    <div className="col co-md-9">
+                                    <div className="col co-md-9 p-4">
                                         For Business
                                     </div>
                                 </div>
