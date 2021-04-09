@@ -20,7 +20,6 @@ export default function Sidebar(props) {
             const defaultCategoryProducts: any[] = productContext.state.products.filter(
                 (product) => {
                     if (product.specials === "Yes") {
-                        console.log("CATEGORY", product);
                         return product;
                     }
                 }
@@ -28,9 +27,9 @@ export default function Sidebar(props) {
             productContext.dispatch(selectedCategory(e.key));
             productContext.dispatch(filterProducts(defaultCategoryProducts));
         } else if (e.key === "Catering") {
-            router.push("/business");
+            router.push("/about#catering");
         } else if (e.key === "Businesses") {
-            router.push("/business");
+            router.push("/about#businesses");
         } else {
             const defaultCategoryProducts: any[] = productContext.state.products.filter(
                 (product) => {
