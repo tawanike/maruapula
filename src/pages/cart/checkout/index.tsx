@@ -24,6 +24,7 @@ const validateMessages = {
 export default function Checkout() {
     const router = useRouter();
     const cartContext = useContext(CartContext);
+    const [order_reference, setOrder_reference] = useState<number>(0);
     const [loading, setLoading] = useState<boolean>(false);
     const [cartTotal, seCartTotal] = useState<number>(0);
     const [userDetails, setUserDetails] = useState<any>();
@@ -38,6 +39,8 @@ export default function Checkout() {
         seCartTotal(total);
         setPlaceOrder(false);
         setLoading(false);
+
+        setOrder_reference(Math.floor(Math.random() * (999999 - 1000000 + 1)) + 1000000);
     }, []);
 
     const onFinish = async (values: any) => {
@@ -53,6 +56,7 @@ export default function Checkout() {
                     total: cartTotal,
                     user: userDetails.user,
                     products: cartContext.state.products,
+                    order_reference: order_reference
                 }),
             });
             setLoading(false);
@@ -358,7 +362,7 @@ export default function Checkout() {
             >
                 {loading || (
                     <div>
-                        <p>Order confirmation reference # {order_reference}</p>
+                        <p>Order confirmation reference #{order_reference}</p>
                         <ul>
                             <li>Monday to Saturday 08H00 to 17H00</li>
                             <li>Deliveries daily, from 09H00 to 17H00</li>
