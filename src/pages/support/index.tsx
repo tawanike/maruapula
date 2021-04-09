@@ -17,10 +17,6 @@ const customDot = (dot, { status, index }) => (
 export default function Support() {
     return (
         <div className="p-3">
-            <div className="pb-3">
-                <h1>Support</h1>
-            </div>
-
             <div>
                 <h3>Frequently asked questions</h3>
                 <Collapse ghost>
@@ -100,7 +96,7 @@ export default function Support() {
             </div>
 
             <div className="pt-3">
-                <h3>How to buy</h3>
+                <h3>How to buy online</h3>
                 <div className="mission-section col-12">
                     <div className="how-it-works col-md-12 mx-5">
                         <Steps
@@ -129,6 +125,16 @@ export default function Support() {
                                 description="Expect your delivery within 2 days."
                             />
                         </Steps>
+                    </div>
+                </div>
+            </div>
+
+            <div className="pt-3">
+                <h3>How to buy using WhatsApp</h3>
+                <div className="mission-section col-12">
+                    <div className="how-it-works col-md-12 mx-5">
+                        <p>Send us a list of your order via WhatsApp:</p>
+                        <h2>083 668 5785</h2>
                     </div>
                 </div>
             </div>

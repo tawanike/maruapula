@@ -32,10 +32,10 @@ export default function Contacts() {
         style={{ width: '100%', height: 600}} />
       </div>
       <div className="col-md-5 p-4">
-        <p><FontAwesomeIcon icon={['fas', 'phone-alt']} size="2x" style={{ marginRight: 10}}/> 083 668 5785</p>
-        <p><FontAwesomeIcon icon={['fas', 'envelope']} size="2x" style={{ marginRight: 10}}/>sales@maruapula.store</p>
-        <p><FontAwesomeIcon icon={['fas', 'map-marker-alt']} size="2x" style={{ marginRight: 10}}/>921 Moss Street, Weltevredenpark</p>
-        <p><FontAwesomeIcon icon={['fas', 'business-time']} size="2x" style={{ marginRight: 10}}/>Monday to Saturday (08H00 to 18H00)</p>
+        <p><FontAwesomeIcon icon={['fas', 'phone-alt']} style={{ marginRight: 10}}/> 083 668 5785</p>
+        <p><FontAwesomeIcon icon={['fas', 'envelope']} style={{ marginRight: 10}}/>sales@maruapula.store</p>
+        <p><FontAwesomeIcon icon={['fas', 'map-marker-alt']} style={{ marginRight: 10}}/>921 Moss Street, Weltevredenpark</p>
+        <p><FontAwesomeIcon icon={['fas', 'business-time']} style={{ marginRight: 10}}/>Monday to Saturday (08H00 to 18H00)</p>
         {/* <p>
           <h3>Follow Us</h3>
           <FontAwesomeIcon icon={['fab', 'facebook']} size="2x" style={{ marginRight: 10}}/>
