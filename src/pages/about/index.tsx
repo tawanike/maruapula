@@ -58,7 +58,7 @@ export default function About() {
                         <p>
                             <Anchor.Link
                                 href="#businesses"
-                                title="Corporate, business and institutional customers"
+                                title="For business"
                             >
                                 <p>
                                     <Anchor.Link

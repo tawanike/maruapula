@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { toFixed } from 'accounting-js'
 import { useContext } from "react";
 import { CartContext } from "src/components/Cart/context";
-import { Drawer } from "antd";
+import { Empty, Drawer, Button } from "antd";
 import { toggleCartDrawer } from "src/components/Cart/actions";
 import { removeFromCart } from "src/components/Cart/actions";
 import { CloseCircleFilled } from "@ant-design/icons";
@@ -34,8 +34,8 @@ export default function CartDrawer(props) {
             visible={cartContext.state.drawer.visible}
             width={360}
         >
-            {cartContext.state.products &&
-                cartContext.state.products.map((product) => {
+            {cartContext.state.products.length > 0 ? <div>
+            { cartContext.state.products.map((product) => {
                     return (
                         <div
                             key={product.id}
@@ -99,7 +99,8 @@ export default function CartDrawer(props) {
                             </div>
                         </div>
                     );
-                })}
+                })
+            }
             <div className="row mb-3">
                 <div className="col-8 fw-bolder">Subtotal</div>
                 <div className="col-4 text-end fw-bolder">R{toFixed(cartContext.state.subtotal, 2)}</div>
@@ -128,6 +129,21 @@ export default function CartDrawer(props) {
                     <p>Checkout</p>
                 </div>
             </div>
+            </div> : <div>
+            <Empty
+                image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
+                imageStyle={{
+                height: 160,
+                }}
+                description={
+                <div style={{ marginBottom: 100}}>
+                    Your cart is empty.
+                </div>
+                }
+            >
+                <Button onClick={() => { router.push('/shop#top'); onClose(); }} type="primary">Start shopping</Button>
+            </Empty>    
+            </div>}
         </Drawer>
     );
 }
