@@ -1,8 +1,7 @@
-@import './src/styles/variables';
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700&display=swap');
-@import './src/styles/ant-override.scss';
-$rubik: Rubik,
-"sans-serif";
+@import "./src/styles/variables";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700&display=swap");
+@import "./src/styles/ant-override.scss";
+$rubik: Rubik, "sans-serif";
 html,
 body {
     color: $primaryText;
@@ -92,7 +91,7 @@ label {
 }
 
 .hoverCursor {
-     :hover {
+    :hover {
         cursor: pointer;
         text-decoration: underline;
         p {
@@ -190,4 +189,17 @@ label {
             height: 30px;
         }
     }
+}
+
+.btn-cta {
+    background-color: #ffffff;
+    color: $main-green;
+    border: 0px;
+}
+
+.btn-cta:hover,
+.btn-cta:active {
+    background-color: #ffffff;
+    color: $main-green;
+    border: 0px;
 }

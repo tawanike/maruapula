@@ -1,12 +1,39 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useContext, useEffect } from "react";
 import { Anchor, Button } from "antd";
+import { ProductContext } from "src/components/Products/context";
+import {
+    filterProducts,
+    selectedCategory,
+} from "src/components/Products/actions";
+
 
 export default function About() {
+    const router = useRouter();
+
+    const productContext = useContext(ProductContext);
+
+    const goTo = (location) => {
+        console.log('location', location)
+        const defaultCategoryProducts: any[] = productContext.state.products.filter(
+            (product) => {
+                if (product.category === location) {
+                    return product;
+                }
+            }
+        );
+        productContext.dispatch(selectedCategory(location));
+        productContext.dispatch(filterProducts(defaultCategoryProducts));
+
+        router.push('/shop#top')
+    };
+
     return (
         <div className="container-fluid">
             <div className="row">
                 <div className="col-md-2 make-me-sticky d-none d-sm-none d-md-block">
-                    <Anchor offsetTop={100}>
+                <Anchor offsetTop={108}>
                         <p>
                             <Anchor.Link
                                 href="#who-we-are"
@@ -50,6 +77,7 @@ export default function About() {
                     </Anchor>
                 </div>
                 <div className="col-12 col-md-10">
+
                     <h3 id="who-we-are" className="p-3">
                         Who we are
                         <hr
@@ -87,11 +115,15 @@ export default function About() {
                                     </ul>
                                 </p>
                             </p>
+                            <div >
+                                <Button className="btn-cta"
+                                onClick={()=> goTo('Fruits')} type="link" size="large">Click here to order online from our fresh food menu</Button>
+                            </div>
                         </div>
 
                         <div className="pb-5 col-md-8">
                             <img
-                                src="https://res.cloudinary.com/mmogomedia/image/upload/v1616779237/maruapula/assets/Karabo_Journey_Image_1.jpg"
+                                src="https://res.cloudinary.com/mmogomedia/image/upload/v1617959304/maruapula/assets/About_Us-_Who_we_are_aeuawo.jpg"
                                 style={{ width: "100%", height: "auto" }}
                             />
                         </div>
@@ -129,7 +161,7 @@ export default function About() {
                             <div className="row">
                                 <div className="col-12 col-md-7 mb-3">
                                     <img
-                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862223/maruapula/assets/Business_Tab_Image_5_uiyxo6.jpg"
+                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1617959311/maruapula/assets/About_Us-_Maruapula_s_natural_healthy_fresh_food_philosophy_o0bcos.jpg"
                                         style={{
                                             width: "100%",
                                             height: "auto",
@@ -162,6 +194,10 @@ export default function About() {
                                         sustainability fresh produced products
                                         need to be made more accessible.
                                     </p>
+                                    <div >
+                                        <Button className="btn-cta"
+                                        onClick={()=> goTo('Fruits')} type="link" size="large">Click here to order online from our fresh food menu</Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -196,6 +232,10 @@ export default function About() {
                                         division prepared her well for
                                         Maruapula.
                                     </p>
+                                    <div >
+                                        <Button className="btn-cta"
+                                        onClick={()=> goTo('Fruits')} type="link" size="large">Click here to order online from our fresh food menu</Button>
+                                    </div>
                                 </div>
                                 <div className="col-12 col-md-7">
                                     <img
@@ -222,8 +262,16 @@ export default function About() {
                                 />
                             </h3>
                             <div className="row">
-                                <div className="col-12"></div>
-                                <div className="col-12">
+                            <div className="col-12 col-md-5">
+                                    <img
+                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1617959305/maruapula/assets/About_Us-_Individual___family_customers_iaamnf.jpg"
+                                        style={{
+                                            width: "100%",
+                                            height: "auto",
+                                        }}
+                                    />
+                                </div>
+                                <div className="col-7">
                                     <p>
                                         We receive orders daily and deliver to
                                         individual and family homes, saving you
@@ -239,12 +287,10 @@ export default function About() {
                                         holidays. <br />
                                     </p>
                                     <p>
-                                        <Link href="/shop">
-                                            <a>
-                                                Click here to order online from
-                                                fresh food menu
-                                            </a>
-                                        </Link>
+                                    <div>
+                                        <Button className="btn-cta"
+                                        onClick={()=> goTo('Fruits')} type="link" size="large">Click here to order online from our fresh food menu</Button>
+                                    </div>
                                     </p>
                                 </div>
                             </div>
@@ -264,42 +310,23 @@ export default function About() {
                             </h3>
                             <div className="row">
                                 <div className="col-12 col-md-7">
+                                    <p>We deliver to corporates, businesses and Government. Our clients include banks, 
+                                        schools, production companies, small, medium and large businesses.</p>
                                     <p>
-                                        We receive orders and deliver to
-                                        corporates, businesses and institutions.
-                                        Our clients include banks, schools,
-                                        movie production companies, churches and
-                                        small, medium and large manufacturing
-                                        business – typically we deliver
-                                        regularly to locations with as few as 10
-                                        or up to 2,000 people!!
-                                    </p>
-                                    <p>
-                                        Our corporate, business and
-                                        institutional customers mostly order
-                                        fruit trays, chicken pieces and prepared
-                                        foods. These orders are delivered to
-                                        institutions either daily, twice weekly
-                                        or once weekly.
+                                        These clients of ours mostly order fruit trays, bulk fresh chicken and prepared foods. 
+                                        Orders are delivered either daily,weekly or twice a week. Due to unique client needs, Maruapula is flexible to deliver when, 
+                                        where and how the customer prefers. 
                                     </p>
 
-                                    <p>
-                                        Due to unique needs, Maruapula is
-                                        flexible to deliver when, where and how
-                                        a corporate, business and institutional
-                                        customer prefers. Deliveries are made
-                                        from 10H00 to 18H00, daily excluding
-                                        Sundays and public holidays.{" "}
-                                    </p>
-                                    <p>
-                                        Explore our offering for fruit trays and
-                                        catering service or contact our sales
-                                        team to discuss your specific needs.
-                                    </p>
+                                    <p>Explore our offering for:</p>
+                                    <p><Link href="#fruit-trays">Fruit trays</Link></p>
+                                    <p><Link href="#catering">Catering service</Link></p>
+                                    <p>or contact our <Link href="/contacts"><span style={{color: '#7dd181'}}>sales team</span></Link> to discuss your specific needs.</p>
+      
                                 </div>
                                 <div className="col-12 col-md-5">
                                     <img
-                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862222/maruapula/assets/Business_Tab_Image_1_cwq1ay.jpg"
+                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1617959305/maruapula/assets/About_Us-_Corporate_Business_and_Government_Clients_irii6m.jpg"
                                         style={{
                                             width: "100%",
                                             height: "auto",
@@ -323,8 +350,8 @@ export default function About() {
                             </h3>
                             <div className="row">
                                 <div className="col-12 col-md-5 mb-3">
-                                    <img
-                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1617204435/maruapula/assets/Catering_image_2_hepozl.jpg"
+                                    <img 
+                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1617959306/maruapula/assets/About_Us-_Catering_service_jmwqyq.jpg"
                                         style={{
                                             width: "100%",
                                             height: "auto",
@@ -389,11 +416,7 @@ export default function About() {
                                             <li>Cake</li>
                                         </ul>
                                     </p>
-                                    <Link href="/contacts">
-                                        <Button type="primary">
-                                            Contact Sales
-                                        </Button>
-                                    </Link>
+                                    <p>Contact our <Link href="/contacts"><span style={{color: '#7dd181'}}>sales team</span></Link> to discuss your specific needs.</p>
                                 </div>
                             </div>
                         </div>
@@ -418,19 +441,22 @@ export default function About() {
                                         So, instead of staff reaching for a
                                         chocolate bar when the munchies take
                                         hold, give your staff a healthier
-                                        alternative. If you want your business
+                                        alternative.
+                                    </p> 
+                                    <p>If you want your business
                                         to be more fruitful too, treat your
                                         staff to premium quality fruit as a
-                                        healthy office snack. Our fruit is
-                                        hand-picked and sourced from local
-                                        farmers, so it’s always fresh. One fruit
-                                        tray can be consumed by 10-12 adults or
+                                        healthy office snack.</p> 
+                                    <p>Our fruit is hand-picked and sourced from local
+                                        farmers, so it’s always fresh.</p>
+                                    <p>One fruit tray can be consumed by 10-12 adults or
                                         15-20 kids
                                     </p>
+                                    <p>Contact our <Link href="/contacts"><span style={{color: '#7dd181'}}>sales team</span></Link> to discuss your specific needs.</p>
                                 </div>
                                 <div className="col-12 col-md-5">
                                     <img
-                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1616862221/maruapula/assets/Business_Tab_Image_3_v4skgy.jpg"
+                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1617959311/maruapula/assets/About_Us._Individual___family_customers._Fruit_Tray_normal_xeh27d.png"
                                         style={{
                                             width: "100%",
                                             height: "auto",
