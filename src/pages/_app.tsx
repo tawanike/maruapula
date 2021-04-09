@@ -68,11 +68,11 @@ function App({ Component, pageProps }) {
                                     color: "#FFFFFF",
                                 }}
                             >
-                                <p className="mb-0">
-                                    All orders received before 14:00, will be
-                                    delivered in 2 days. Deliveries from 10H00
-                                    to 18H00, daily. NO DELIEVERIES ON SUNDAYS
-                                    AND PUBLIC HOLIDAYS
+                                <p className="mb-0 text-center col-12">
+                                    All orders received before 14H00, will be
+                                    delivered in 2 days. Deliveries daily, from
+                                    09H00 to 17H00. No deliveries on Sundays and
+                                    Public Holiday
                                 </p>
                             </div>
                         </div>

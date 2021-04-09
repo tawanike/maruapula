@@ -193,7 +193,7 @@ export default function Home() {
                                         />
                                     </div>
                                     <div className="col co-md-9">
-                                        For Institutions
+                                        For Business
                                     </div>
                                 </div>
                             </Link>

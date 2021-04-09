@@ -16,7 +16,6 @@ export default function Sidebar(props) {
     const router = useRouter();
     const productContext = useContext(ProductContext);
     const navigate = (e) => {
-        
         if (e.key === "Specials") {
             const defaultCategoryProducts: any[] = productContext.state.products.filter(
                 (product) => {
@@ -119,7 +118,7 @@ export default function Sidebar(props) {
                 }}
                 key="Businesses"
             >
-                For institutions
+                For business
             </Menu.Item>
         </Menu>
     );
