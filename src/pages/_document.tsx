@@ -30,6 +30,7 @@ class MyDocument extends Document {
                         }}
                     />
                     {/* End Google Tag Manager (noscript) */}
+                    <title>Maruapula Store</title>
                 </Head>
                 <body>
                     <Main />
