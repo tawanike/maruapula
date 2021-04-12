@@ -1,7 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { googleTagManager } from "src/components/scripts";
-import * as Sentry from "@sentry/react";
-import { Integrations } from "@sentry/tracing";
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -11,15 +9,6 @@ class MyDocument extends Document {
 
     render() {
         const GTM_ID = 'GTM-TP66ZCL';
-        if (typeof document !== "undefined") {
-            Sentry.init({
-                dsn:
-                    "https://b6fdd410e3264d24b7d3eac56c2334f7@o398189.ingest.sentry.io/5556015",
-                autoSessionTracking: true,
-                integrations: [new Integrations.BrowserTracing()],
-                tracesSampleRate: 0.2,
-            });
-        }
         return (
             <Html lang="en">
                 <Head>
