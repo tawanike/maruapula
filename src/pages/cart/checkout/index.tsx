@@ -345,6 +345,7 @@ export default function Checkout() {
             <Modal
                 title="Confirm order"
                 visible={showPlaceOrder}
+                maskClosable={false}
                 onOk={() => {
                     if (!loading) {
                         setPlaceOrder(true);

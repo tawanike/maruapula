@@ -18,6 +18,7 @@ import ProductContextProvider from "src/components/Products/context";
 import { useEffect } from "react";
 import { Router } from "next/router";
 import "../libs/fontawesome";
+import { GTMPageView } from 'src/components/utils/gtm';
 
 NProgress.configure({
     showSpinner: false,
@@ -34,15 +35,18 @@ function App({ Component, pageProps }) {
         const handleRouteChange = (url) => NProgress.start();
         const handleCompleteChange = (url) => NProgress.done();
         const handleChangeError = (err, url) => NProgress.done();
+        const handleRouteChanges = (url: string) => GTMPageView(url);
 
         Router.events.on("routeChangeStart", handleRouteChange);
         Router.events.on("routeChangeComplete", handleCompleteChange);
         Router.events.on("routeChangeError", handleChangeError);
+        Router.events.on('routeChangeComplete', handleRouteChange);
 
         return () => {
             Router.events.off("routeChangeStart", handleRouteChange);
             Router.events.off("routeChangeComplete", handleCompleteChange);
             Router.events.off("routeChangeError", handleChangeError);
+            Router.events.off('routeChangeComplete', handleRouteChanges);
         };
     }, []);
     return (
