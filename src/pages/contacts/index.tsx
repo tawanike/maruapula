@@ -26,11 +26,6 @@ export default function Contacts() {
   };
   return (
     <div className="row">
-      <div className="col-12 mb-5">
-
-        <img src={`https://maps.googleapis.com/maps/api/staticmap?center=921+Moss+Rd,+Weltevredenpark,+Roodepoort&zoom=17&size=1200x500&markers=label=M|921+Moss+Rd,+Weltevredenpark,+Roodepoort&key=${process.env.GOOGLE_BROWSER_API_KEY}`} 
-        style={{ width: '100%', height: 600}} />
-      </div>
       <div className="col-md-5 p-4">
         <p><FontAwesomeIcon icon={['fas', 'phone-alt']} style={{ marginRight: 10}}/> 083 668 5785</p>
         <p><FontAwesomeIcon icon={['fas', 'envelope']} style={{ marginRight: 10}}/>sales@maruapula.store</p>
@@ -45,7 +40,7 @@ export default function Contacts() {
       </div>
       <div className="col-md-7 Contacts p-5">
         <div className="col-md-12">
-          <h2>Get intouch with us</h2>
+          <h2>Get in touch with us</h2>
         </div>
         <Form layout="vertical" name="contacts" onFinish={onFinish} validateMessages={validateMessages}>
           <div className="row">
