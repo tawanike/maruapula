@@ -11,7 +11,7 @@ import { BannersContext } from "src/components/Banners/context";
 import { ProductContext } from "src/components/Products/context";
 import { getBanners } from "src/components/Banners/actions";
 import { changePage, filterProducts, getProducts } from "src/components/Products/actions";
-
+import TextScroller from "src/components/utils/text-scroller";
 
 export default function Home() {
     const bannersContext = useContext(BannersContext);
@@ -65,6 +65,34 @@ export default function Home() {
                         ""
                     )}
                 </div>
+
+                <div
+                            className="col-12 mt-5"
+                            sx={{
+                                bg: "muted",
+                                height: "50px",
+                                display: "grid",
+                                color: "#FFFFFF",
+                            }}
+                        >
+                            <div
+                                className="container"
+                                sx={{
+                                    height: "50px",
+                                    display: "grid",
+                                    placeItems: "center",
+                                    color: "#FFFFFF"
+                                }}
+                            >
+                                <p className="mb-0 text-center col-12">
+                                    <TextScroller text="All orders received before 14H00, will be
+                                    delivered in 2 days. Deliveries daily, from
+                                    09H00 to 17H00. No deliveries on Sundays and
+                                    Public Holiday" />
+                                    
+                                </p>
+                            </div>
+                        </div>
                 <div className="col-12" sx={{ paddingTop: "100px" }} id="top">
                     <div className="row">
                         <div className="col-12 col-md-3">
