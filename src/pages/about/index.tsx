@@ -235,7 +235,7 @@ export default function About() {
                             <div className="row">
                             <div className="col-12 col-md-5">
                                     <img
-                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/assets/assets/About_Us-_Individual___family_customers_iaamnf.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618332485/assets/About_Us-_Individual___family_customers_iaamnf.jpg"
                                         style={{
                                             width: "100%",
                                             height: "auto",
@@ -299,7 +299,7 @@ export default function About() {
                                 </div>
                                 <div className="col-12 col-md-5">
                                     <img
-                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/assets/assets/About_Us-_Corporate_Business_and_Government_Clients_irii6m.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618332484/assets/About_Us-_Corporate_Business_and_Government_Clients_irii6m.jpg"
                                         style={{
                                             width: "100%",
                                             height: "auto",
