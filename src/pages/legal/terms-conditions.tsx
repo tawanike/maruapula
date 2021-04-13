@@ -9,9 +9,9 @@ export default function TermsConditions() {
             please click here to contact us.</p>
 
 <h3>Introduction</h3>
-<p>1.1. Thank you for using General Supplies (Pty) Ltd herein after referred to as “Maruapula”. 
-  These Terms of Service (“Terms”) govern your use of Maruapula services, including our website and mobile 
-  applications (the “Services”), and are entered into by you and Maruapula.</p>
+<p>1.1. Thank you for using the website of Maruapula General Supplies (Pty) Ltd, hereinafter referred to as 
+  “Maruapula”. These Terms of Service (“Terms”) govern your use of Maruapula services, including our website and 
+  mobile applications (the “Services”), and are entered into by you and Maruapula.</p>
 
 
 <h3>In these terms:</h3>
@@ -203,7 +203,7 @@ tax may be charged on the undiscounted original price of the product.<br />
 
 <h3>Transactions involving Alcohol</h3>
 
-11.1. No alcohol will be sold by Maruapula through the our website.<br />
+11.1. No alcohol will be sold by Maruapula through the website.<br />
 
 <h3>12. Third-party Products and Content</h3>
 
@@ -308,7 +308,9 @@ Termination, Section 1 and Sections 4-15 survive and continue to apply to you.<b
 
 <h3>Returns</h3>
 
-21.1. If you are for any reason dissatisfied with any item purchased, you may contact Maruapula within 48 hours of purchase for a replacement or exchange, provided you have the original tax invoice and the specific item(s) purchased. Please note that items purchased on our sale may be subject to a separate returns policy. Please email customer service at sales@maruapula.store
+21.1. If you are for any reason dissatisfied with any item purchased, you may contact Maruapula within 48 hours of
+ purchase for a replacement or exchange, provided you have the original tax invoice and the specific item(s) purchased. 
+ Please email customer service at sales@maruapula.store for any queries related to returns.
 
 <h3>22. Assignment</h3>
 
