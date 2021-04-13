@@ -5,6 +5,7 @@ import { useEffect, useState, useContext } from "react";
 import { Dropdown, Button } from 'antd';
 import Loading from "src/components/Loading";
 import Banners from "src/components/Banners";
+import MobileBanner from 'src/components/Banners/Mobile';
 import Products from "src/components/Products/List";
 import Sidebar from "src/components/Sidebar";
 import { BannersContext } from "src/components/Banners/context";
@@ -12,6 +13,11 @@ import { ProductContext } from "src/components/Products/context";
 import { getBanners } from "src/components/Banners/actions";
 import { changePage, filterProducts, getProducts } from "src/components/Products/actions";
 import TextScroller from "src/components/utils/text-scroller";
+import {
+    BrowserView,
+    MobileView
+  } from "react-device-detect";
+
 
 export default function Home() {
     const bannersContext = useContext(BannersContext);
@@ -57,20 +63,32 @@ export default function Home() {
     return (
         <div className="col-12" sx={{ paddingLeft: "15px" }}>
             <div className="row">
-                <div className="col-12">
-                    {bannersContext.state.banners &&
-                    bannersContext.state.banners.length ? (
-                        <Banners banners={bannersContext.state.banners} />
-                    ) : (
-                        ""
-                    )}
-                </div>
+            <BrowserView>
+                    <div className="col-12">
+                        {bannersContext.state.banners &&
+                        bannersContext.state.banners.length ? (
+                            <Banners banners={bannersContext.state.banners} is_home={true} /> 
+                        ) : (
+                            ""
+                        )}
+                    </div>
+                </BrowserView>
+                <MobileView>
+                    <div className="col-12">
+                        {bannersContext.state.banners &&
+                        bannersContext.state.banners.length ? (
+                            <MobileBanner banners={bannersContext.state.banners} is_home={true} />
+                        ) : (
+                            ""
+                        )}
+                    </div>
+                </MobileView>
 
                 <div
                             className="col-12 mt-5"
                             sx={{
                                 bg: "muted",
-                                height: "50px",
+                                height: "90px",
                                 display: "grid",
                                 color: "#FFFFFF",
                             }}
@@ -78,7 +96,7 @@ export default function Home() {
                             <div
                                 className="container"
                                 sx={{
-                                    height: "50px",
+                                    height: "90px",
                                     display: "grid",
                                     placeItems: "center",
                                     color: "#FFFFFF"

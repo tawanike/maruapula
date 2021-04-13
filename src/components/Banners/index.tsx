@@ -1,11 +1,18 @@
 import { Button, Carousel } from "antd";
 import { useRouter } from "next/router";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { ProductContext } from "src/components/Products/context";
 import {
     filterProducts,
     selectedCategory,
 } from "src/components/Products/actions";
+import {
+    BrowserView,
+    MobileView,
+    isMobile,
+    isBrowser
+  } from "react-device-detect";
+
 
 export default function Banners(props) {
     const router = useRouter();
@@ -27,8 +34,7 @@ export default function Banners(props) {
         productContext.dispatch(filterProducts(defaultCategoryProducts));
     };
 
-    return (
-        <Carousel autoplay dots={false}>
+    return (<Carousel autoplay dots={false}>
             {props.banners.map((banner, index) => (
                 <div className="Banner" sx={{ height: "auto" }} key={index}>
                     <picture className="w-100">
@@ -70,6 +76,5 @@ export default function Banners(props) {
                     </div>
                 </div>
             ))}
-        </Carousel>
-    );
+        </Carousel>);
 }
