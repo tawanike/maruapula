@@ -140,7 +140,7 @@ export default function About() {
                             <div className="row">
                                 <div className="col-12 col-md-7 mb-3">
                                     <img
-                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/assets/assets/About_Us-_Maruapula_s_natural_healthy_fresh_food_philosophy_o0bcos.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618332489/assets/About_Us-_Maruapula_s_natural_healthy_fresh_food_philosophy_o0bcos_odwiqw.jpg"
                                         style={{
                                             width: "100%",
                                             height: "auto",
@@ -210,7 +210,7 @@ export default function About() {
                                 </div>
                                 <div className="col-12 col-md-7">
                                     <img
-                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/assets/assets/Karabo_Journey_Image_2.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618332517/assets/Karabo_Journey_Image_2_kgtemd.jpg"
                                         style={{
                                             width: "100%",
                                             height: "auto",
@@ -324,7 +324,7 @@ export default function About() {
                             <div className="row">
                                 <div className="col-12 col-md-5 mb-3">
                                     <img 
-                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/assets/assets/About_Us-_Catering_service_jmwqyq.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618332484/assets/About_Us-_Catering_service_jmwqyq.jpg"
                                         style={{
                                             width: "100%",
                                             height: "auto",
@@ -418,7 +418,7 @@ export default function About() {
                                 </div>
                                 <div className="col-12 col-md-5">
                                     <img
-                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/assets/About_Us._Individual___family_customers._Fruit_Tray_normal_xeh27d.png"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618332533/assets/About_Us._Individual___family_customers._Fruit_Tray_normal_xeh27d.png"
                                         style={{
                                             width: "100%",
                                             height: "auto",
