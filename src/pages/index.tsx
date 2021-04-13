@@ -179,7 +179,7 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/platter.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326878/products/FR0025.jpg"
                                         style={{
                                             width: "165%",
                                             height: "auto",
@@ -196,7 +196,7 @@ export default function Home() {
                                 <div className="row">
                                     <div className="d-none d-md-block col-md-3 h-100">
                                         <img
-                                            src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/catering_services.jpg"
+                                            src="https://res.cloudinary.com/maruapula/image/upload/v1618332517/assets/catering_services_diyky1.jpg"
                                             style={{
                                                 width: "135%",
                                                 height: "auto",
@@ -214,7 +214,7 @@ export default function Home() {
                                 <div className="row">
                                     <div className="d-none d-md-block col-md-3 h-100">
                                         <img
-                                            src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/About_Us-_Corporate_Business_and_Government_Clients_irii6m.jpg"
+                                            src="https://res.cloudinary.com/maruapula/image/upload/v1618332484/assets/About_Us-_Corporate_Business_and_Government_Clients_irii6m.jpg"
                                             style={{
                                                 width: "135%",
                                                 height: "auto",

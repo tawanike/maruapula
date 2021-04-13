@@ -21,15 +21,11 @@ const ProductContextProvider: React.FC = ( props: any ) => {
     
     const [state, dispatch] = useReducer( reducer, initialState);
 
-    useEffect(() => {
-        
-    }, [state.products])
-
-return (
-    <ProductContext.Provider value={{ state, dispatch }}>
-        {props.children}
-    </ProductContext.Provider>
-);
+    return (
+        <ProductContext.Provider value={{ state, dispatch }}>
+            {props.children}
+        </ProductContext.Provider>
+    );
 };
 
 export default ProductContextProvider;
