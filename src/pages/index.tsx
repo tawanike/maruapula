@@ -128,7 +128,7 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594495/maruapula/products/FR0009.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/FR0009.jpg"
                                         style={{
                                             width: "134%",
                                             height: "auto",
@@ -145,7 +145,7 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594501/maruapula/products/VG0022.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/VG0022.jpg"
                                         style={{
                                             width: "125.3%",
                                             height: "auto",
@@ -162,7 +162,7 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/CH0009.jpg"
                                         style={{
                                             width: "100%",
                                             height: "auto",
@@ -179,7 +179,7 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594500/maruapula/products/platter.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/platter.jpg"
                                         style={{
                                             width: "165%",
                                             height: "auto",
@@ -196,7 +196,7 @@ export default function Home() {
                                 <div className="row">
                                     <div className="d-none d-md-block col-md-3 h-100">
                                         <img
-                                            src="https://res.cloudinary.com/mmogomedia/image/upload/v1617958751/maruapula/assets/catering_services.jpg"
+                                            src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/catering_services.jpg"
                                             style={{
                                                 width: "135%",
                                                 height: "auto",
@@ -214,7 +214,7 @@ export default function Home() {
                                 <div className="row">
                                     <div className="d-none d-md-block col-md-3 h-100">
                                         <img
-                                            src="https://res.cloudinary.com/mmogomedia/image/upload/v1617959305/maruapula/assets/About_Us-_Corporate_Business_and_Government_Clients_irii6m.jpg"
+                                            src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/About_Us-_Corporate_Business_and_Government_Clients_irii6m.jpg"
                                             style={{
                                                 width: "135%",
                                                 height: "auto",

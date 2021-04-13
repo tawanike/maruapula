@@ -33,8 +33,8 @@ export default function HeaderComponent() {
                         <a>
                             <img
                                 sx={{ width: "100%", height: "auto" }}
-                                src="https://res.cloudinary.com/mmogomedia/image/upload/v1617880681/maruapula/assets/maruapula_landscape_uh0orm.svg"
-                                alt=""
+                                src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/assets/maruapula_landscape_uh0orm.svg"
+                                alt="Maruapula Logo"
                             />
                         </a>
                     </Link>

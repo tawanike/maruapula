@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { useEffect, useState, useContext } from "react";
-import { Menu, Dropdown, Button } from 'antd';
+import { Dropdown, Button } from 'antd';
 import Loading from "src/components/Loading";
 import Banners from "src/components/Banners";
 import Products from "src/components/Products/List";

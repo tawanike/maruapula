@@ -47,7 +47,7 @@ export default function CartDrawer(props) {
                                 sx={{ display: "grid", placeItems: "center" }}
                             >
                                     <img
-                                        src={`https://res.cloudinary.com/mmogomedia/image/upload/v1616594498/maruapula/products/${product.id}.jpg`}
+                                        src={`https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/${product.id}.jpg`}
                                         alt={product.title}
                                         onError={(e) => {
                                             (e.target as any).src =
