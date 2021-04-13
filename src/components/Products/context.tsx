@@ -1,6 +1,5 @@
-import { createContext, useReducer, Dispatch,useEffect } from 'react';
+import { createContext, useReducer, Dispatch } from 'react';
 import reducer, { Action} from './reducer';
-import { getProducts } from './actions';
 import { IProduct } from './constants';
 
 export interface InitContextProps {
