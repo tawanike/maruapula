@@ -22,20 +22,20 @@ export default async (req, res) => {
         const rows = await sheet.getRows();
         
         rows.map(row => {
-          products.push({
-            id: row.id,
-            title: row.title,
-            size: row.size,
-            description: row.description,
-            available: row.available,
-            price: row.price,
-            promo_price: row.promo_price,
-            category: row.category,
-            specials: row.specials
-          })
+          if(row.available === 'Yes'){
+            products.push({
+              id: row.id,
+              title: row.title,
+              size: row.size,
+              description: row.description,
+              available: row.available,
+              price: row.price,
+              promo_price: row.promo_price,
+              category: row.category,
+              specials: row.specials
+            });
+          }
         });
-
-        
         res.status(200).json(products);    
   }
     

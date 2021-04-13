@@ -105,14 +105,14 @@ export default function Home() {
                             {loading ? (
                                 <Loading />
                             ) : (
-                                <Products
+                                productContext.state.selectedProducts.length > 0 ? <Products
                                     category={productContext.state.category}
                                     changePage={handleChangePage}
                                     currentPage={productContext.state.page}
                                     products={
                                         productContext.state.selectedProducts
                                     }
-                                />
+                                /> : "Coming Soon"
                             )}
                         </div>
                     </div>

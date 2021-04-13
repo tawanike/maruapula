@@ -7,7 +7,6 @@ export default (req, res) => {
 
   if (req.method === 'POST') {
     // Process a POST request
-    console.log(req)
   } else {
     const products = [];
     (async () => {
@@ -24,7 +23,7 @@ export default (req, res) => {
         const rows = await sheet.getRows();
         
         rows.map(row => {
-            if(row.specials === 'Yes') {
+            if(row.available === 'Yes' && row.category === 'Specials') {
                 products.push({
                     id: row.id,
                     title: row.title,
@@ -39,8 +38,6 @@ export default (req, res) => {
                   })
             }
         })
-        console.log('SPECIALS', products);
-
         res.status(200).json(products);
     })();
     
