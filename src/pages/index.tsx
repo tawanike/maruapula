@@ -16,6 +16,8 @@ import {
     selectedCategory,
 } from "src/components/Products/actions";
 import Products from "src/components/Products/List";
+import TextScroller from "src/components/utils/text-scroller";
+
 
 export default function Home() {
     const router = useRouter();
@@ -89,6 +91,33 @@ export default function Home() {
                         ""
                     )}
                 </div>
+                <div
+                            className="col-12 mt-5"
+                            sx={{
+                                bg: "muted",
+                                height: "50px",
+                                display: "grid",
+                                color: "#FFFFFF",
+                            }}
+                        >
+                            <div
+                                className="container"
+                                sx={{
+                                    height: "50px",
+                                    display: "grid",
+                                    placeItems: "center",
+                                    color: "#FFFFFF"
+                                }}
+                            >
+                                <p className="mb-0 text-center col-12">
+                                    <TextScroller text="All orders received before 14H00, will be
+                                    delivered in 2 days. Deliveries daily, from
+                                    09H00 to 17H00. No deliveries on Sundays and
+                                    Public Holiday" />
+                                    
+                                </p>
+                            </div>
+                        </div>
                 <div className="col-12" sx={{ paddingTop: "50px" }}>
                     <h3 className="mb-5">Categories</h3>
                     <Card title={null}>

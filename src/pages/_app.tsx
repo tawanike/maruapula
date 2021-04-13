@@ -55,32 +55,6 @@ function App({ Component, pageProps }) {
                 <CartContextProvider>
                     <ThemeProvider theme={theme}>
                         <div
-                            className="col-12"
-                            sx={{
-                                bg: "muted",
-                                height: "60px",
-                                display: "grid",
-                                color: "#FFFFFF",
-                            }}
-                        >
-                            <div
-                                className="container"
-                                sx={{
-                                    height: "60px",
-                                    display: "grid",
-                                    placeItems: "center",
-                                    color: "#FFFFFF",
-                                }}
-                            >
-                                <p className="mb-0 text-center col-12">
-                                    All orders received before 14H00, will be
-                                    delivered in 2 days. Deliveries daily, from
-                                    09H00 to 17H00. No deliveries on Sundays and
-                                    Public Holiday
-                                </p>
-                            </div>
-                        </div>
-                        <div
                             className="col-12 sticky-top"
                             sx={{
                                 maxHeight: "150px",
