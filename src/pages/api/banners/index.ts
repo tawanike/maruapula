@@ -9,7 +9,7 @@ export default async (req, res) => {
   } else {
     const banners = [];
       // Initialize the sheet - doc ID is the long id in the sheets URL
-      const doc = new GoogleSpreadsheet('1kY3EDdWuA1je4YL-SzUNMhqZgVD8rfKMB5vuzQ2OoqA');
+      const doc = new GoogleSpreadsheet('1Po4c-a568X82qyLoeatM3LL5_7-TUtyoKqCWUhFG4FA');
 
       await doc.useServiceAccountAuth({
           client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
