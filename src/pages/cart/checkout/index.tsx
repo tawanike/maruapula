@@ -62,7 +62,7 @@ export default function Checkout() {
             setLoading(false);
             setPlaceOrder(false);
             setShowPlaceOrder(false);
-            return router.push("/");
+            // return router.push("/");
         } else {
             setUserDetails(values);
             setShowPlaceOrder(true);
@@ -104,6 +104,7 @@ export default function Checkout() {
                                     name={["user", "mobile"]}
                                     label="Mobile"
                                     rules={[{ required: true }]}
+                                    extra="Phone number should be in the format of 27xxxxxxxx"
                                 >
                                     <Input />
                                 </Form.Item>
