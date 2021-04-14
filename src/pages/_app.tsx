@@ -1,5 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+import Head from 'next/head';
 import { jsx } from "theme-ui";
 import { ThemeProvider } from "theme-ui";
 import theme from "src/_theme";
@@ -54,6 +55,15 @@ function App({ Component, pageProps }) {
             <ProductContextProvider>
                 <CartContextProvider>
                     <ThemeProvider theme={theme}>
+                    <Head>
+                        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+                        <meta name="description" content="Fresh, Fruits and vegetables, Home food, Office, Online Deliveries, Catering, food lovers market, 
+                        Gauteng, Ferreira Fresh, Raw Nutrition" />
+                        <meta name="description" content="" />
+                        <meta name="description" content="" />
+                        <meta name="description" content="" />
+                        <title>Maruapula Store | Fresh Produce | Serve Them Fresh, Daily</title>
+                    </Head>
                         <div
                             className="col-12 sticky-top"
                             sx={{

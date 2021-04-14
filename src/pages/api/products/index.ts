@@ -10,7 +10,7 @@ export default async (req, res) => {
     const products = [];
 
       // Initialize the sheet - doc ID is the long id in the sheets URL
-      const doc = new GoogleSpreadsheet('1kY3EDdWuA1je4YL-SzUNMhqZgVD8rfKMB5vuzQ2OoqA');
+      const doc = new GoogleSpreadsheet('1Po4c-a568X82qyLoeatM3LL5_7-TUtyoKqCWUhFG4FA');
 
       await doc.useServiceAccountAuth({
           client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
@@ -22,20 +22,20 @@ export default async (req, res) => {
         const rows = await sheet.getRows();
         
         rows.map(row => {
-          products.push({
-            id: row.id,
-            title: row.title,
-            size: row.size,
-            description: row.description,
-            available: row.available,
-            price: row.price,
-            promo_price: row.promo_price,
-            category: row.category,
-            specials: row.specials
-          })
+          if(row.available === 'Yes'){
+            products.push({
+              id: row.id,
+              title: row.title,
+              size: row.size,
+              description: row.description,
+              available: row.available,
+              price: row.price,
+              promo_price: row.promo_price,
+              category: row.category,
+              specials: row.specials
+            });
+          }
         });
-
-        
         res.status(200).json(products);    
   }
     

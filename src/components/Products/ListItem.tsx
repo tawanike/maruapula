@@ -18,8 +18,9 @@ export default function ListItem(props) {
     id ? id : "nothing"
 
     if (id) {
-      return `https://res.cloudinary.com/mmogomedia/image/upload/v1616594498/maruapula/products/${id}.jpg`
+      return `https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/${id}.jpg`
     }
+
     return `./placeholder.jpg`
   }
 
