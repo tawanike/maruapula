@@ -26,6 +26,7 @@ export default function Checkout() {
     const cartContext = useContext(CartContext);
     const [order_reference, setOrder_reference] = useState<number>(0);
     const [loading, setLoading] = useState<boolean>(false);
+    const [hasError, setHasError] = useState<boolean>(false);
     const [cartTotal, seCartTotal] = useState<number>(0);
     const [userDetails, setUserDetails] = useState<any>();
     const [placeOrder, setPlaceOrder] = useState<boolean>(false);
@@ -40,8 +41,13 @@ export default function Checkout() {
         setPlaceOrder(false);
         setLoading(false);
 
-        setOrder_reference(Math.floor(Math.random() * (999999 - 1000000 + 1)) + 1000000);
+        setOrder_reference(Math.floor(Math.random() * (100000 - 999999 + 1)));
     }, []);
+
+    const onFinishFailed = (errorInfo: any) => {
+        console.log('Failed:', errorInfo.errorFields);
+        setHasError(errorInfo.errorFields > 0);
+      };
 
     const onFinish = async (values: any) => {
         if (placeOrder) {
@@ -62,7 +68,7 @@ export default function Checkout() {
             setLoading(false);
             setPlaceOrder(false);
             setShowPlaceOrder(false);
-            return router.push("/");
+            // return router.push("/");
         } else {
             setUserDetails(values);
             setShowPlaceOrder(true);
@@ -74,6 +80,7 @@ export default function Checkout() {
             <Form
                 name="nest-messages"
                 onFinish={onFinish}
+                onFinishFailed={onFinishFailed}
                 validateMessages={validateMessages}
                 layout="vertical"
             >
@@ -104,6 +111,7 @@ export default function Checkout() {
                                     name={["user", "mobile"]}
                                     label="Mobile"
                                     rules={[{ required: true }]}
+                                    extra="Phone number should be in the format of 27xxxxxxxx"
                                 >
                                     <Input />
                                 </Form.Item>
@@ -332,7 +340,7 @@ export default function Checkout() {
                                         placeItems: "center end",
                                     }}
                                 >
-                                    <Button htmlType="submit">
+                                    <Button htmlType="submit" type="primary" disabled={hasError}>
                                         Place order
                                     </Button>
                                 </div>
@@ -353,7 +361,7 @@ export default function Checkout() {
                     } else {
                         setShowPlaceOrder(false);
                         cartContext.dispatch(emptyCart());
-                        router.push("/");
+                        // router.push("/");
                     }
                 }}
                 className="mt-5"
