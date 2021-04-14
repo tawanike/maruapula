@@ -1,6 +1,6 @@
 @import "./variables.scss";
 ::selection {
-    background: $main-green;
+    background: $main-green !important;
 }
 
 html {
@@ -92,5 +92,13 @@ html {
 .ant-steps-item-finish
     > .ant-steps-item-container
     > .ant-steps-item-tail::after {
+    background: $main-green !important;
+}
+
+.ant-pagination-item-active {
+    border-color: $main-green !important;
+}
+
+.ant-pagination-item::selection {
     background: $main-green !important;
 }
