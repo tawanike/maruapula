@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Form, Input, Button } from 'antd';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -26,17 +27,18 @@ export default function Contacts() {
   };
   return (
     <div className="row">
+      <Head>
+        <title>Contacts - Maruapula Store | Fresh Produce | Serve Them Fresh, Daily | Gauteng Delivery</title>
+      </Head>
+      <div className="col-12" className="mb-5">
+      <img width="100%" src="https://maps.googleapis.com/maps/api/staticmap?center=921+Moss+Street,+Weltevredenpark,+Rooderpoort&zoom=15&scale=2&size=600x300&maptype=roadmap&key=AIzaSyArHNzJPcVWWBtlVfXyBavPJ2qfL3sW__0&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:M%7C921+Moss+Street,+Weltevredenpark,+Rooderpoort" alt="Google Map of 921 Moss Street, Weltevredenpark, Rooderpoort"/>
+      </div>
+      
       <div className="col-md-5 p-4">
         <p><FontAwesomeIcon icon={['fas', 'phone-alt']} style={{ marginRight: 10}}/> 083 668 5785</p>
         <p><FontAwesomeIcon icon={['fas', 'envelope']} style={{ marginRight: 10}}/>sales@maruapula.store</p>
         <p><FontAwesomeIcon icon={['fas', 'map-marker-alt']} style={{ marginRight: 10}}/>921 Moss Street, Weltevredenpark</p>
-        <p><FontAwesomeIcon icon={['fas', 'business-time']} style={{ marginRight: 10}}/>Monday to Saturday (08H00 to 18H00)</p>
-        {/* <p>
-          <h3>Follow Us</h3>
-          <FontAwesomeIcon icon={['fab', 'facebook']} size="2x" style={{ marginRight: 10}}/>
-          <FontAwesomeIcon icon={['fab', 'twitter']} size="2x" style={{ marginRight: 10}}/>
-          <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" style={{ marginRight: 10}}/>
-        </p> */}
+        <p><FontAwesomeIcon icon={['fas', 'business-time']} style={{ marginRight: 10}}/>Monday to Saturday (08H00 to 17H00)</p>
       </div>
       <div className="col-md-7 Contacts p-5">
         <div className="col-md-12">

@@ -19,7 +19,7 @@ export default function Sidebar(props) {
         if (e.key === "Specials") {
             const defaultCategoryProducts: any[] = productContext.state.products.filter(
                 (product) => {
-                    if (product.specials === "Yes") {
+                    if (product.category === "Specials") {
                         return product;
                     }
                 }

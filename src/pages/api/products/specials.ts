@@ -7,12 +7,11 @@ export default (req, res) => {
 
   if (req.method === 'POST') {
     // Process a POST request
-    console.log(req)
   } else {
     const products = [];
     (async () => {
       // Initialize the sheet - doc ID is the long id in the sheets URL
-      const doc = new GoogleSpreadsheet('1kY3EDdWuA1je4YL-SzUNMhqZgVD8rfKMB5vuzQ2OoqA');
+      const doc = new GoogleSpreadsheet('1Po4c-a568X82qyLoeatM3LL5_7-TUtyoKqCWUhFG4FA');
 
       await doc.useServiceAccountAuth({
           client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || CLIENT_ID,
@@ -24,7 +23,7 @@ export default (req, res) => {
         const rows = await sheet.getRows();
         
         rows.map(row => {
-            if(row.specials === 'Yes') {
+            if(row.available === 'Yes' && row.category === 'Specials') {
                 products.push({
                     id: row.id,
                     title: row.title,
@@ -39,8 +38,6 @@ export default (req, res) => {
                   })
             }
         })
-        console.log('SPECIALS', products);
-
         res.status(200).json(products);
     })();
     

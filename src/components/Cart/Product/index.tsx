@@ -20,7 +20,7 @@ export default function CartProduct(props) {
     <div className="row">
       <div className="col">
         <Image
-          src={`https://res.cloudinary.com/mmogomedia/image/upload/v1616594498/maruapula/products/${props.product.id}.jpg`}
+          src={`https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/${props.product.id}.jpg`}
           alt={props.product.title}
           width={120}
           height={120}

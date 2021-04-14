@@ -16,8 +16,8 @@ export default function FooterComponent() {
                     <p>
                         <img
                             sx={{ width: "60%", height: "auto" }}
-                            src="https://res.cloudinary.com/mmogomedia/image/upload/v1617880681/maruapula/assets/maruapula_landscape_uh0orm.svg"
-                            alt=""
+                            src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/assets/maruapula_landscape_uh0orm.svg"
+                            alt="" 
                         />
                     </p>
                     <p>

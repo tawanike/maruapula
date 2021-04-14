@@ -1,11 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { Card, Carousel } from "antd";
+import Head from 'next/head';
+import { Card } from "antd";
 import { jsx } from "theme-ui";
 import { useEffect, useState, useContext } from "react";
 import Link from "next/link";
 import Loading from "src/components/Loading";
 import Banners from "src/components/Banners";
+import MobileBanner from 'src/components/Banners/Mobile';
 import { useRouter } from "next/router";
 import { BannersContext } from "src/components/Banners/context";
 import { ProductContext } from "src/components/Products/context";
@@ -17,6 +19,10 @@ import {
 } from "src/components/Products/actions";
 import Products from "src/components/Products/List";
 import TextScroller from "src/components/utils/text-scroller";
+import {
+    BrowserView,
+    MobileView
+  } from "react-device-detect";
 
 
 export default function Home() {
@@ -82,20 +88,35 @@ export default function Home() {
 
     return (
         <div className="col-12" sx={{ paddingLeft: "15px" }}>
+            <Head>
+                <title>Maruapula Store | Fresh Produce | Serve Them Fresh, Daily | Gauteng Delivery</title>
+            </Head>
             <div className="row">
-                <div className="col-12">
-                    {bannersContext.state.banners &&
-                    bannersContext.state.banners.length ? (
-                        <Banners banners={bannersContext.state.banners} is_home={true} />
-                    ) : (
-                        ""
-                    )}
-                </div>
+                <BrowserView>
+                    <div className="col-12">
+                        {bannersContext.state.banners &&
+                        bannersContext.state.banners.length ? (
+                            <Banners banners={bannersContext.state.banners} is_home={true} /> 
+                        ) : (
+                            ""
+                        )}
+                    </div>
+                </BrowserView>
+                <MobileView>
+                    <div className="col-12">
+                        {bannersContext.state.banners &&
+                        bannersContext.state.banners.length ? (
+                            <MobileBanner banners={bannersContext.state.banners} is_home={true} />
+                        ) : (
+                            ""
+                        )}
+                    </div>
+                </MobileView>
                 <div
                             className="col-12 mt-5"
                             sx={{
                                 bg: "muted",
-                                height: "50px",
+                                height: "60px",
                                 display: "grid",
                                 color: "#FFFFFF",
                             }}
@@ -103,7 +124,7 @@ export default function Home() {
                             <div
                                 className="container"
                                 sx={{
-                                    height: "50px",
+                                    height: "60px",
                                     display: "grid",
                                     placeItems: "center",
                                     color: "#FFFFFF"
@@ -128,7 +149,7 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594495/maruapula/products/FR0009.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/FR0009.jpg"
                                         style={{
                                             width: "134%",
                                             height: "auto",
@@ -145,7 +166,7 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594501/maruapula/products/VG0022.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/VG0022.jpg"
                                         style={{
                                             width: "125.3%",
                                             height: "auto",
@@ -162,7 +183,7 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1616669936/maruapula/products/CH0009.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/CH0009.jpg"
                                         style={{
                                             width: "100%",
                                             height: "auto",
@@ -179,7 +200,7 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/mmogomedia/image/upload/v1616594500/maruapula/products/platter.jpg"
+                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326878/products/FR0025.jpg"
                                         style={{
                                             width: "165%",
                                             height: "auto",
@@ -196,7 +217,7 @@ export default function Home() {
                                 <div className="row">
                                     <div className="d-none d-md-block col-md-3 h-100">
                                         <img
-                                            src="https://res.cloudinary.com/mmogomedia/image/upload/v1617958751/maruapula/assets/catering_services.jpg"
+                                            src="https://res.cloudinary.com/maruapula/image/upload/v1618332517/assets/catering_services_diyky1.jpg"
                                             style={{
                                                 width: "135%",
                                                 height: "auto",
@@ -214,7 +235,7 @@ export default function Home() {
                                 <div className="row">
                                     <div className="d-none d-md-block col-md-3 h-100">
                                         <img
-                                            src="https://res.cloudinary.com/mmogomedia/image/upload/v1617959305/maruapula/assets/About_Us-_Corporate_Business_and_Government_Clients_irii6m.jpg"
+                                            src="https://res.cloudinary.com/maruapula/image/upload/v1618332484/assets/About_Us-_Corporate_Business_and_Government_Clients_irii6m.jpg"
                                             style={{
                                                 width: "135%",
                                                 height: "auto",

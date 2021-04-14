@@ -10,12 +10,35 @@ export default function List(props) {
   const [pageStartEnd, setPageStartEnd] = useState<any>({start: 0, end:12});
 
   const handleChangePage = (page, pageSize) => {
+    console.log(page, pageSize);
+    console.log(pageStartEnd)
     let start = 0;
     let end = pageSize;
     if (page > 1) {
       start = pageStartEnd.end;
       end = (pageSize) * page;
     }
+
+    if (page === 2) {
+      start = 13;
+      end = 24;
+    }
+
+    if (page > 3) {
+      start = 25
+      end = 36;
+    }
+
+    if (page > 4) {
+      start = 37;
+      end = 48;
+    }
+
+    if (page > 5) {
+      start = 49;
+      end = 60;
+    }
+
     props.changePage(page);
     setPageStartEnd({start, end});
     window.scrollTo({
