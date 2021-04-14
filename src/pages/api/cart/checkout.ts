@@ -1,6 +1,7 @@
 import axios from 'axios';
 const sgMail = require('@sendgrid/mail');
-
+const twilio = require('twilio');
+const twilioClient = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 export default async (req, res) => {
     if (req.method === 'POST') {
@@ -62,14 +63,25 @@ export default async (req, res) => {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
         }
-        await axios
-            .post( 'https://api.clickatell.com/rest/message', {
-                to: [req.body.user.mobile],
-                text: `Thank you for your Maruapula order!! We will contact you soon to finalise your order + payment arrangements. Call 0836685785 for queries. Ref #${req.body.order_reference}`
-                }, { headers: headers} );
-        
-
-        // Send Email and SMS to user
+        // await axios
+        //     .post( 'https://api.clickatell.com/rest/message', {
+        //         to: [req.body.user.mobile],
+        //         text: `Thank you for your Maruapula order!! We will contact you soon to finalise your order + payment arrangements. Call 0836685785 for queries. Ref #${req.body.order_reference}`
+        //         }, { headers: headers} );
+        console.log(req.body.user.mobile)
+        try {
+          twilioClient.messages
+          .create({
+             body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+             from: '	+27600702641',
+             to: `+27${req.body.user.mobile}`
+           })
+          .then(message => console.log(message.sid));
+  // Send Email and SMS to user
+        } catch (error) {
+          console.log(error)
+        }
+         
     }else{
 
     }

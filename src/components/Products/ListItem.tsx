@@ -4,7 +4,7 @@ import { jsx } from "theme-ui"
 
 import { Modal } from "antd"
 import { useState } from "react"
-import Image from "next/image"
+
 
 import AddToCartButton from "src/components/Cart/Button"
 

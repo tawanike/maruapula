@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import Head from 'next/head';
-import { Card } from "antd";
+import { Card, Modal } from "antd";
 import { jsx } from "theme-ui";
 import { useEffect, useState, useContext } from "react";
 import Link from "next/link";
@@ -24,6 +24,7 @@ import {
     MobileView
   } from "react-device-detect";
 
+import AddToCartButton from "src/components/Cart/Button"
 
 export default function Home() {
     const router = useRouter();
@@ -32,6 +33,20 @@ export default function Home() {
     const [products, setProducts] = useState<any[]>();
     const [banners, setSlides] = useState<any[]>();
     const [loading, setLoading] = useState<boolean>(false);
+    const [showProduct, setShowProduct] = useState(false)
+    const productDetails = () => {
+      setShowProduct(true)
+    }
+  
+    const getProductImg = id => {
+      id ? id : "nothing"
+  
+      if (id) {
+        return `https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/${id}.jpg`
+      }
+  
+      return `./placeholder.jpg`
+    }
 
     useEffect(() => {
         (async () => {
@@ -252,20 +267,22 @@ export default function Home() {
                 </div>
                 <div className="col-12" sx={{ paddingTop: "50px" }}>
                     <h3>Today's Specials</h3>
-                    <div className="col-12">
-                        {loading ? (
-                            <Loading />
-                        ) : (
-                            <Products
-                                category={""}
-                                products={productContext.state.products.filter(product => {
-                                    if (product.category === "Specials") return product;
-                                }).slice(
-                                    0,
-                                    3
-                                )}
-                            />
-                        )}
+                    <div className="container">
+                        <div className="col-12">
+                            {loading ? (
+                                <Loading />
+                            ) : (
+                                <Products
+                                    category={""}
+                                    products={productContext.state.products.filter(product => {
+                                        if (product.category === "Specials") return product;
+                                    }).slice(
+                                        0,
+                                        5
+                                    )}
+                                />
+                            )}
+                        </div>
                     </div>
                 </div>
                 <div className="col-12" sx={{ paddingTop: "50px" }}></div>
