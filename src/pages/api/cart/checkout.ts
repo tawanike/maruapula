@@ -65,7 +65,7 @@ export default async (req, res) => {
         await axios
             .post( 'https://api.clickatell.com/rest/message', {
                 to: [req.body.user.mobile],
-                text: `Thank you for your Maruapula order!! We will contact you soon to finalise your order + payment arrangements. Call 0836685785 for queries. Ref #${req.body.order_reference}`
+                text: `Thank you for your Maruapula order! We will contact you soon to finalise your order + payment arrangements. Call 0836685785 for queries. Ref#${req.body.order_reference}`
                 }, { headers: headers} );
         
 
