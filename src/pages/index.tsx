@@ -116,7 +116,7 @@ export default function Home() {
                             className="col-12 mt-5"
                             sx={{
                                 bg: "muted",
-                                height: "60px",
+                                height: "90px",
                                 display: "grid",
                                 color: "#FFFFFF",
                             }}
@@ -124,7 +124,7 @@ export default function Home() {
                             <div
                                 className="container"
                                 sx={{
-                                    height: "60px",
+                                    height: "90px",
                                     display: "grid",
                                     placeItems: "center",
                                     color: "#FFFFFF"

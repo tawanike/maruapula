@@ -25,7 +25,7 @@ export default function Contacts() {
       body: JSON.stringify(values)
     });
 
-    
+    console.log(submitted);
   };
   return (
     <div className="row">
