@@ -1,6 +1,11 @@
+import Head from 'next/head';
+
 export default function TermsConditions() {
     return (
       <div className="p-3">
+        <Head>
+            <title>Terms and Conditions - Maruapula Store | Fresh Produce | Serve Them Fresh, Daily | Gauteng Delivery</title>
+        </Head>
           <h1>Term and Conditions</h1>
           <p>Please take a moment to read these terms and conditions (“Terms & Conditions”) to understand how 
             they apply to your online purchase of any products or services.</p>

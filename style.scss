@@ -221,3 +221,7 @@ label {
     color: $main-green;
     border: 0px;
 }
+
+.mmogo-view-active {
+    border-bottom: 2px solid $main-green;
+}

@@ -2,13 +2,17 @@
 /** @jsx jsx */
 
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { jsx } from "theme-ui";
+import { useEffect } from "react";
 
 import CartDrawerButton from "src/components/Cart/Drawer/Button";
 import { MenuOutlined } from "@ant-design/icons";
 import { Dropdown, Menu } from "antd";
 
 export default function HeaderComponent() {
+    const router = useRouter();
+
     const menu = (
         <Menu sx={{ marginTop: "24px", textTransform: 'uppercase' }}>
             <Menu.Item>
@@ -45,7 +49,7 @@ export default function HeaderComponent() {
                         sx={{ listStyle: "none", paddingLeft: "0" }}
                     >
                         <li
-                            className="col-2 h-100"
+                            className={router.pathname === '/' ? `col-2 h-100 mmogo-view-active` : `col-2 h-100` }
                             sx={{
                                 variant: "center",
                                 fontWeight: 600,
@@ -62,7 +66,7 @@ export default function HeaderComponent() {
                             </Link>
                         </li>
                         <li
-                            className="col-2 h-100"
+                            className={router.pathname === '/shop' ? `col-2 h-100 mmogo-view-active` : `col-2 h-100` }
                             sx={{
                                 variant: "center",
                                 fontWeight: 600,
@@ -79,7 +83,7 @@ export default function HeaderComponent() {
                             </Link>
                         </li>
                         <li
-                            className="col-2 h-100"
+                            className={router.pathname === '/about' ? `col-2 h-100 mmogo-view-active` : `col-2 h-100` }
                             sx={{
                                 variant: "center",
                                 fontWeight: 600,
@@ -96,7 +100,7 @@ export default function HeaderComponent() {
                             </Link>
                         </li>
                         <li
-                            className="col-2 h-100"
+                            className={router.pathname === '/support' ? `col-2 h-100 mmogo-view-active` : `col-2 h-100` }
                             sx={{
                                 variant: "center",
                                 fontWeight: 600,
@@ -113,7 +117,7 @@ export default function HeaderComponent() {
                             </Link>
                         </li>
                         <li
-                            className="col-2 h-100"
+                            className={router.pathname === '/contacts' ? `col-2 h-100 mmogo-view-active` : `col-2 h-100` }
                             sx={{
                                 variant: "center",
                                 fontWeight: 600,

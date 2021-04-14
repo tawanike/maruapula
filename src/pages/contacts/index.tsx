@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Form, Input, Button } from 'antd';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -26,6 +27,13 @@ export default function Contacts() {
   };
   return (
     <div className="row">
+      <Head>
+        <title>Contacts - Maruapula Store | Fresh Produce | Serve Them Fresh, Daily | Gauteng Delivery</title>
+      </Head>
+      <div className="col-12" className="mb-5">
+      <img width="100%" src="https://maps.googleapis.com/maps/api/staticmap?center=921+Moss+Street,+Weltevredenpark,+Rooderpoort&zoom=15&scale=2&size=600x300&maptype=roadmap&key=AIzaSyArHNzJPcVWWBtlVfXyBavPJ2qfL3sW__0&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:M%7C921+Moss+Street,+Weltevredenpark,+Rooderpoort" alt="Google Map of 921 Moss Street, Weltevredenpark, Rooderpoort"/>
+      </div>
+      
       <div className="col-md-5 p-4">
         <p><FontAwesomeIcon icon={['fas', 'phone-alt']} style={{ marginRight: 10}}/> 083 668 5785</p>
         <p><FontAwesomeIcon icon={['fas', 'envelope']} style={{ marginRight: 10}}/>sales@maruapula.store</p>

@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import "./variables.scss";
 ::selection {
     background: $main-green;
 }
@@ -63,4 +63,34 @@ html {
     background: #adadad;
     border-color: #adadad;
     color: #000;
+}
+
+.ant-steps-icon,
+.ant-steps-icon-dot {
+    color: $main-green;
+}
+
+.ant-steps-item-tail {
+    color: $main-green;
+}
+
+.ant-anchor-link-title-active,
+.ant-anchor-link-active {
+    color: $main-green !important;
+}
+
+.ant-anchor-ink-ball {
+    border: 2px solid $main-green !important;
+}
+.ant-steps-item-finish
+    .ant-steps-item-icon
+    > .ant-steps-icon
+    .ant-steps-icon-dot {
+    background: $main-green !important;
+}
+
+.ant-steps-item-finish
+    > .ant-steps-item-container
+    > .ant-steps-item-tail::after {
+    background: $main-green !important;
 }

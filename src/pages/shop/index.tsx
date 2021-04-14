@@ -1,5 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+import Head from 'next/head';
 import { jsx } from "theme-ui";
 import { useEffect, useState, useContext } from "react";
 import { Dropdown, Button } from 'antd';
@@ -62,6 +63,9 @@ export default function Home() {
 
     return (
         <div className="col-12" sx={{ paddingLeft: "15px" }}>
+            <Head>
+                <title>Shop - Maruapula Store | Fresh Produce | Serve Them Fresh, Daily | Gauteng Delivery</title>
+            </Head>
             <div className="row">
             <BrowserView>
                     <div className="col-12">

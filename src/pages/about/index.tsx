@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext } from "react";
@@ -31,6 +32,9 @@ export default function About() {
 
     return (
         <div className="container-fluid">
+            <Head>
+                <title>About - Maruapula Store | Fresh Produce | Serve Them Fresh, Daily | Gauteng Delivery</title>
+            </Head>
             <div className="row">
                 <div className="col-md-2 make-me-sticky d-none d-sm-none d-md-block">
                 <Anchor offsetTop={108}>
