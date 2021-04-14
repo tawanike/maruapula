@@ -16,7 +16,7 @@ const TextScroller = ({ text }) => {
   });
 
   return (
-    <div key={key}>
+    <div className="row" key={key}>
       <animated.div style={scrolling}>{text}</animated.div>
     </div>
   );

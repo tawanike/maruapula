@@ -30,7 +30,7 @@ export default function Contacts() {
       <Head>
         <title>Contacts - Maruapula Store | Fresh Produce | Serve Them Fresh, Daily | Gauteng Delivery</title>
       </Head>
-      <div className="col-12" className="mb-5">
+      <div className="col-12 mb-5">
       <img width="100%" src="https://maps.googleapis.com/maps/api/staticmap?center=921+Moss+Street,+Weltevredenpark,+Rooderpoort&zoom=15&scale=2&size=600x300&maptype=roadmap&key=AIzaSyArHNzJPcVWWBtlVfXyBavPJ2qfL3sW__0&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:M%7C921+Moss+Street,+Weltevredenpark,+Rooderpoort" alt="Google Map of 921 Moss Street, Weltevredenpark, Rooderpoort"/>
       </div>
       
