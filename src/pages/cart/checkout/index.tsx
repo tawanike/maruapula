@@ -112,7 +112,7 @@ export default function Checkout() {
                                     name={["user", "mobile"]}
                                     label="Mobile"
                                     rules={[{ required: true }]}
-                                    extra="Phone number should be in the format of 27xxxxxxxx"
+                                    extra="Phone number should be in the format of 27xxxxxxx No Special Characters"
                                 >
                                     <Input />
                                 </Form.Item>
