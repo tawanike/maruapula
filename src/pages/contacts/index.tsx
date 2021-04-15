@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import { Alert, Form, Input, Button } from 'antd';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRouter } from 'next/router';
 
 /* eslint-disable no-template-curly-in-string */
 const validateMessages = {
