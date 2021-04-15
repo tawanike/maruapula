@@ -1,4 +1,4 @@
-import { Button } from "antd";
+import { Button, Carousel } from "antd";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import { ProductContext } from "src/components/Products/context";
@@ -6,7 +6,7 @@ import {
     filterProducts,
     selectedCategory,
 } from "src/components/Products/actions";
-import Carousel from 'react-bootstrap/Carousel';
+// import Carousel from 'react-bootstrap/Carousel';
 
 
 export default function Banners(props) {
@@ -31,20 +31,20 @@ export default function Banners(props) {
 
     return (<Carousel>
             {props.banners.map((banner, index) => (
-                <Carousel.Item key={index}>
+                <div key={index}>
+                    <img src={banner.mobile_image} className="d-block w-100" />
                     <div className="MobileBanner">
                         <h3>{banner.title}</h3>
-                        <img src={banner.mobile_image} className="w-100" />
                         <Button
                             type="primary"
                             onClick={() => goTo(banner.link)}
                             size="large"
-                            className="bottom"
+                            className="buttom"
                         >
                             Buy Now
                         </Button>
                     </div>
-                </Carousel.Item>
+                </div>
             ))}
         </Carousel>
     );

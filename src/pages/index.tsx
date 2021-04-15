@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import Head from 'next/head';
-import { Card, Modal } from "antd";
+import { Card } from "antd";
 import { jsx } from "theme-ui";
 import { useEffect, useState, useContext } from "react";
 import Link from "next/link";
@@ -24,7 +24,6 @@ import {
     MobileView
   } from "react-device-detect";
 
-import AddToCartButton from "src/components/Cart/Button"
 
 export default function Home() {
     const router = useRouter();
