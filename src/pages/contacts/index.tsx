@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Form, Input, Button } from 'antd';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRouter } from 'next/router';
 
 /* eslint-disable no-template-curly-in-string */
 const validateMessages = {
@@ -15,6 +16,7 @@ const validateMessages = {
 };
 
 export default function Contacts() {
+  const router = useRouter();
   const onFinish = async (values: any) => {
     const submitted = await fetch('/api/contacts',  {
       method: 'POST',
@@ -25,7 +27,8 @@ export default function Contacts() {
       body: JSON.stringify(values)
     });
 
-    console.log(submitted);
+    router.push('/contacts#top')
+
   };
   return (
     <div className="row">
