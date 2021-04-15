@@ -119,8 +119,8 @@ export default function Home() {
                     <div className="row">
                         <div className="col-12 col-md-3">
                             <Sidebar className="mb-5 d-none d-md-block"/>
-                            <Dropdown overlay={<Sidebar />} placement="bottomCenter" arrow className="d-md-none">
-                                <Button block className="mb-5">Categories</Button>
+                            <Dropdown overlay={<Sidebar />} placement="bottomCenter" arrow trigger={["click"]} className="d-md-none sticky-category">
+                                <Button block size="large" className="mb-5" type="primary">Categories</Button>
                             </Dropdown>
                         </div>
                         <div className="col-12 col-md-9">

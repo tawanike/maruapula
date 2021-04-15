@@ -28,6 +28,20 @@ export default function Home() {
     const [products, setProducts] = useState<any[]>();
     const [banners, setSlides] = useState<any[]>();
     const [loading, setLoading] = useState<boolean>(false);
+    const [showProduct, setShowProduct] = useState(false)
+    const productDetails = () => {
+      setShowProduct(true)
+    }
+  
+    const getProductImg = id => {
+      id ? id : "nothing"
+  
+      if (id) {
+        return `https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/${id}.jpg`
+      }
+  
+      return `./placeholder.jpg`
+    }
 
     useEffect(() => {
         (async () => {
@@ -140,6 +154,7 @@ export default function Home() {
                         <p className="mb-0 text-center">
                             <TextScroller
                                 text="All orders received before 14H00, will be
+
                                     delivered in 2 days. Deliveries daily, from
                                     09H00 to 17H00. No deliveries on Sundays and
                                     Public Holiday"
@@ -280,6 +295,7 @@ export default function Home() {
                                     .slice(0, 3)}
                             />
                         )}
+
                     </div>
                 </div>
                 <div className="col-12" sx={{ paddingTop: "50px" }}></div>

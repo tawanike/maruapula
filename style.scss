@@ -160,10 +160,10 @@ label {
         padding: 32px 0px 36px 48px;
         text-align: center;
     }
-    .bottom {
+    .buttom {
         position: absolute;
         top: 0;
-        left: 0;
+        left: 12;
         margin: 84px 120px;
     }
 }
@@ -224,4 +224,11 @@ label {
 
 .mmogo-view-active {
     border-bottom: 2px solid $main-green;
+}
+
+.sticky-category {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
 }

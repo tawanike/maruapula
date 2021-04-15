@@ -2,9 +2,8 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 
-import { Modal } from "antd";
-import { useState } from "react";
-import Image from "next/image";
+import { Modal } from "antd"
+import { useState } from "react"
 
 import AddToCartButton from "src/components/Cart/Button";
 import { motion } from "framer-motion";
