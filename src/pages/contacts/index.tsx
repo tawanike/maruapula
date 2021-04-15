@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import Head from 'next/head';
-import { Form, Input, Button } from 'antd';
+import { Alert, Form, Input, Button } from 'antd';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 /* eslint-disable no-template-curly-in-string */
@@ -15,6 +16,8 @@ const validateMessages = {
 };
 
 export default function Contacts() {
+  const [form]  = Form.useForm();
+  const [showAlert, setShowAlert] = useState(false);
   const onFinish = async (values: any) => {
     const submitted = await fetch('/api/contacts',  {
       method: 'POST',
@@ -25,7 +28,10 @@ export default function Contacts() {
       body: JSON.stringify(values)
     });
 
-    console.log(submitted);
+    if (submitted.status === 201){
+      form.resetFields()
+      setShowAlert(true)
+    }
   };
   return (
     <div className="row">
@@ -39,10 +45,14 @@ export default function Contacts() {
         <p><FontAwesomeIcon icon={['fas', 'business-time']} style={{ marginRight: 10}}/>Monday to Saturday (08H00 to 17H00)</p>
       </div>
       <div className="col-md-7 Contacts p-5">
+        {showAlert && <div className="mb-3">
+          <Alert message="Your message has been sent." type="success" banner={true} />
+        </div> }
+        
         <div className="col-md-12">
           <h2>Get in touch with us</h2>
         </div>
-        <Form layout="vertical" name="contacts" onFinish={onFinish} validateMessages={validateMessages}>
+        <Form form={form} layout="vertical" name="contacts" onFinish={onFinish} validateMessages={validateMessages}>
           <div className="row">
             <div className="col-md-6">
               <Form.Item name='name' label="Name" rules={[{ required: true }]}>
