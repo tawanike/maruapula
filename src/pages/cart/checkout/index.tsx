@@ -48,32 +48,26 @@ export default function Checkout() {
     const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo.errorFields);
         setHasError(errorInfo.errorFields > 0);
-      };
+    };
 
     const onFinish = async (values: any) => {
-        if (placeOrder) {
-            setLoading(true);
-            await fetch("/api/cart/checkout", {
-                method: "POST",
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    total: cartTotal,
-                    user: userDetails.user,
-                    products: cartContext.state.products,
-                    order_reference: order_reference
-                }),
-            });
-            setLoading(false);
-            setPlaceOrder(false);
-            setShowPlaceOrder(false);
-            // return router.push("/");
-        } else {
-            setUserDetails(values);
-            setShowPlaceOrder(true);
-        }
+        setLoading(true);
+        await fetch("/api/cart/checkout", {
+            method: "POST",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                total: cartTotal,
+                user: values.user,
+                products: cartContext.state.products,
+                order_reference: order_reference
+            }),
+        });
+        setLoading(false);
+        setPlaceOrder(false);
+        setShowPlaceOrder(false);
     };
 
     return (
@@ -358,7 +352,7 @@ export default function Checkout() {
                 okText="Continue"
                 onOk={() => {
                     setPlaceOrder(false);
-                    setShowAfterPlaceOrder(true)
+                    setShowAfterPlaceOrder(true);
                     onFinish(userDetails);
                 }}
                 className="mt-5"

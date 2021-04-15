@@ -6,6 +6,7 @@ const twilioClient = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWIL
 
 export default async (req, res) => {
     if (req.method === 'POST') {
+      console.log(req.body)
         sgMail.setApiKey(process.env.SENDGRID_API_KEY); // Replace with environment variable
         sgMail1.setApiKey(process.env.SENDGRID_API_KEY);
         const msg = {
@@ -19,6 +20,13 @@ export default async (req, res) => {
                 tracking_code: req.body.order_reference,
                 customer_name: req.body.user.first_name,
                 customer_email: req.body.user.email,
+                address_line_one: req.body.user.address_line_one,
+                address_line_two: req.body.user.address_two,
+                address_line_three: req.body.user.address_three,
+                city: req.body.user.city,
+                province: req.body.user.province,
+                postcode: req.body.user.postcode,
+                delivery_instructions: req.body.user.delivery_instructions,
                 products: req.body.products
             },
         };
@@ -64,20 +72,13 @@ export default async (req, res) => {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
         }
-        // await axios
-        //     .post( 'https://api.clickatell.com/rest/message', {
-        //         to: [req.body.user.mobile],
-        //         text: ``
-        //         }, { headers: headers} );
-        console.log(req.body.user.mobile)
         try {
-          twilioClient.messages
+          await twilioClient.messages
           .create({
              body: `Thank you for your Maruapula order!! We will contact you soon to finalise your order + payment arrangements. Call 0836685785 for queries. Ref #${req.body.order_reference}`,
              from: '	+27600702641',
              to: `+${req.body.user.mobile}`
-           })
-          .then(message => console.log(message.sid));
+           });
   // Send Email and SMS to user
         } catch (error) {
           console.log(error)
