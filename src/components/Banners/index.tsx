@@ -6,12 +6,6 @@ import {
     filterProducts,
     selectedCategory,
 } from "src/components/Products/actions";
-import {
-    BrowserView,
-    MobileView,
-    isMobile,
-    isBrowser
-  } from "react-device-detect";
 
 
 export default function Banners(props) {
@@ -19,9 +13,9 @@ export default function Banners(props) {
     const productContext = useContext(ProductContext);
 
     const goTo = (location) => {
-        if (router.asPath === "/") {
+        
             router.push('/shop#top');
-        }
+
         
         const defaultCategoryProducts: any[] = productContext.state.products.filter(
             (product) => {

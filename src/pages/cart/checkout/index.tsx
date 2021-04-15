@@ -31,6 +31,7 @@ export default function Checkout() {
     const [userDetails, setUserDetails] = useState<any>();
     const [placeOrder, setPlaceOrder] = useState<boolean>(false);
     const [showPlaceOrder, setShowPlaceOrder] = useState<boolean>(false);
+    const [showAfterPlaceOrder, setShowAfterPlaceOrder] = useState<boolean>(false);
     const { TextArea } = Input;
 
     useEffect(() => {
@@ -355,42 +356,48 @@ export default function Checkout() {
                 visible={showPlaceOrder}
                 maskClosable={false}
                 onOk={() => {
-                    if (!loading) {
-                        setPlaceOrder(true);
-                        onFinish(userDetails);
-                    } else {
-                        setShowPlaceOrder(false);
-                        cartContext.dispatch(emptyCart());
-                        router.push("/");
-                    }
+                    setPlaceOrder(false);
+                    setShowAfterPlaceOrder(true)
+                    onFinish(userDetails);
                 }}
                 className="mt-5"
                 onCancel={() => {
                     setShowPlaceOrder(false);
                 }}
             >
-                {loading || (
-                    <div>
-                        <p>Order confirmation reference #{order_reference}</p>
-                        <ul>
-                            <li>Monday to Saturday 08H00 to 17H00</li>
-                            <li>Deliveries daily, from 09H00 to 17H00</li>
-                            <li>
-                                No deliveries on Sundays and Public Holidays.
-                            </li>
-                            <li>Delivery fee: R50.</li>
-                        </ul>
-                    </div>
-                )}
+                <div>
+                    <p>Order confirmation reference #{order_reference}</p>
+                    <ul>
+                        <li>Monday to Saturday 08H00 to 17H00</li>
+                        <li>Deliveries daily, from 09H00 to 17H00</li>
+                        <li>
+                            No deliveries on Sundays and Public Holidays.
+                        </li>
+                        <li>Delivery fee: R50.</li>
+                    </ul>
+                </div>
+            </Modal>
 
-                {loading && (
-                    <div>
-                        <h3>
-                            Your order has been submitted, please check your
-                            email inbox for more information.
-                        </h3>
-                    </div>
-                )}
+            <Modal
+                title="Confirm order"
+                visible={showAfterPlaceOrder}
+                maskClosable={false}
+                onOk={() => {
+                        setShowAfterPlaceOrder(false);
+                        cartContext.dispatch(emptyCart());
+                        router.push("/");
+                }}
+                className="mt-5"
+                onCancel={() => {
+                    setShowAfterPlaceOrder(false);
+                }}
+            >
+                <div>
+                    <h3>
+                        Your order has been submitted, please check your
+                        email inbox for more information.
+                    </h3>
+                </div>
             </Modal>
         </div>
     );
