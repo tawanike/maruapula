@@ -75,7 +75,7 @@ export default async (req, res) => {
           .create({
              body: `Thank you for your Maruapula order!! We will contact you soon to finalise your order + payment arrangements. Call 0836685785 for queries. Ref #${req.body.order_reference}`,
              from: '	+27600702641',
-             to: req.body.user.mobile
+             to: `+${req.body.user.mobile}`
            })
           .then(message => console.log(message.sid));
   // Send Email and SMS to user

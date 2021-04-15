@@ -355,6 +355,7 @@ export default function Checkout() {
                 title="Confirm order"
                 visible={showPlaceOrder}
                 maskClosable={false}
+                okText="Continue"
                 onOk={() => {
                     setPlaceOrder(false);
                     setShowAfterPlaceOrder(true)
@@ -382,6 +383,7 @@ export default function Checkout() {
                 title="Confirm order"
                 visible={showAfterPlaceOrder}
                 maskClosable={false}
+                okText="Done"
                 onOk={() => {
                         setShowAfterPlaceOrder(false);
                         cartContext.dispatch(emptyCart());
