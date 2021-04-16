@@ -51,7 +51,10 @@ export default function Checkout() {
     };
 
     const onFinish = async (values: any) => {
+        // Add error handling here
         setLoading(true);
+        setPlaceOrder(true);
+        setShowPlaceOrder(true);
         await fetch("/api/cart/checkout", {
             method: "POST",
             headers: {
@@ -66,8 +69,7 @@ export default function Checkout() {
             }),
         });
         setLoading(false);
-        setPlaceOrder(false);
-        setShowPlaceOrder(false);
+
     };
 
     return (
@@ -335,7 +337,7 @@ export default function Checkout() {
                                         placeItems: "center end",
                                     }}
                                 >
-                                    <Button htmlType="submit" type="primary" disabled={hasError}>
+                                    <Button htmlType="submit" type="primary">
                                         Place order
                                     </Button>
                                 </div>
@@ -351,9 +353,10 @@ export default function Checkout() {
                 maskClosable={false}
                 okText="Continue"
                 onOk={() => {
+                    setShowPlaceOrder(false);
                     setPlaceOrder(false);
                     setShowAfterPlaceOrder(true);
-                    onFinish(userDetails);
+                    // onFinish(userDetails);
                 }}
                 className="mt-5"
                 onCancel={() => {

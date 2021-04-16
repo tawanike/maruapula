@@ -20,7 +20,8 @@ export default async (req, res) => {
                 tracking_code: req.body.order_reference,
                 customer_name: req.body.user.first_name,
                 customer_email: req.body.user.email,
-                address_line_one: req.body.user.address_line_one,
+                mobile_number: req.body.user.mobile,
+                address_line_one: req.body.user.address_one,
                 address_line_two: req.body.user.address_two,
                 address_line_three: req.body.user.address_three,
                 city: req.body.user.city,
@@ -46,14 +47,22 @@ export default async (req, res) => {
             from: 'sales@maruapula.store',
             templateId: 'd-b792a77ffa0247fe940b0ee1aa0e3ed8',
             dynamic_template_data: {
-                subject: 'New Online Order',
-                service_fee: 'R50.00',
-                total: req.body.total,
-                tracking_code: req.body.order_reference,
-                customer_name: 'sales@maruapula.store',
-                customer_email: 'sales@maruapula.store',
-                products: req.body.products
-            },
+              subject: 'Online Order Confirmation',
+              service_fee: 'R50.00',
+              total: parseInt(req.body.total) + parseInt(50),
+              tracking_code: req.body.order_reference,
+              customer_name: req.body.user.first_name,
+              customer_email: req.body.user.email,
+              mobile_number: req.body.user.mobile,
+              address_line_one: req.body.user.address_one,
+              address_line_two: req.body.user.address_two,
+              address_line_three: req.body.user.address_three,
+              city: req.body.user.city,
+              province: req.body.user.province,
+              postcode: req.body.user.postcode,
+              delivery_instructions: req.body.user.delivery_instructions,
+              products: req.body.products
+          },
         };
 
         try {
