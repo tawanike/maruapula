@@ -16,7 +16,7 @@ export default async (req, res) => {
             dynamic_template_data: {
                 subject: 'Online Order Confirmation',
                 service_fee: 'R50.00',
-                total: parseInt(req.body.total) + parseInt(50),
+                total: parseInt(req.body.total) + parseInt('50'),
                 tracking_code: req.body.order_reference,
                 customer_name: req.body.user.first_name,
                 customer_email: req.body.user.email,
@@ -49,7 +49,7 @@ export default async (req, res) => {
             dynamic_template_data: {
               subject: 'Online Order Confirmation',
               service_fee: 'R50.00',
-              total: parseInt(req.body.total) + parseInt(50),
+              total: parseInt(req.body.total) + parseInt('50'),
               tracking_code: req.body.order_reference,
               customer_name: req.body.user.first_name,
               customer_email: req.body.user.email,
