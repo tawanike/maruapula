@@ -45,16 +45,32 @@ export default function Checkout() {
         setOrder_reference(Math.floor(Math.random() * (100000 - 999999 + 1)));
     }, []);
 
+    const validatePhoneNumber = (value) => {
+        const trimmed = value.replace(/\s/g, '');
+        const regex = /^27(6|7|8){1}[0-9]{1}[0-9]{7}$/;
+        if (regex.test(trimmed) === true) {
+            return true;
+        } else {
+            return false;
+        }
+            
+    }
+
     const onFinishFailed = (errorInfo: any) => {
         console.log('Failed:', errorInfo.errorFields);
         setHasError(errorInfo.errorFields > 0);
     };
 
+    const submitOrder = (user) => {
+        setUserDetails(user);
+        setPlaceOrder(true);
+        setShowPlaceOrder(true);
+    }
+
     const onFinish = async (values: any) => {
         // Add error handling here
         setLoading(true);
-        setPlaceOrder(true);
-        setShowPlaceOrder(true);
+        
         await fetch("/api/cart/checkout", {
             method: "POST",
             headers: {
@@ -63,7 +79,7 @@ export default function Checkout() {
             },
             body: JSON.stringify({
                 total: cartTotal,
-                user: values.user,
+                user: userDetails.user,
                 products: cartContext.state.products,
                 order_reference: order_reference
             }),
@@ -76,7 +92,7 @@ export default function Checkout() {
         <div>
             <Form
                 name="nest-messages"
-                onFinish={onFinish}
+                onFinish={submitOrder}
                 onFinishFailed={onFinishFailed}
                 validateMessages={validateMessages}
                 layout="vertical"
@@ -107,8 +123,17 @@ export default function Checkout() {
                                 <Form.Item
                                     name={["user", "mobile"]}
                                     label="Mobile"
-                                    rules={[{ required: true }]}
-                                    extra="Phone number should be in the format of 27xxxxxxx No Special Characters"
+                                    rules={[{ required: true }, (_) => ({
+                                        validator(_, value) {
+                                          if (validatePhoneNumber(value)) {
+                                            return Promise.resolve();
+                                          }
+                                          return Promise.reject(new Error('Mobile should be in the format “27123456789” with 11 digits, no special characters, or spaces.'));
+                                        },
+                                      })]}
+                                    extra="Mobile should be in the format “27123456789” with 11 digits, no special characters, or spaces."
+                                    hasFeedback
+
                                 >
                                     <Input />
                                 </Form.Item>
@@ -356,7 +381,7 @@ export default function Checkout() {
                     setShowPlaceOrder(false);
                     setPlaceOrder(false);
                     setShowAfterPlaceOrder(true);
-                    // onFinish(userDetails);
+                    onFinish(userDetails);
                 }}
                 className="mt-5"
                 onCancel={() => {
