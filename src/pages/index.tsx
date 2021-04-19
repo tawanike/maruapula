@@ -135,7 +135,7 @@ export default function Home() {
                     className="col-12 mt-5"
                     sx={{
                         bg: "muted",
-                        height: "60px",
+                        height: "90px",
                         display: "grid",
                         color: "#FFFFFF",
                         overflow: "hidden",
@@ -144,7 +144,7 @@ export default function Home() {
                     <div
                         className=""
                         sx={{
-                            height: "60px",
+                            height: "90px",
                             display: "grid",
                             placeItems: "center",
                             color: "#FFFFFF",
