@@ -172,9 +172,9 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/FR0009.jpg"
+                                        src="fruits.jpg"
                                         style={{
-                                            width: "134%",
+                                            width: "100%",
                                             height: "auto",
                                         }}
                                     />
@@ -191,9 +191,9 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/VG0022.jpg"
+                                        src="veggies.jpg"
                                         style={{
-                                            width: "125.3%",
+                                            width: "100%",
                                             height: "auto",
                                         }}
                                     />
@@ -210,7 +210,7 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326830/products/CH0009.jpg"
+                                        src="poultry.jpeg"
                                         style={{
                                             width: "100%",
                                             height: "auto",
@@ -229,15 +229,16 @@ export default function Home() {
                             >
                                 <div className="d-none d-md-block col-md-3">
                                     <img
-                                        src="https://res.cloudinary.com/maruapula/image/upload/v1618326878/products/FR0025.jpg"
+                                        src="platter.jpeg"
                                         style={{
-                                            width: "165%",
+                                            width: "100%",
                                             height: "auto",
                                         }}
                                     />
                                 </div>
-                                <div className="col co-md-9 p-4">
+                                <div className="col co-md-9 p-3">
                                     Pre-cooked Meals
+                                    <br /><small>Coming Soon</small>
                                 </div>
                             </div>
                         </Card.Grid>
@@ -246,9 +247,9 @@ export default function Home() {
                                 <div className="row">
                                     <div className="d-none d-md-block col-md-3 h-100">
                                         <img
-                                            src="https://res.cloudinary.com/maruapula/image/upload/v1618332517/assets/catering_services_diyky1.jpg"
+                                            src="catering.jpg"
                                             style={{
-                                                width: "135%",
+                                                width: "100%",
                                                 height: "auto",
                                             }}
                                         />
@@ -264,9 +265,9 @@ export default function Home() {
                                 <div className="row">
                                     <div className="d-none d-md-block col-md-3 h-100">
                                         <img
-                                            src="https://res.cloudinary.com/maruapula/image/upload/v1618332484/assets/About_Us-_Corporate_Business_and_Government_Clients_irii6m.jpg"
+                                            src="business.png"
                                             style={{
-                                                width: "135%",
+                                                width: "100%",
                                                 height: "auto",
                                             }}
                                         />

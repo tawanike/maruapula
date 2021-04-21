@@ -42,14 +42,15 @@ export default function FooterComponent() {
                         921 Moss Street, Weltevredenpark
                     </p>
 
-                    {/* <p>
-            <a><FontAwesomeIcon icon={['fab', 'facebook']} style={{ marginRight: 10}}/></a>
-            <a><FontAwesomeIcon icon={['fab', 'twitter']} style={{ marginRight: 10}}/></a>
-            <a><FontAwesomeIcon icon={['fab', 'instagram']} style={{ marginRight: 10}}/></a>
-          </p> */}
-                </div>
-                <div className="col-md-4 p-5">
                     <p>
+            <a href="https://www.facebook.com/Maruapula-Fresh-Produce-105126261719915/" 
+                target="_blank"><FontAwesomeIcon icon={['fab', 'facebook']} style={{ marginRight: 10}} size="2x" /></a>
+            {/* <a><FontAwesomeIcon icon={['fab', 'twitter']} style={{ marginRight: 10}}/></a>
+            <a><FontAwesomeIcon icon={['fab', 'instagram']} style={{ marginRight: 10}}/></a>*/}
+          </p> 
+                </div>
+                <div className="col-md-4 p-5" >
+                    <p className="pt-4">
                         <Link href="/about" sx={{textDecoration: "none"}}>
                             <a sx={{textDecoration: "none"}}>About</a>
                         </Link>
@@ -71,12 +72,16 @@ export default function FooterComponent() {
                         </Link>
                     </p>
                 </div>
-                <div className="col-md-4 p-2">
-                    <h3>Operating Hours</h3>
+                <div className="col-md-4 p-2 pt-5">
+                    <h3 className="pt-3">Operating Hours</h3>
                     <p>Monday to Saturday: 08H00 to 17H00</p>
                     <p>Deliveries daily, from 09H00 to 17H00</p>
                     <p>No deliveries on Sundays and Public Holidays</p>
                 </div>
+            </div>
+            <div className="row">
+                <p className="col-8 small">&copy; 2021 Maruapula Store.
+                Developed by <a href="https://www.mmogomedia.com" target="_blank">Mmogo Media</a></p>
             </div>
         </Footer>
     );

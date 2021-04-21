@@ -44,6 +44,8 @@ export default function Contacts() {
         <p><FontAwesomeIcon icon={['fas', 'envelope']} style={{ marginRight: 10}}/>sales@maruapula.store</p>
         <p><FontAwesomeIcon icon={['fas', 'map-marker-alt']} style={{ marginRight: 10}}/>921 Moss Street, Weltevredenpark</p>
         <p><FontAwesomeIcon icon={['fas', 'business-time']} style={{ marginRight: 10}}/>Monday to Saturday (08H00 to 17H00)</p>
+        <p><a href="https://www.facebook.com/Maruapula-Fresh-Produce-105126261719915/" 
+                target="_blank"><FontAwesomeIcon icon={['fab', 'facebook']} style={{ marginRight: 10}}/></a></p>
       </div>
       <div className="col-md-7 Contacts p-5">
         {showAlert && <div className="mb-3">
