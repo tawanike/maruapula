@@ -227,7 +227,7 @@ export default function Home() {
                                 className="row"
                                 onClick={() => navigate("Precooked")}
                             >
-                                <div className="d-none d-md-block col-md-3">
+                                {/* <div className="d-none d-md-block col-md-3">
                                     <img
                                         src="platter.jpeg"
                                         style={{
@@ -235,8 +235,8 @@ export default function Home() {
                                             height: "auto",
                                         }}
                                     />
-                                </div>
-                                <div className="col co-md-9 p-3">
+                                </div> */}
+                                <div className="col co-md-12 p-3">
                                     Pre-cooked Meals
                                     <br /><small>Coming Soon</small>
                                 </div>
@@ -293,7 +293,7 @@ export default function Home() {
                                         if (product.category === "Specials")
                                             return product;
                                     })
-                                    .slice(0, 3)}
+                                    .slice(0, 5)}
                             />
                         )}
 
